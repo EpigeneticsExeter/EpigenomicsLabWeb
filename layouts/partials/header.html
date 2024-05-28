@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    {{ $header_sass := resources.Get "sass/header.scss" }}
+    {{ $style := $header_sass | resources.ToCSS | resources.Fingerprint }}
+    {{ with $style }}
+    <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
+    {{ end }}
+</head>
+
+<ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#">People</a></li>
+    <li><a href="#">Research</a></li>
+    <li><a href="#">Collaborators</a></li>
+    <li><a href="#">Contact Us</a></li>
+</ul>
+
+</html>
