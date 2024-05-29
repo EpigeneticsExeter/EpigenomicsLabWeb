@@ -12,7 +12,8 @@ make it a private repository (hopefully the deployment still works)
 
 In order to run this locally you will need to do the following:
 
-1. Install Hugo and git (a farily recent version of git is required >=2.31)
+1. Install the **extended version** of Hugo and git (a farily recent version of git is required >=2.31)
+    - You can find the latest prebuilt binaries for hugo [here](https://github.com/gohugoio/hugo/releases/latest)
 2. Clone this repository
 3. navigate the the root of this repository and run `hugo server`
 
@@ -44,7 +45,7 @@ git clone https://github.com/sof202/EpigenomicsLabWeb.git path/to/wherever/you/w
 Step 3: Create an SSH tunnel
 
 Go to your terminal, not the ssh connection, just your local terminal. If you
-are a windows user, just press `crtl + r` then type "cmd" and hit enter.
+are a windows user, just press `ctrl + r` then type "cmd" and hit enter.
 
 Now we will create an SSH tunnel with:
 
