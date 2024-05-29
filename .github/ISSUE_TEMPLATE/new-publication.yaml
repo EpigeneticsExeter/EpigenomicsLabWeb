@@ -17,18 +17,18 @@ body:
     id: Who
     attributes:
       label: "Which members of the Lab worked on this paper?"
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: Where
     attributes:
       label: "Where can the publication be found?"
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: What
     attributes:
       label: "Give a short summary of the publication"
       description: This is to ensure that we add the correct tags to the publication
-      validations:
-        required: true
+    validations:
+      required: true

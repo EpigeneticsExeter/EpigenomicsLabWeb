@@ -31,5 +31,5 @@ body:
     attributes:
       label: "Please give us details about the change"
       description: For new lab members, be sure to upload an image somewhere accessible (like the website channel in slack)
-      validations:
-        required: true
+    validations:
+      required: true
