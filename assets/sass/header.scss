@@ -1,3 +1,5 @@
+@import "colours/light-mode";
+
 ul {
     list-style-type: none;
     top: 0;
@@ -5,7 +7,7 @@ ul {
     padding: 0px;
     position: sticky;
     overflow: hidden;
-    background-color: #003C3C;
+    background-color: $base_green;
 }
 
 img {
@@ -24,8 +26,10 @@ li:last-child {
 
 li a {
     display: block;
-    color: #FFFFFF;
+    color: white;
     font-weight: bold;
+
+    /* specific to logo image */
     padding: 34.8px;
     text-align: center;
     font-size: 20px;
@@ -33,5 +37,5 @@ li a {
 }
 
 a:hover {
-    background-color: #001A1A;
+    background-color: $dark_green;
 }

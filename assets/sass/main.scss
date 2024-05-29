@@ -1,4 +1,6 @@
+@import "colours/light-mode";
+
 body {
-    color: #003c3c;
+    color: $text_dark_green;
     margin: auto;
 }
