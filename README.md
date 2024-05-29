@@ -1,4 +1,4 @@
-# EpigeonmicsLab Website
+# Epigenomics Lab Website
 This is the repository for the epigenomicslab.com (eventually).
 
 Currently the pages are being deployed to:
