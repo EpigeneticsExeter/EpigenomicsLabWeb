@@ -1,0 +1,35 @@
+name: Personnel Request 
+description: Make a request to add/remove/change data on a lab member
+title: "[Personnel Request]: "
+labels: ["Personnel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: textarea
+    id: who
+    attributes:
+      label: "Who are you requesting a change for?" 
+      description: Give details about who they are, instead of just a first name.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Request type"
+      description: Please specify the type of change that needs to be addressed
+      multiple: true
+      options:
+        - Add a new lab member
+        - Remove a historic lab member
+        - Make a change to an existing lab member
+    validations:
+      required: true
+  - type: textarea
+    id: Details
+    attributes:
+      label: "Please give us details about the change"
+      description: For new lab members, be sure to upload an image somewhere accessible (like the website channel in slack)
+      validations:
+        required: true
