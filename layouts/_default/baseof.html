@@ -11,7 +11,14 @@
 </head>
 {{ partial "partials/header.html" }}
 
-<body style="color: #003B3C; margin: 0;">
+
+{{ $main_sass := resources.Get "sass/main.scss" }}
+{{ $style := $main_sass | resources.ToCSS | resources.Fingerprint }}
+{{ with $style }}
+<link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
+
+<body>
     {{ block "main" . }}
     This is placeholder text
     {{ end }}
