@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
     {{ end }}
 </head>
-
-<ul>
-    <li><a class="active" href="#">Home</a></li>
-    <li><a href="#">People</a></li>
-    <li><a href="#">Research</a></li>
-    <li><a href="#">Collaborators</a></li>
-    <li><a href="#">Contact Us</a></li>
-</ul>
+<div>
+    <ul>
+        {{ with resources.Get "images/Shitty-logo.png" }}
+        <a href="#"><img src="{{ .RelPermalink }}"></a>
+        {{ end }}
+        <li><a href="#">People</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Collaborators</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
 
 </html>
