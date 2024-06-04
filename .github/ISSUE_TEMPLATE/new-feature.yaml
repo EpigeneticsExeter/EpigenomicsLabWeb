@@ -1,0 +1,16 @@
+name: New feature
+description: Make a request to add a new feature to the website
+title: "[Featuer Request]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: textarea
+    id: page-name
+    attributes:
+      label: "Details" 
+      description: Give details for the feature you want to see implemented.
+    validations:
+      required: true
