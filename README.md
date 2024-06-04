@@ -1,5 +1,5 @@
 # Epigenomics Lab Website
-This is the repository for the epigenomicslab.com (eventually).
+This is the repository for epigenomicslab.com (eventually).
 
 Currently the pages are being deployed to:
 https://EpigeneticsExeter.github.io/EpigenomicsLabWeb/
@@ -11,8 +11,8 @@ make this a private repository (hopefully the deployment still works).
 
 In order to run this locally you will need to do the following:
 
-1. Install the **extended version** of Hugo and git (a farily recent version of git is required >=2.31)
-    - You can find the latest prebuilt binaries for hugo [here](https://github.com/gohugoio/hugo/releases/latest)
+1. Install the **extended version** of Hugo and git (a fairly recent version of git is required >=2.31)
+    - You can find the latest pre-built binaries for hugo [here](https://github.com/gohugoio/hugo/releases/latest)
 2. Clone this repository
 3. navigate the the root of this repository and run `hugo server`
 
