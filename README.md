@@ -32,8 +32,8 @@ mkdir -p ~/.local/bin/
 wget https://github.com/gohugoio/hugo/releases/download/v0.126.0/hugo_extended_0.126.0_Linux-64bit.tar.gz
 tar -C ~/.local/bin -xzf hugo_extended_0.126.0_Linux-64bit.tar.gz
 rm hugo_extended_0.126.0_Linux-64bit.tar.gz
-rm README.md
-rm LISENCE
+rm ~/.local/bin/README.md
+rm ~/.local/bin/LISENCE
 ```
 
 Step 2: Clone this repository
