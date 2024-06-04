@@ -1,0 +1,16 @@
+name: New page
+description: Make a request to add a new page to the website
+title: "[New Page]: "
+labels: ["new-page"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: textarea
+    id: page-name
+    attributes:
+      label: "Details" 
+      description: Give details for what would need to be on the new page
+    validations:
+      required: true
