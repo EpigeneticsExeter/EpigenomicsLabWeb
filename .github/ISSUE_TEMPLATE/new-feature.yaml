@@ -1,6 +1,6 @@
 name: New feature
 description: Make a request to add a new feature to the website
-title: "[Featuer Request]: "
+title: "[Feature Request]: "
 labels: ["enhancement"]
 body:
   - type: markdown
