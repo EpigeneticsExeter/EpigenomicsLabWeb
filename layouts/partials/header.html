@@ -3,20 +3,21 @@
 <head>
     {{ $header_sass := resources.Get "sass/header.scss" }}
     {{ $style := $header_sass | resources.ToCSS | resources.Fingerprint }}
-    {{ with $style }}
-    <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
-    {{ end }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
-<div>
-    <ul>
-        {{ with resources.Get "images/Shitty-logo.png" }}
-        <a href="#"><img src="{{ .RelPermalink }}"></a>
-        {{ end }}
-        <li><a href="#">People</a></li>
-        <li><a href="#">Research</a></li>
-        <li><a href="#">Collaborators</a></li>
-        <li><a href="#">Contact Us</a></li>
-    </ul>
+
+<div class="main-navbar">
+    {{ with resources.Get "images/Shitty-logo.png" }}
+    <a id="logo" href="#"><img style="height: 60px;" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+    <div class="inner-navbar">
+        <a href="#">People</a>
+        <a href="#">Research</a>
+        <a href="#">Collaborators</a>
+    </div>
+
+    <a id="contact-us" href="#">Contact Us</a>
 </div>
+
 
 </html>

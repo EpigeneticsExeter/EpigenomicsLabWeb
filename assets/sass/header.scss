@@ -1,41 +1,51 @@
 @import "colours/light-mode";
 
-ul {
-    list-style-type: none;
-    top: 0;
-    margin: auto;
-    padding: 0px;
+.main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: $base_green;
     position: sticky;
-    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.inner-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
     background-color: $base_green;
 }
 
-img {
-    height: 90px;
-    float: left;
-}
 
-li {
-    float: left;
-}
-
-li:last-child {
-    float: right;
-}
-
-
-li a {
-    display: block;
+a {
+    background-color: $base_green;
     color: white;
     font-weight: bold;
 
     /* required to fit the logo image */
-    padding: 34.8px;
+    padding: 5px;
     text-align: center;
-    font-size: 20px;
     text-decoration: none;
 }
 
-a:hover {
+.inner-navbar a {
+    padding: 5px 15px;
+    margin: 5px 25px;
+}
+
+#contact-us {
+    padding: 5px 15px;
+    margin: 5px 10px;
+}
+
+/* If the logo has hover properties it looks awful */
+a:not(#logo):hover {
     background-color: $dark_green;
+    border-radius: 5px;
 }
