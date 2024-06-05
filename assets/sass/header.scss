@@ -1,4 +1,6 @@
 @import "colours/light-mode";
+@import "font/text.scss";
+
 
 .main-navbar {
     display: flex;
@@ -10,8 +12,7 @@
     top: 0;
     width: 100%;
     height: 8%;
-    font-size: 20px;
-    font-family: 'Outfit', sans-serif;
+    @include navigation-text;
 }
 
 .inner-navbar {

@@ -1,0 +1,9 @@
+@mixin navigation-text {
+    font-family: 'Outfit', sans-serif;
+    /* sans-serif if outfit cannot be found*/
+    font-size: 20px;
+}
+
+@mixin main-text {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
