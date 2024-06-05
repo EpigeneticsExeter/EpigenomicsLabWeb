@@ -12,11 +12,8 @@
 {{ partial "partials/header.html" }}
 
 
-{{ $main_sass := resources.Get "sass/main.scss" }}
-{{ $style := $main_sass | resources.ToCSS | resources.Fingerprint }}
-{{ with $style }}
-<link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
-{{ end }}
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
 <body>
     {{ block "main" . }}

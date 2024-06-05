@@ -1,8 +1,7 @@
 <html>
 
 <head>
-    {{ $header_sass := resources.Get "sass/header.scss" }}
-    {{ $style := $header_sass | resources.ToCSS | resources.Fingerprint }}
+    {{ $style := resources.Get "sass/header.scss" | resources.ToCSS | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
 
