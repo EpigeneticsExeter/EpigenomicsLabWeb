@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{ $404_sass := resources.Get "sass/404.scss" }}
-{{ $style := $404_sass | resources.ToCSS | resources.Fingerprint }}
+{{ $main_sass := resources.Get "sass/main.scss" }}
+{{ $style := $main_sass | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 <main class="text-centre">
         <h1>404 Not Found</h1>

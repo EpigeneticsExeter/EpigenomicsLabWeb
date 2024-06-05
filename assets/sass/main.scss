@@ -1,6 +1,21 @@
-@import "colours/light-mode";
+@import "colours/light-mode.scss";
+@import "font/text.scss";
 
 body {
     color: $text_dark_green;
     margin: auto;
+}
+
+.text-centre {
+    @include main-text;
+    text-align: center;
+}
+
+.button {
+    background-color: $base-green;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
 }
