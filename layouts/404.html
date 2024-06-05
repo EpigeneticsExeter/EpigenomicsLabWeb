@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ $404_sass := resources.Get "sass/404.scss" }}
+{{ $style := $404_sass | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<main class="text-centre">
+        <h1>404 Not Found</h1>
+        <p>The page you are looking for doesn't exist, sorry.
+                Please return to home by clicking the link below</p>
+        <a class="button" href="/EpigenomicsLabWeb/">Home</a>
+</main>
+{{ end }}
