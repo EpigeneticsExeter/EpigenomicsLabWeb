@@ -12,7 +12,6 @@
     top: 0;
     width: 100%;
     height: 8%;
-    @include navigation-text;
 }
 
 .inner-navbar {
@@ -24,7 +23,8 @@
 }
 
 
-a {
+a,
+.dropdown {
     background-color: $base_green;
     color: white;
     font-weight: bold;
@@ -33,6 +33,12 @@ a {
     padding: 5px;
     text-align: center;
     text-decoration: none;
+    @include navigation-text;
+}
+
+.dropdown {
+    padding: 10px;
+    cursor: pointer;
 }
 
 .inner-navbar a {
@@ -43,6 +49,24 @@ a {
 #contact-us {
     padding: 5px 15px;
     margin: 5px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: $base_green;
+    text-decoration: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown-content a {
+    margin: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
 }
 
 /* If the logo has hover properties it looks awful */
