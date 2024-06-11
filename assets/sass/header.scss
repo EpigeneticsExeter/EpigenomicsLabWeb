@@ -39,6 +39,7 @@ a,
 .dropdown {
     padding: 10px;
     cursor: pointer;
+    position: relative;
 }
 
 .inner-navbar a {
@@ -55,6 +56,7 @@ a,
     display: none;
     position: absolute;
     top: 100%;
+    right: 0;
     background-color: $base_green;
     text-decoration: none;
     border-radius: 0px 0px 10px 10px;
@@ -65,7 +67,7 @@ a,
 }
 
 .dropdown:hover .dropdown-content {
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
