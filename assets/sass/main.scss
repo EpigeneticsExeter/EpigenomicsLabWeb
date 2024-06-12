@@ -1,11 +1,28 @@
 @import "colours/light-mode.scss";
 @import "font/text.scss";
 
-body {
-    color: $text_dark_green;
-    margin: auto;
+/* --------------------- */
+/* OVERARCHING STRUCTURE */
+/* --------------------- */
+html {
+    height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    color: $text_dark_green;
+    margin: auto;
+    height: 100%;
+}
+
+.content {
+    flex: auto;
+}
+
+/* -------- */
+/* 404 PAGE */
+/* -------- */
 .text-centre {
     @include main-text;
     text-align: center;

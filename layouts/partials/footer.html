@@ -1,0 +1,14 @@
+{{ $style := resources.Get "sass/footer.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+<div class="main-footer-box">
+    <div class="copyright-box">
+        <p>© Complex Disease Epigenetics Group</p>
+    </div>
+    <div class="additional-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">UoE</a>
+        <a href="#">X</a>
+        <a href="/sitemap.xml">Sitemap</a>
+    </div>
+</div>

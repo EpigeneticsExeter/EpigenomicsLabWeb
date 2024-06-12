@@ -9,16 +9,23 @@
         {{ end }}
     </title>
 </head>
-{{ partial "partials/header.html" }}
-
-
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
 <body>
-    {{ block "main" . }}
-    This is placeholder text
-    {{ end }}
+    {{ partial "partials/header.html" }}
+
+
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    <div class="content">
+        {{ block "main" . }}
+        This is placeholder text
+        {{ end }}
+
+    </div>
+
+    {{ partial "partials/footer.html"}}
+
 </body>
 
 </html>
