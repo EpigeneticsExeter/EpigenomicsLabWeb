@@ -4,16 +4,13 @@
 /* --------------------- */
 /* OVERARCHING STRUCTURE */
 /* --------------------- */
-html {
-    height: 100%;
-}
 
 body {
     display: flex;
     flex-direction: column;
     color: $text_dark_green;
     margin: auto;
-    height: 100%;
+    min-height: 100vh;
 }
 
 .content {
