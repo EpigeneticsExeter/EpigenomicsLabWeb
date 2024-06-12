@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
 <div class="main-navbar">
-    {{ with resources.Get "images/Shitty-logo.png" }}
-    <a id="logo" href="/EpigenomicsLabWeb"><img style="height: 60px;" src="{{ .RelPermalink }}"></a>
-    {{ end }}
+    {{ $logo_image := resources.Get "images/Shitty-logo.png" }}
+    <a id="logo" href="/EpigenomicsLabWeb">
+        <img src="{{ $logo_image.RelPermalink }}">
+    </a>
     <div class="inner-navbar">
         <a href="#">People</a>
         <div class="dropdown">Research
