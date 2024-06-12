@@ -1,5 +1,6 @@
 +++
 Title = "Home Page"
+layout = "home"
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
