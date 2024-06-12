@@ -1,0 +1,60 @@
+@import "colours/light-mode";
+@import "font/text.scss";
+
+#team-photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- */
+/* ABOUT */
+/* ----- */
+#about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-container img {
+    height: 100px;
+}
+
+#about-container p {
+    @include main-text;
+    text-align: center;
+    color: $text_dark_green;
+}
+
+/* --------- */
+/* SUB TEAMS */
+/* --------- */
+.sub-team-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $base_green;
+}
+
+.sub-team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include navigation-text;
+    color: white;
+    width: 50%;
+}
+
+.sub-team-photo {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.sub-team-photo img {
+    width: 80%
+}
