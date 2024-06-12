@@ -1,7 +1,9 @@
 @import "colours/light-mode";
 @import "font/text.scss";
 
-
+/* ------------------- */
+/* MAIN NAVIGATION BAR */
+/* ------------------- */
 .main-navbar {
     display: flex;
     flex-direction: row;
@@ -28,18 +30,9 @@ a,
     background-color: $base_green;
     color: white;
     font-weight: bold;
-
-    /* required to fit the logo image */
-    padding: 5px;
     text-align: center;
     text-decoration: none;
     @include navigation-text;
-}
-
-.dropdown {
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
 }
 
 .inner-navbar a {
@@ -52,26 +45,39 @@ a,
     margin: 5px 10px;
 }
 
+/*  Get dropdown menu to look like the anchors */
+.dropdown {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* ---------------------- */
+/* RESEARCH DROPDOWN MENU */
+/* ---------------------- */
 .dropdown-content {
     display: none;
     position: absolute;
+
+    /* ensures centering of dropdown menu, though very hacky */
+    left: -42%;
+
     top: 100%;
-    right: 0;
     background-color: $base_green;
-    text-decoration: none;
     border-radius: 0px 0px 10px 10px;
 }
 
-.dropdown-content a {
-    margin: 5px;
-}
 
 .dropdown:hover .dropdown-content {
-    display: grid;
+    display: flex;
     flex-direction: column;
 }
 
-/* If the logo has hover properties it looks awful */
+/* ----- */
+/* HOVER */
+/* ----- */
+
+/* logo is an anchor, but we don't want it to have hover properties */
 a:not(#logo):hover {
     background-color: $dark_green;
     border-radius: 5px;
