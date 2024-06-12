@@ -1,9 +1,5 @@
-<html>
-
-<head>
-    {{ $style := resources.Get "sass/header.scss" | resources.ToCSS | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-</head>
+{{ $style := resources.Get "sass/header.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
 <div class="main-navbar">
     {{ with resources.Get "images/Shitty-logo.png" }}
@@ -23,6 +19,3 @@
 
     <a id="contact-us" href="contact-us">Contact Us</a>
 </div>
-
-
-</html>

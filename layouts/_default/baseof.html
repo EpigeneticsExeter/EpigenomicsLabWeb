@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
     <title>
         {{ block "title" . }}
         {{ .Site.Title }}
@@ -13,15 +15,10 @@
 <body>
     {{ partial "partials/header.html" }}
 
-
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-
     <div class="content">
         {{ block "main" . }}
         This is placeholder text
         {{ end }}
-
     </div>
 
     {{ partial "partials/footer.html"}}
