@@ -5,6 +5,9 @@
     display: flex;
 }
 
+/* -------------- */
+/* FILTERING AREA */
+/* -------------- */
 .filter-container {
     display: flex;
     flex-direction: column;
@@ -16,6 +19,9 @@
     @include main-text;
 }
 
+/* ---------------- */
+/* GRID OF PROFILES */
+/* ---------------- */
 .people-photo-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
