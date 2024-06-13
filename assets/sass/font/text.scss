@@ -5,6 +5,11 @@
 }
 
 @mixin main-text {
-    font-family: 'Outfit' sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 20px
+}
+
+@mixin small-main-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px
 }
