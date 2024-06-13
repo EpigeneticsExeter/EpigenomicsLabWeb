@@ -1,0 +1,43 @@
+@import "colours/light-mode";
+@import "font/text.scss";
+
+.main-container {
+    display: flex;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 5px;
+    max-height: 40vh;
+    background-color: $base_green;
+    color: white;
+    @include main-text;
+}
+
+.people-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%
+}
+
+.person-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    margin: 2px;
+    @include small-main-text;
+}
+
+.person-profile:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.person-profile img {
+    object-fit: cover;
+    height: 90%;
+    width: 70%;
+    border-radius: 50%;
+}

@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $style := resources.Get "sass/people.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<div class="main-container">
+
+    <div class="filter-container">
+        <h1>Filter</h1>
+        <input type="checkbox">
+
+    </div>
+    <div class="people-photo-grid">
+
+        {{ range .Pages }}
+        <div class="person-profile {{ .Params.team }} {{ .Params.position }}">
+            {{ with resources.Get .Params.image }}
+            <img src="{{ .RelPermalink }}"></img>
+            {{ end }}
+
+            <h1>{{ .Params.name }}</h1>
+        </div>
+        {{ end}}
+    </div>
+</div>
+{{ end }}
