@@ -3,7 +3,15 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
 
+
+
 {{ define "main" }}
+{{ $github_logo := resources.Get "/svgs/github_logo_black.svg"}}
+{{ $X_logo := resources.Get "/svgs/X_logo.svg"}}
+{{ $linkedin_logo := resources.Get "/svgs/LinkedIn_logo.svg"}}
+{{ $orcid_logo := resources.Get "/svgs/orcid_logo.svg"}}
+{{ $email := resources.Get "/svgs/email.svg"}}
+
 <div class="main-container">
 
     <div class="filter-container">
@@ -21,10 +29,28 @@
         {{ range .Pages }}
         <div class="person-profile {{ .Params.team }} {{ .Params.position }}">
             {{ with resources.Get .Params.image }}
-            <img src="{{ .RelPermalink }}"></img>
+            <img class="profile_picture" src="{{ .RelPermalink }}"></img>
             {{ end }}
-
-            <h1>{{ .Params.name }}</h1>
+            <div class="link-tree">
+                <a href="#">
+                    <img src="{{ $github_logo.RelPermalink }}">
+                </a>
+                <a href="#">
+                    <img src="{{ $X_logo.RelPermalink }}">
+                </a>
+                <a href="#">
+                    <img src="{{ $linkedin_logo.RelPermalink }}">
+                </a>
+                <a href="#">
+                    <img src="{{ $orcid_logo.RelPermalink }}">
+                </a>
+                <a href="#">
+                    <img src="{{ $email.RelPermalink }}">
+                </a>
+            </div>
+            <div class="name">
+                <h1>{{ .Params.name }}</h1>
+            </div>
         </div>
         {{ end}}
     </div>

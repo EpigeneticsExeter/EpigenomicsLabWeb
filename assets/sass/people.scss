@@ -29,7 +29,7 @@
 .filter-grid button {
     appearance: none;
     background-color: $dark_green;
-    border: 1px solid rgba(27, 31, 35, .15);
+    border: 0px;
     border-radius: 10px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
@@ -47,7 +47,7 @@
 /* ---------------- */
 .people-photo-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 70%
 }
 
@@ -55,6 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     margin: 2px;
     @include small-main-text;
@@ -64,9 +65,43 @@
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
 }
 
-.person-profile img {
+/* ------------------- */
+/* INDIVIDUAL PROFILES */
+/* ------------------- */
+.profile_picture {
     object-fit: cover;
-    height: 90%;
-    width: 70%;
+    height: 70%;
+    width: 80%;
     border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.person-profile h1 {
+    margin: 0;
+}
+
+.person-profile .link-tree {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.person-profile:hover .link-tree {
+    visibility: visible;
+    opacity: 1;
+}
+
+.link-tree a {
+    height: 100%;
+}
+
+.link-tree img {
+    height: 100%;
+    width: 100%;
+    max-height: 100px;
+    max-width: 100px;
 }
