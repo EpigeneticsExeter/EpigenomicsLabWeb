@@ -81,7 +81,7 @@
 /* ----- */
 
 /* logo is an anchor, but we don't want it to have hover properties */
-a:not(#logo):hover {
+.main-navbar a:not(#logo):hover {
     background-color: $dark_green;
     border-radius: 5px;
 }
