@@ -22,10 +22,9 @@
             <button type="button">PhD</button>
             <button type="button">Postdoc</button>
         </div>
-
     </div>
-    <div class="people-photo-grid">
 
+    <div class="people-photo-grid">
         {{ range .Pages }}
         <div class="person-profile {{ .Params.team }} {{ .Params.position }}">
             {{ with resources.Get .Params.image }}
@@ -64,5 +63,6 @@
         </div>
         {{ end}}
     </div>
+
 </div>
 {{ end }}
