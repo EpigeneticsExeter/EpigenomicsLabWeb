@@ -1,6 +1,9 @@
-{{ define "main" }}
+{{ define "extra_head" }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
 <main class="text-centre">
         <h1>404 Not Found</h1>
         <p>The page you are looking for doesn't exist, sorry.

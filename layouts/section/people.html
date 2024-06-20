@@ -1,6 +1,9 @@
-{{ define "main" }}
+{{ define "extra_head" }}
 {{ $style := resources.Get "sass/people.scss" | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
 <div class="main-container">
 
     <div class="filter-container">

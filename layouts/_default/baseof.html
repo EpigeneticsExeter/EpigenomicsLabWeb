@@ -10,6 +10,9 @@
         {{ .Site.Title }}
         {{ end }}
     </title>
+    <!--Put any additional head items (like style sheets) in this block-->
+    {{ block "extra_head" . }}
+    {{ end }}
 </head>
 
 <body>
