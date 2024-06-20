@@ -31,28 +31,28 @@
             <img class="profile_picture" src="{{ .RelPermalink }}"></img>
             {{ end }}
             <div class="link-tree">
-                {{ if .Params.github}}
-                <a href="https://github.com/{{ .Params.github}}" target="_blank">
+                {{ if .Params.linktree.github}}
+                <a href="https://github.com/{{ .Params.linktree.github}}" target="_blank">
                     <img src="{{ $github_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.x }}
+                {{ if .Params.linktree.x }}
                 <a href="#">
                     <img src="{{ $X_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.linkedin }}
-                <a href="https://linkedin.com/in/{{ .Params.linkedin }}" target="_blank">
+                {{ if .Params.linktree.linkedin }}
+                <a href="https://linkedin.com/in/{{ .Params.linktree.linkedin }}" target="_blank">
                     <img src="{{ $linkedin_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.orcid }}
+                {{ if .Params.linktree.orcid }}
                 <a href="#">
                     <img src="{{ $orcid_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.email }}
-                <a href="mailto:{{ .Params.email }}" target="_blank">
+                {{ if .Params.linktree.email }}
+                <a href="mailto:{{ .Params.linktree.email }}" target="_blank">
                     <img src="{{ $email.RelPermalink }}">
                 </a>
                 {{ end }}

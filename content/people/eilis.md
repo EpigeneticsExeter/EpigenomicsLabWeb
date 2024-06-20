@@ -4,6 +4,7 @@
   image = "/images/profile_pictures/Eilis_Hannon.jfif"
   position = "PI"
   team = "analysis"
-  github = "ejh243"
+  [linktree]
+    github = "ejh243"
 +++
 

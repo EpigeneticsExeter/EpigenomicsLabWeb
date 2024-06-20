@@ -4,8 +4,9 @@
   image = "/images/profile_pictures/samfletcher.jpg"
   position = "GRA"
   team = "analysis"
-  github = "sof202"
-  linkedin = "sam-fletcher-6830511b9"
-  email = "s.o.fletcher@exeter.ac.uk"
+  [linktree]
+    github = "sof202"
+    linkedin = "sam-fletcher-6830511b9"
+    email = "s.o.fletcher@exeter.ac.uk"
 +++
 
