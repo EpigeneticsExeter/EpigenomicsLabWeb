@@ -11,6 +11,7 @@
 .filter-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 30%;
     margin: 5px;
     max-height: 40vh;
@@ -19,12 +20,34 @@
     @include main-text;
 }
 
+.filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5%;
+}
+
+.filter-grid button {
+    appearance: none;
+    background-color: $dark_green;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 10px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    @include main-text;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+
 /* ---------------- */
 /* GRID OF PROFILES */
 /* ---------------- */
 .people-photo-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 70%
 }
 
