@@ -12,18 +12,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
     width: 30%;
     margin: 5px;
     max-height: 40vh;
     background-color: $base_green;
     color: white;
+    border-radius: 10px;
+    min-height: 30vh;
     @include main-text;
 }
 
 .filter-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 5%;
+    column-gap: 2%;
+    row-gap: 2%;
 }
 
 .filter-grid button {
@@ -37,8 +41,19 @@
     cursor: pointer;
     display: inline-block;
     @include main-text;
-    padding: 5px 15px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
     text-align: center;
+}
+
+/* FADE IN */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.fade-in.show {
+    opacity: 1;
 }
 
 

@@ -17,12 +17,14 @@
     <div class="filter-container">
         <h1>Filter</h1>
         <div class="filter-grid">
-            <button type="button">GRA</button>
-            <button type="button">PI</button>
-            <button type="button">PhD</button>
-            <button type="button">Postdoc</button>
+            <button type="button" id="All">All</button>
+            <button type="button" id="GRA">GRA</button>
+            <button type="button" id="PI">PI</button>
+            <button type="button" id="PhD">PhD</button>
+            <button type="button" id="Postdoc">Postdoc</button>
         </div>
     </div>
+
 
     <div class="people-photo-grid">
         {{ range .Pages }}
@@ -37,7 +39,7 @@
                 </a>
                 {{ end }}
                 {{ if .Params.linktree.x }}
-                <a href="#">
+                <a href="https://x.com/{{ .Params.linktree.x }}">
                     <img src="{{ $X_logo.RelPermalink }}">
                 </a>
                 {{ end }}
@@ -47,7 +49,7 @@
                 </a>
                 {{ end }}
                 {{ if .Params.linktree.orcid }}
-                <a href="#">
+                <a href="https://orcid.org/{{ .Params.linktree.orcid }}" target="_blank">
                     <img src="{{ $orcid_logo.RelPermalink }}">
                 </a>
                 {{ end }}
@@ -65,4 +67,7 @@
     </div>
 
 </div>
+{{ with resources.Get "js/people_filtering.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
 {{ end }}
