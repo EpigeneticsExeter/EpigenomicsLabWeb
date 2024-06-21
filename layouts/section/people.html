@@ -23,12 +23,13 @@
             <button type="button" id="PhD">PhD</button>
             <button type="button" id="Postdoc">Postdoc</button>
         </div>
+        <input type="text" id="searchInput" placeholder="Search for names...">
     </div>
 
 
     <div class="people-photo-grid">
         {{ range .Pages }}
-        <div class="person-profile {{ .Params.team }} {{ .Params.position }}">
+        <div id='{{ replace .Params.name " " "" }}' class="person-profile {{ .Params.team }} {{ .Params.position }}">
             {{ with resources.Get .Params.image }}
             <img class="profile_picture" src="{{ .RelPermalink }}"></img>
             {{ end }}

@@ -1,12 +1,10 @@
-// Get all the filter buttons
 const allButton = document.getElementById('All')
 const graButton = document.getElementById('GRA');
 const piButton = document.getElementById('PI');
 const phdButton = document.getElementById('PhD');
 const postdocButton = document.getElementById('Postdoc');
-
-// Get all the profiles
 const profiles = document.querySelectorAll('div.person-profile');
+const searchInput = document.getElementById('searchInput');
 
 allButton.addEventListener('click', () => filterProfiles('all'));
 graButton.addEventListener('click', () => filterProfiles('GRA'));
@@ -22,8 +20,8 @@ profiles.forEach((profile,index) => {
     }, 100 * (index + 1))
 });
 
-// Function to filter profiles based on the link clicked with fade-in effect
 function filterProfiles(category) {
+    // displays profiles sequentially depending on the button clicked
     let delay = 100;
     profiles.forEach(profile => {
         profile.classList.remove('show');
@@ -35,11 +33,27 @@ function filterProfiles(category) {
                 profile.style.display = 'flex';
                 setTimeout(() => {
                     profile.classList.add('show');
-                }, 50); // Adjust this delay as needed for the fade-in effect
-            }, delay); // Initial delay for each profile
+                }, 50); 
+            }, delay); 
             delay += 100
         }
 
     });
 }
 
+// displays profiles that contain the string in the search bar
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    profiles.forEach(profile => {
+        const profileName = profile.id.toLowerCase();
+  
+        if (profileName.includes(searchTerm)) {
+            profile.style.display = 'flex';
+            profile.classList.add('show');
+        } else {
+            profile.style.display = 'none';
+            profile.classList.remove('show');
+        }
+    });
+});
