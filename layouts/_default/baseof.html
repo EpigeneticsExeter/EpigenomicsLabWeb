@@ -19,13 +19,14 @@
     {{ partial "partials/header.html" }}
 
     <div class="content">
+        <!--Put your main web content in this block-->
         {{ block "main" . }}
-        This is placeholder text
         {{ end }}
     </div>
 
     {{ partial "partials/footer.html"}}
 
+    <!--Put any js scripts in this block-->
     {{ block "scripts" . }}
     {{ end }}
 
