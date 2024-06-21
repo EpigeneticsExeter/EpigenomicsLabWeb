@@ -74,6 +74,10 @@
     </div>
 
 </div>
+{{ end }}
+
+
+{{ define "scripts" }}
 {{ with resources.Get "js/people_filtering.js" }}
 <script type="application/javascript" src="{{ .Permalink }}"></script>
 {{ end }}
