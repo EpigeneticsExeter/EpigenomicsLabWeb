@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 30%;
     margin: 5px;
     height: 30vh;
@@ -45,15 +46,64 @@
     text-align: center;
 }
 
-/* FADE IN */
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.25s;
+/* ---------- */
+/* SEARCH BAR */
+/* ---------- */
+
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
 }
 
-.fade-in.show {
-    opacity: 1;
+.input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 50%;
+    transition: all .5s ease;
+    background-color: $dark_green;
+    padding-right: 40px;
+    color: white;
+    box-sizing: border-box;
+    @include main-text;
 }
+
+.input-search::placeholder {
+    color: rgba(255, 255, 255, .5);
+    @include main-text;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: white;
+    background-color: $dark_green;
+}
+
+.btn-search:focus~.input-search {
+    width: 300px;
+    border-radius: 0px;
+    background-color: $dark_green;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0, 0, 1);
+}
+
+.input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: $dark_green;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
 
 
 /* ---------------- */
@@ -120,4 +170,16 @@
     height: 100%;
     width: 100%;
     max-height: 100px;
+}
+
+/* ------- */
+/* FADE IN */
+/* ------- */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.fade-in.show {
+    opacity: 1;
 }
