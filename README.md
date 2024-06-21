@@ -33,6 +33,7 @@ tar -C ~/.local/bin -xzf hugo_extended_0.126.0_Linux-64bit.tar.gz
 rm hugo_extended_0.126.0_Linux-64bit.tar.gz
 rm ~/.local/bin/README.md
 rm ~/.local/bin/LISENCE
+echo "PATH=$PATH:~/.local/bin" >> ~/.bash_profile
 ```
 
 Step 2: Clone this repository
