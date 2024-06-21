@@ -24,6 +24,7 @@ profiles.forEach((profile,index) => {
 
 // Function to filter profiles based on the link clicked with fade-in effect
 function filterProfiles(category) {
+    let delay = 200;
     profiles.forEach(profile => {
         profile.classList.remove('show');
         profile.style.display = 'none';
@@ -35,8 +36,10 @@ function filterProfiles(category) {
                 setTimeout(() => {
                     profile.classList.add('show');
                 }, 50); // Adjust this delay as needed for the fade-in effect
-            }, 200 * (index + 1)); // Initial delay for each profile
+            }, delay); // Initial delay for each profile
+            delay += 200
         }
+
     });
 }
 
