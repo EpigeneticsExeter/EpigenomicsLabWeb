@@ -1,0 +1,68 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/publications.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+
+
+{{ define "main" }}
+{{ $search_icon := resources.Get "/svgs/search_icon.svg" }}
+
+<div class="main-container">
+
+    <div class="filter-container">
+        <h1>Filter</h1>
+        <div class="filter-grid">
+            <button type="button" id="All">All</button>
+            <button type="button" id="GRA">GRA</button>
+            <button type="button" id="PI">PI</button>
+            <button type="button" id="PhD">PhD</button>
+            <button type="button" id="Postdoc">Postdoc</button>
+        </div>
+        <div class="search-box">
+            <button class="btn-search">
+                <img height="50%" src="{{ $search_icon.RelPermalink }}">
+            </button>
+            <input type="text" class="input-search" id="searchInput" placeholder="Type to search...">
+        </div>
+    </div>
+
+    <div class="publications-container">
+    {{ range .Pages }}
+    <a class="publication-link">
+            <div class="publication">
+                <div class="publication-header"></div>
+                <div class="title">{{ .Params.title }}</div>
+                <div class="authors">
+                    {{ $max_number_authors := 7 }}
+                    {{ $concatenated_authors := replace .Params.authors " " "" }}
+                    {{ $number_of_authors := replace $concatenated_authors "," " " | countwords }}
+                    {{ $subsetted_authors := findRESubmatch `[^,]*` .Params.authors $max_number_authors }}
+
+                    {{ if (gt $number_of_authors $max_number_authors) }}
+                        {{ range $index, $author := $subsetted_authors }}
+                            {{ index $author 0 }}{{ if (lt $index (sub $max_number_authors 1)) }},{{ end }}
+                        {{ end }}
+                        <i>+ {{ sub $number_of_authors $max_number_authors }} more</i>
+                    {{ else }}
+                        {{ .Params.authors }}
+                    {{ end }}
+                </div>
+                <div class="journal">{{ .Params.journal }}</div>
+                <div class="date">{{ .Params.date }}</div>
+            </div>
+        </a>
+    {{ end }}
+
+    </div>
+
+
+</div>
+{{ end }}
+
+
+{{ define "scripts" }}
+{{ with resources.Get "js/people_filtering.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
+{{ end }}

@@ -1,7 +1,7 @@
 @mixin navigation-text {
     font-family: 'Outfit', sans-serif;
-    /* sans-serif if outfit cannot be found*/
     font-size: 20px;
+    color: white;
 }
 
 @mixin main-text {
@@ -9,7 +9,13 @@
     font-size: 20px
 }
 
+@mixin large-main-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 @mixin small-main-text {
     font-family: 'Outfit', sans-serif;
-    font-size: 10px
+    font-size: 15px
 }
