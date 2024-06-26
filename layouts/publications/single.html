@@ -1,0 +1,18 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/individual_publication.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="main-container">
+        <div class="abstract-container">
+                <div class="abstract">
+                        <h1>Abstract</h1>
+                        {{ .Content }}
+                </div>
+        </div>
+        <div class="publication-iframe-container">
+                <iframe src="{{ .Params.link }}"></iframe>
+        </div>
+</div>
+{{ end }}

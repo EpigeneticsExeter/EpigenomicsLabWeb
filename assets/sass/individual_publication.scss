@@ -1,0 +1,32 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.abstract-container {
+    width: 50%;
+    display: flex;
+    margin-left: 20px;
+
+    .abstract {
+        @include small-main-text;
+
+        h1 {
+            @include large-main-text;
+        }
+    }
+}
+
+.publication-iframe-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    iframe {
+        width: 98%;
+        height: 98%;
+    }
+}
