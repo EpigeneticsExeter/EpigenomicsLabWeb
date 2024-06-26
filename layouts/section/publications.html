@@ -29,7 +29,7 @@
 
     <div class="publications-container">
     {{ range .Pages }}
-    <a class="publication-link">
+        <a class="publication-link" href="{{ .RelPermalink }}">
             <div class="publication">
                 <div class="publication-header"></div>
                 <div class="title">{{ .Params.title }}</div>
