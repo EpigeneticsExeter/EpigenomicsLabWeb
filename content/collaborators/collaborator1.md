@@ -1,7 +1,7 @@
 +++
 [params]
     name = "Name1"
-    featured = "yes"
+    featured = 1
     image = ""
 +++
 

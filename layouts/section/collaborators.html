@@ -7,6 +7,7 @@
 {{ $tech_background := resources.Get "images/tech-background.svg" }}
 <div id="slideshow" class="slideshow-container">
     {{ range .Pages }}
+    {{ if .Params.featured }}
     <div class="slide fade-in">
         <div class="image-container">
         {{ with resources.Get "images/placeholder.png" }}
@@ -19,9 +20,12 @@
         </div>
     </div>
     {{ end }}
+    {{ end }}
     <div class="slideshow-navigation-container">
     {{ range $index, $page := .Pages }}
+    {{ if .Params.featured }}
         <span class="dot-indicator" onclick="switchSlide({{ $index }})"></span>
+    {{ end }}
     {{ end }}
     </div>
 </div>

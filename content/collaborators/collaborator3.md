@@ -1,0 +1,13 @@
++++
+[params]
+    name = "Collaborator Name 3"
+    featured = 1
+    image = ""
++++
+
+VERY BORING DESCRIPTION.
+VERY BORING DESCRIPTION.
+VERY BORING DESCRIPTION.
+
+VERY BORING DESCRIPTION.
+VERY BORING DESCRIPTION.
