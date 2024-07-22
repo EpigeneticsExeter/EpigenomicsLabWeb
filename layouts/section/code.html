@@ -1,0 +1,25 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/code.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="description-container">
+    <h1>Our Code Repositories</h1>
+    <p>
+        Here at the complex disease epigenetics group, we believe that our code
+        should be easily accessible to aid in reproducing the results in our
+        research.<br>
+        As such, we share our published code via GitHub. This page contains
+        our featured repositories.
+    </p>
+</div>
+<div class="repository-grid">
+    {{ $theme := "default"}}
+    {{ range .Pages }}
+    <a href="https://github.com/{{ .Params.username }}/{{ .Params.repo }}" target="_blank" >
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username={{ .Params.username }}&repo={{ .Params.repo }}&theme={{ $theme }}">
+    </a>
+    {{ end }}
+</div>
+{{ end }}
