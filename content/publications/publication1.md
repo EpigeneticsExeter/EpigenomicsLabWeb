@@ -5,7 +5,7 @@ journal = "European Neuropsychopharmacology"
 date = "Oct 2022"
 [ params ]
     link = "https://nanoporetech.com/resource-centre/lc22-long-read-transcriptome-sequencing-reveals-isoform-diversity-across-human-neurodevelopment-and-aging"
-    geo_numbers = ""
+    geo_numbers = "GSE123,GSE234,GSE345"
 +++
 
 Alternative splicing dramatically increases transcriptomic and proteomic
