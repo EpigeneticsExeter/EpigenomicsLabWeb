@@ -13,11 +13,10 @@
     <div class="filter-container">
         <h1>Filter</h1>
         <div class="filter-grid">
-            <button type="button" id="All">All</button>
-            <button type="button" id="GRA">GRA</button>
-            <button type="button" id="PI">PI</button>
-            <button type="button" id="PhD">PhD</button>
-            <button type="button" id="Postdoc">Postdoc</button>
+            <button type="button" id="Latest">Latest</button>
+            <button type="button" id="Oldest">Oldest</button>
+            <button type="button" id="A-Z">A-Z</button>
+            <button type="button" id="Z-A">Z-A</button>
         </div>
         <div class="search-box">
             <button class="btn-search">
@@ -29,7 +28,7 @@
 
     <div class="publications-container">
     {{ range .Pages }}
-        <a class="publication-link" href="{{ .RelPermalink }}">
+        <a class="publication-link {{ replace .Params.date " " "" }}" id=" {{ replace .Params.title " " "" }} {{ replace .Params.authors " " "" }}" href="{{ .RelPermalink }}">
             <div class="publication">
                 <div class="publication-header"></div>
                 <div class="title">{{ .Params.title }}</div>
@@ -62,7 +61,7 @@
 
 
 {{ define "scripts" }}
-{{ with resources.Get "js/people_filtering.js" }}
+{{ with resources.Get "js/publication_filtering.js" }}
 <script type="application/javascript" src="{{ .Permalink }}"></script>
 {{ end }}
 {{ end }}
