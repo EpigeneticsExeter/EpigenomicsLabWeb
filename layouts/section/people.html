@@ -18,11 +18,11 @@
     <div class="filter-container">
         <h1>Filter</h1>
         <div class="filter-grid">
-            <button type="button" id="All">All</button>
-            <button type="button" id="GRA">GRA</button>
-            <button type="button" id="PI">PI</button>
-            <button type="button" id="PhD">PhD</button>
-            <button type="button" id="Postdoc">Postdoc</button>
+            <button type="button" id="all">All</button>
+            <button type="button" id="gra">GRA</button>
+            <button type="button" id="pi">PI</button>
+            <button type="button" id="phd">PhD</button>
+            <button type="button" id="postdoc">Postdoc</button>
         </div>
         <div class="search-box">
             <button class="btn-search">
@@ -35,7 +35,7 @@
 
     <div class="people-photo-grid">
         {{ range .Pages }}
-        <div id='{{ replace .Params.name " " "" }}' class="person-profile {{ .Params.team }} {{ .Params.position }}">
+        <div id='{{ replace .Params.name " " "" | lower}}' class="person-profile {{ .Params.team | lower }} {{ .Params.position | lower }}">
             {{ with resources.Get .Params.image }}
             <img class="profile_picture" src="{{ .RelPermalink }}"></img>
             {{ end }}

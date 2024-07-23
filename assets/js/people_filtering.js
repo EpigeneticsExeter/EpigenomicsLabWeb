@@ -1,16 +1,16 @@
-const allButton = document.getElementById('All')
-const graButton = document.getElementById('GRA');
-const piButton = document.getElementById('PI');
-const phdButton = document.getElementById('PhD');
-const postdocButton = document.getElementById('Postdoc');
+const allButton = document.getElementById('all')
+const graButton = document.getElementById('gra');
+const piButton = document.getElementById('pi');
+const phdButton = document.getElementById('phd');
+const postdocButton = document.getElementById('postdoc');
 const profiles = document.querySelectorAll('div.person-profile');
 const searchInput = document.getElementById('searchInput');
 
 allButton.addEventListener('click', () => filterProfiles('all'));
-graButton.addEventListener('click', () => filterProfiles('GRA'));
-piButton.addEventListener('click', () => filterProfiles('PI'));
-phdButton.addEventListener('click', () => filterProfiles('PhD'));
-postdocButton.addEventListener('click', () => filterProfiles('PostDoc'));
+graButton.addEventListener('click', () => filterProfiles('gra'));
+piButton.addEventListener('click', () => filterProfiles('pi'));
+phdButton.addEventListener('click', () => filterProfiles('phd'));
+postdocButton.addEventListener('click', () => filterProfiles('postdoc'));
 
 // Show all profiles with fade-in effect initially
 profiles.forEach((profile,index) => {
