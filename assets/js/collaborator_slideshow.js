@@ -29,17 +29,18 @@ function switchSlide(index) {
     showSlides();
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const slideshowContainer = document.getElementById("slideshow");
+const slideshowContainer = document.getElementById("slideshow");
 
-    if (slideshowContainer) {
-        slideshowContainer.addEventListener("mouseenter", () => {
-            clearInterval(slideshowInterval); 
-        });
+let timeoutID = null;
 
-        slideshowContainer.addEventListener("mouseleave", () => {
-            showSlides();
-        });
-    }
-});
+if (slideshowContainer) {
+    slideshowContainer.addEventListener("mouseenter", () => {
+        clearInterval(slideshowInterval); 
+    });
+
+    slideshowContainer.addEventListener("mouseleave", () => {
+        clearTimeout(timeoutID)
+        timeoutID = setTimeout(showSlides, 1000);
+    });
+}
 
