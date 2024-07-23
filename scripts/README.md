@@ -12,6 +12,13 @@ This fills in the fields required for a new person to be added to /people.
 ### Quirks
 
 #### 1
+Python is required for these script and the following python modules are 
+required:
+
+- re
+- argparser
+
+#### 2
 An image of the person must already exist in `/assets/images/profile_pictures`
 before running this script. In particular, this image must comply with the 
 following:
@@ -19,9 +26,13 @@ following:
 If the person's name is `John Doe`, the image must be called `johndoe.png`.
 (The file extension doesn't matter here, only the base name matters.)
 
-#### 2
+#### 3
 If you separate a person's teams/groups with anything other than a white space,
 it is likely that undefined behaviour will result.
+
+#### 4
+The email parser cannot actually check if an email is valid, it will only
+ensure that emails end in "@exeter.ac.uk"
 
 ## new_publication.sh
 
