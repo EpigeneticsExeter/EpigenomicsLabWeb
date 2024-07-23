@@ -3,6 +3,7 @@
 PEOPLE_DIR="$(dirname "$0")/../content/people"
 ASSETS_DIR="$(dirname "$0")/../assets"
 IMAGES_DIR="$(dirname "$0")/../assets/images/profile_pictures"
+PYTHON_DIR="$(dirname "$0")/processing_scripts/"
 
 cat << EOF
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -44,14 +45,23 @@ read -r github
 echo "Enter the person's ORCID username:"
 read -r orcid
 
-## ============ ##
-##   CHECKING   ##
-## ============ ##
+## ================= ##
+##   EMAIL PARSING   ##
+## ================= ##
 
-# NAME #
+formatted_email=$(python "${PYTHON_DIR}/parse_email.py" "${email}")
+
+## ================ ##
+##   NAME PARSING   ##
+## ================ ##
+
 lower_case_name=$(echo "${name}" | tr '[:upper:]' '[:lower:]')
 concatenated_name=$(echo "${lower_case_name}" | tr -d ' ')
 capitalized_name=$(echo "${lower_case_name}" | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2));}1')
+
+## =================== ##
+##   PROFILE PICTURE   ##
+## =================== ##
 
 # Images should be in the correct assets directory and under the correct file name
 # for organisational purposes.
@@ -81,6 +91,6 @@ cat > "${PEOPLE_DIR}/${concatenated_name}.md" << EOF
     orcid = "${orcid}"
     github = "${github}"
     linkedin = "${linkedin}"
-    email = "${email}"
+    email = "${formatted_email}"
 +++
 EOF
