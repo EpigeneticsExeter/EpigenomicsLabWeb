@@ -59,13 +59,17 @@ lower_case_name=$(echo "${name}" | tr '[:upper:]' '[:lower:]')
 concatenated_name=$(echo "${lower_case_name}" | tr -d ' ')
 capitalized_name=$(echo "${lower_case_name}" | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2));}1')
 
+# We create a name glob (*firstname*lastname*) to more robustly find a person's
+# profile picture
+name_glob=$(python "${PYTHON_DIR}/name_parse.py" "${name}")
+
 ## =================== ##
 ##   PROFILE PICTURE   ##
 ## =================== ##
 
-# Images should be in the correct assets directory and under the correct file name
-# for organisational purposes.
-image_path="$(find "${IMAGES_DIR}" -type f -name "${concatenated_name}*")"
+# For organisational purposes, images should be in the profile_pictures 
+# directory
+image_path="$(find "${IMAGES_DIR}" -type f -iname "${name_glob}")"
 if [[ -z "${image_path}" ]]; then
     echo "Could not find an image for: ${name} in ${IMAGES_DIR}."
     echo "Please put an image in first under the name:"
