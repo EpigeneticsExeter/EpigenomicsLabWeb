@@ -5,70 +5,70 @@
 
 {{ define "main" }}
 <div id="team-photo-container">
-        <div>
-                {{ with resources.Get "images/placeholder.png" }}
-                <img style="height:400px" src="{{ .RelPermalink }}"></img>
-                {{ end }}
-        </div>
+    <div>
+        {{ with resources.Get "images/placeholder.png" }}
+        <img style="height:400px" src="{{ .RelPermalink }}"></img>
+        {{ end }}
+    </div>
 </div>
 <div id="about-container">
-        {{ $dna_gif := resources.Get "gifs/DNA.gif" }}
-        <img src="{{ $dna_gif.RelPermalink }}"></img>
-        <p>Sequencing the genome was only the first step in our quest to understand how genes are expressed and
-                functionally regulated. Increased understanding about the functional complexity of the genome has led to
-                growing recognition about the role of epigenetic variation in the etiology of neuropsychiatric and
-                neurodegenerative disease. Epigenetic processes act to dynamically control gene expression independently
-                of DNA sequence variation and are known to regulate key neurobiological and cognitive processes in the
-                brain. Our group takes an integrated genomics approach to understand the molecular mechanisms involved
-                in brain health and disease across the life-course.</p>
-        <img src="{{ $dna_gif.RelPermalink }}"></img>
+    {{ $dna_gif := resources.Get "gifs/DNA.gif" }}
+    <img src="{{ $dna_gif.RelPermalink }}"></img>
+    <p>Sequencing the genome was only the first step in our quest to understand how genes are expressed and
+        functionally regulated. Increased understanding about the functional complexity of the genome has led to
+        growing recognition about the role of epigenetic variation in the etiology of neuropsychiatric and
+        neurodegenerative disease. Epigenetic processes act to dynamically control gene expression independently
+        of DNA sequence variation and are known to regulate key neurobiological and cognitive processes in the
+        brain. Our group takes an integrated genomics approach to understand the molecular mechanisms involved
+        in brain health and disease across the life-course.</p>
+    <img src="{{ $dna_gif.RelPermalink }}"></img>
 </div>
 <div class="sub-team-container">
 
-        <div class="sub-team-info">
-                <h2>Team 1</h2>
-                <p>Here is some fascinating information about team 1</p>
-        </div>
-        <div class="sub-team-photo">
-                {{ with resources.Get "images/placeholder.png" }}
-                <img src="{{ .RelPermalink }}"></img>
-                {{ end }}
-        </div>
+    <div class="sub-team-info">
+        <h2>Team 1</h2>
+        <p>Here is some fascinating information about team 1</p>
+    </div>
+    <div class="sub-team-photo">
+        {{ with resources.Get "images/placeholder.png" }}
+        <img src="{{ .RelPermalink }}"></img>
+        {{ end }}
+    </div>
 </div>
 <div class="sub-team-container">
 
-        <div class="sub-team-photo">
-                {{ with resources.Get "images/placeholder.png" }}
-                <img src="{{ .RelPermalink }}"></img>
-                {{ end }}
-        </div>
-        <div class="sub-team-info">
-                <h2>Team 2</h2>
-                <p>Here is some fascinating information about team 2</p>
-        </div>
+    <div class="sub-team-photo">
+        {{ with resources.Get "images/placeholder.png" }}
+        <img src="{{ .RelPermalink }}"></img>
+        {{ end }}
+    </div>
+    <div class="sub-team-info">
+        <h2>Team 2</h2>
+        <p>Here is some fascinating information about team 2</p>
+    </div>
 </div>
 <div class="sub-team-container">
 
-        <div class="sub-team-info">
-                <h2>Team 3</h2>
-                <p>Here is some fascinating information about team 3</p>
-        </div>
-        <div class="sub-team-photo">
-                {{ with resources.Get "images/placeholder.png" }}
-                <img src="{{ .RelPermalink }}"></img>
-                {{ end }}
-        </div>
+    <div class="sub-team-info">
+        <h2>Team 3</h2>
+        <p>Here is some fascinating information about team 3</p>
+    </div>
+    <div class="sub-team-photo">
+        {{ with resources.Get "images/placeholder.png" }}
+        <img src="{{ .RelPermalink }}"></img>
+        {{ end }}
+    </div>
 </div>
 <div class="sub-team-container">
 
-        <div class="sub-team-photo">
-                {{ with resources.Get "images/placeholder.png" }}
-                <img src="{{ .RelPermalink }}"></img>
-                {{ end }}
-        </div>
-        <div class="sub-team-info">
-                <h2>Team 4</h2>
-                <p>Here is some fascinating information about team 4</p>
-        </div>
+    <div class="sub-team-photo">
+        {{ with resources.Get "images/placeholder.png" }}
+        <img src="{{ .RelPermalink }}"></img>
+        {{ end }}
+    </div>
+    <div class="sub-team-info">
+        <h2>Team 4</h2>
+        <p>Here is some fascinating information about team 4</p>
+    </div>
 </div>
 {{ end }}
