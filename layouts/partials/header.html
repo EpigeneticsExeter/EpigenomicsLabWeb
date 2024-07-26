@@ -1,19 +1,21 @@
-<html>
+{{ $style := resources.Get "sass/header.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
-<head>
-    {{ $header_sass := resources.Get "sass/header.scss" }}
-    {{ $style := $header_sass | resources.ToCSS | resources.Fingerprint }}
-    {{ with $style }}
-    <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
-    {{ end }}
-</head>
+<div class="main-navbar">
+    {{ $logo_image := resources.Get "images/logo.png" }}
+    <a id="logo" href="/EpigenomicsLabWeb">
+        <img src="{{ $logo_image.RelPermalink }}">
+    </a>
+    <div class="inner-navbar">
+        <a href="/EpigenomicsLabWeb/people">People</a>
+        <div class="dropdown">Research
+            <div class="dropdown-content">
+                <a href="/EpigenomicsLabWeb/publications">Publications</a>
+                <a href="/EpigenomicsLabWeb/code">Code</a>
+            </div>
+        </div>
+        <a href="/EpigenomicsLabWeb/collaborators">Collaborators</a>
+    </div>
 
-<ul>
-    <li><a class="active" href="#">Home</a></li>
-    <li><a href="#">People</a></li>
-    <li><a href="#">Research</a></li>
-    <li><a href="#">Collaborators</a></li>
-    <li><a href="#">Contact Us</a></li>
-</ul>
-
-</html>
+    <a id="contact-us" href="/EpigenomicsLabWeb/contact-us">Contact Us</a>
+</div>

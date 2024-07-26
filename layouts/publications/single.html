@@ -1,0 +1,33 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/individual_publication.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="main-container">
+    <div class="abstract-data-container">
+        <div class="section">
+            <h1>Abstract</h1>
+            {{ .Content }}
+        </div>
+        {{ $number_of_geos :=  strings.CountWords .Params.geo_numbers }}
+        {{ if gt  $number_of_geos 0 }}
+        <div class="section">
+            <h1>Data Used</h1>
+            {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
+            <div class="geo_grid">
+                {{ range $geo_numbers }}
+                <div class="geo_item">
+                    {{ $geo_item := index . 0}}
+                    <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc={{ $geo_item }}" target="_blank">{{ $geo_item }}</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="publication-iframe-container">
+        <iframe src="{{ .Params.link }}"></iframe>
+    </div>
+</div>
+{{ end }}

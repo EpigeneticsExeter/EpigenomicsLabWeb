@@ -1,0 +1,37 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+
+/* --------------------- */
+/* OVERARCHING STRUCTURE */
+/* --------------------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: $text_dark_green;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------- */
+/* 404 PAGE */
+/* -------- */
+.text-centre {
+    @include main-text;
+    text-align: center;
+}
+
+.button {
+    background-color: $base-green;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}

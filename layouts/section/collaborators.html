@@ -1,0 +1,38 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/collaborators.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+{{ $tech_background := resources.Get "images/tech-background.svg" }}
+<div id="slideshow" class="slideshow-container">
+    {{ range .Pages }}
+    {{ if .Params.featured }}
+    <div class="slide fade-in">
+        <div class="image-container">
+        {{ with resources.Get "images/placeholder.png" }}
+        <img src="{{ .RelPermalink }}"></img>
+        {{ end }}
+        </div>
+        <div class="description">
+            <h1>{{ .Params.name }}</h1>
+            <p>{{ .Content }}</p>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <div class="slideshow-navigation-container">
+    {{ range $index, $page := .Pages }}
+    {{ if .Params.featured }}
+        <span class="dot-indicator" onclick="switchSlide({{ $index }})"></span>
+    {{ end }}
+    {{ end }}
+    </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+{{ with resources.Get "js/collaborator_slideshow.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
+{{ end }}

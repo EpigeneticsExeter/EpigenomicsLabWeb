@@ -1,0 +1,32 @@
+@import "colours/light-mode";
+@import "font/text.scss";
+
+.main-footer-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark_green;
+    @include navigation-text;
+    color: white;
+    flex-shrink: 0;
+}
+
+.copyright-box {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.additional-links {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 0px 20px;
+}
+
+.additional-links a {
+    text-decoration: none;
+    margin: 20px;
+    color: white;
+}

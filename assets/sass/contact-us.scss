@@ -1,0 +1,40 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+
+.main-container {
+    display: flex;
+    margin-top: 2%;
+
+    .contact-and-join-container {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    .address-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 60%;
+        margin-right: 5%;
+
+
+        p {
+            text-align: right;
+        }
+
+        img {
+            border-radius: 2%;
+            height: 50%;
+        }
+    }
+}
+
+p {
+    @include small-main-text;
+}
+
+h1 {
+    @include main-text;
+}

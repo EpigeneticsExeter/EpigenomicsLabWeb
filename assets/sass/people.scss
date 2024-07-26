@@ -1,0 +1,82 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+@import "filter_boxes.scss";
+
+/* ---------------- */
+/* GRID OF PROFILES */
+/* ---------------- */
+.people-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 70%;
+    margin-left: 30%;
+}
+
+.person-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    margin: 2px;
+    border-radius: 5px;
+    @include small-main-text;
+}
+
+.person-profile:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------- */
+/* INDIVIDUAL PROFILES */
+/* ------------------- */
+.profile_picture {
+    object-fit: cover;
+    width: 70%;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    aspect-ratio: 1/1;
+}
+
+.person-profile h1 {
+    margin: 0;
+    height: 10%;
+    cursor: default;
+}
+
+.person-profile .link-tree {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.person-profile:hover .link-tree {
+    visibility: visible;
+    opacity: 1;
+}
+
+.link-tree a {
+    height: 100%;
+}
+
+.link-tree img {
+    height: 100%;
+    width: 100%;
+    max-height: 100px;
+}
+
+/* ------- */
+/* FADE IN */
+/* ------- */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.fade-in.show {
+    opacity: 1;
+}

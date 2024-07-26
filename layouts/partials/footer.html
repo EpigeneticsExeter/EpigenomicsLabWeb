@@ -1,0 +1,14 @@
+{{ $style := resources.Get "sass/footer.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+<div class="main-footer-box">
+    <div class="copyright-box">
+        <p>© Complex Disease Epigenetics Group</p>
+    </div>
+    <div class="additional-links">
+        <a href="#">LinkedIn</a>
+        <a href="https://medicine.exeter.ac.uk/research/facilities/rild/" target="_blank">UoE</a>
+        <a href="https://x.com/PsyEpigenetics/" target="_blank">X</a>
+        <a href="/EpigenomicsLabWeb/sitemap.xml">Sitemap</a>
+    </div>
+</div>

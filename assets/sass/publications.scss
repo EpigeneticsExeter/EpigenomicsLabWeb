@@ -1,0 +1,68 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+@import "filter_boxes.scss";
+
+/* ------------------- */
+/* PUBLICATION ENTRIES */
+/* ------------------- */
+
+.publications-container {
+    display: flex;
+    justify-self: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70%;
+    margin: 5px 5px 0px 30.5%;
+}
+
+.publication-link {
+    text-decoration: none;
+    width: 90%;
+}
+
+.publication {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 0px 10px 0px;
+    cursor: pointer;
+
+    .publication-header {
+        background-image: linear-gradient(70deg, $base_green, $light_green);
+        width: 150px;
+        height: 4px;
+    }
+
+    .title {
+        @include large-main-text;
+        color: black;
+        margin-left: 10px;
+
+    }
+
+    .journal,
+    .date,
+    .authors {
+        @include small-main-text;
+        color: black;
+        margin-left: 20px;
+    }
+
+}
+
+.publication:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ------- */
+/* FADE IN */
+/* ------- */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.fade-in.show {
+    opacity: 1;
+}

@@ -1,39 +1,87 @@
-ul {
-    list-style-type: none;
-    top: 0;
-    margin: 0;
-    padding: 0px;
+@import "colours/light-mode";
+@import "font/text.scss";
+
+/* ------------------- */
+/* MAIN NAVIGATION BAR */
+/* ------------------- */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: $base_green;
     position: sticky;
+    top: 0;
     width: 100%;
-    overflow: hidden;
-    background-color: #003C3C;
 }
 
-li {
-    float: left;
-    border: 1px solid black;
-}
-
-li:last-child {
-    float: right;
-    border: 1px 0px 1px 1px solid black;
+.inner-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: $base_green;
 }
 
 
-li a {
-    display: block;
-    color: #FFFFFF;
+.main-navbar a,
+.dropdown {
+    background-color: $base_green;
+    color: white;
     font-weight: bold;
-    padding: 14px 16px;
     text-align: center;
-    font-size: 20px;
     text-decoration: none;
+    @include navigation-text;
 }
 
-a:hover {
-    background-color: #003333;
+.inner-navbar a {
+    padding: 5px 15px;
+    margin: 5px 25px;
 }
 
-.active {
-    background-color: #005F5F;
+
+#logo img {
+    width: 120px;
+}
+
+#contact-us {
+    padding: 5px 15px;
+    margin: 5px 10px;
+}
+
+/*  Get dropdown menu to look like the anchors */
+.dropdown {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* ---------------------- */
+/* RESEARCH DROPDOWN MENU */
+/* ---------------------- */
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    /* ensures centering of dropdown menu, though very hacky */
+    left: -42%;
+
+    top: 100%;
+    background-color: $base_green;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- */
+/* HOVER */
+/* ----- */
+
+/* logo is an anchor, but we don't want it to have hover properties */
+.main-navbar a:not(#logo):hover {
+    background-color: $dark_green;
+    border-radius: 5px;
 }

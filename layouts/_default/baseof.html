@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 
 <head>
     <meta charset="utf-8">
+    <meta name="keywords" content="Epigenetics, Epigenomics, Lab, Exeter, Alzheimers, Schizophrenia, ADHD, Autism, Brain, Cancer, DNA, Methylation">
+    <meta name="description" content="The home of epigentics research in Exeter UK">
+    <link rel="icon" type="image/x-icon" href="/EpigenomicsLabWeb/favicon.ico">
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
     <title>
         {{ block "title" . }}
         {{ .Site.Title }}
         {{ end }}
     </title>
-</head>
-{{ partial "partials/header.html" }}
-
-<body style="color: #003B3C; margin: 0;">
-    {{ block "main" . }}
-    This is placeholder text
+    <!--Put any additional head items (like style sheets) in this block-->
+    {{ block "extra_head" . }}
     {{ end }}
+</head>
+
+<body>
+    {{ partial "partials/header.html" }}
+
+    <div class="content">
+        <!--Put your main web content in this block-->
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+
+    {{ partial "partials/footer.html"}}
+
+    <!--Put any js scripts in this block-->
+    {{ block "scripts" . }}
+    {{ end }}
+
 </body>
 
 </html>

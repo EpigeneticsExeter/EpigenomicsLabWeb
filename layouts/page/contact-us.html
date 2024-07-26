@@ -1,0 +1,41 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/contact-us.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="main-container">
+    <div class="contact-and-join-container">
+        <h1>Join Us</h1>
+
+        <p>
+            Vacancies in our group are regularly updated on this <a href="https://jobs.exeter.ac.uk/hrpr_webrecruitment/wrd/run/etrec105gf.open?wvid=3817591jNg" target="_blank">page</a>.<br>
+            We are always keen to hear from talented graduate students and 
+            postdocs who may be interested in joining our group.<br>
+            Please don’t hesitate to get in touch!
+        </p>
+
+        <h1>Collaborators</h1>
+
+        <p>
+            If you are thinking about collaborating with us, please contact us at<br>
+            blahblahblah@exeter.com
+        </p>
+
+    </div>
+    <div class="address-container">
+        {{ with resources.Get "images/RILD-building.jpg" }}
+        <img src="{{ .RelPermalink }}">
+            {{ end }}
+        <h1>Our Address</h1>
+        <p>
+            RILD Building Level 3 South<br>
+            Royal Deveon & Exeter Hospital<br>
+            Barrack Rd<br>
+            Exeter<br>
+            EX2 5DW  UK<br>
+            +44(0)1392-406779
+        </p>
+    </div>
+</div>
+{{ end }}
