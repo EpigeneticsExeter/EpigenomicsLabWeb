@@ -29,7 +29,7 @@ recent is 'within the last year'-->
     <h1>Recent events</h1>
 </div>
 <div class="blog-grid">
-    {{ range .Pages.ByDate }}
+    {{ range .Pages.ByDate.Reverse }}
         {{ $date_difference := now.Sub .Date }}
         {{ if le $date_difference $hours_in_a_year }}
             {{ if not .Params.featured }}
@@ -55,7 +55,7 @@ recent is 'within the last year'-->
     <h1>Older events</h1>
 </div>
 <div class="blog-grid">
-    {{ range .Pages.ByDate }}
+    {{ range .Pages.ByDate.Reverse }}
         {{ $date_difference := now.Sub .Date }}
         {{ if gt $date_difference $hours_in_a_year }}
             {{ if not .Params.featured }}
