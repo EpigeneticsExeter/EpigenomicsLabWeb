@@ -1,0 +1,107 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+
+.back-button {
+    display: flex;
+    width: 4%;
+    justify-content: space-between;
+    margin: 1%;
+    background-color: $base_green;
+    border-radius: 10px;
+    padding: 5px;
+    position: fixed;
+
+    a {
+        text-decoration: none;
+        color: $text_dark_green;
+        @include navigation-text;
+        font-weight: bold;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-self: center;
+
+
+    .blog-article-top {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            @include main-text;
+            align-self: flex-start;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        h3 {
+            @include small-main-text;
+            align-self: flex-start;
+            margin: 0;
+        }
+
+        p {
+            @include small-main-text;
+            align-self: flex-start;
+            margin: 0 0 2% 0;
+        }
+
+        .author-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2%;
+
+            .author-image {
+                height: 5%;
+                width: 5%;
+                aspect-ratio: 1/1;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            .author-information {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    margin: 0 5%;
+                }
+            }
+        }
+
+        p {
+            @include small-main-text;
+            align-self: flex-start;
+        }
+
+        .blog-image-container {
+            display: flex;
+            justify-content: center;
+            max-height: 80%;
+            max-width: 80%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .blog-article {
+        @include small-main-text;
+
+        img {
+            width: 80%;
+        }
+    }
+}

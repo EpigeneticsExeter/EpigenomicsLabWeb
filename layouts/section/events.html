@@ -1,0 +1,82 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/events.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+{{ $featured_pages := where .Pages ".Params.featured" "eq" 1 }}
+{{ with index $featured_pages 0 }}
+    <div class="featured-blog-box">
+        <div class="featured-text-box">
+        <h2>Featured: {{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+        <a href="{{ .RelPermalink }}">
+            <button class="go-to-featured-article">Read More</button>
+        </a>
+        </div>
+        <div class="featured-image-box">
+            {{ with resources.Get .Params.image }}
+            <img src="{{ .RelPermalink }}"></img>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}
+
+<!-- Instead of making users say if the event is recent, we will just say
+recent is 'within the last year'-->
+{{ $hours_in_a_year := time.ParseDuration "8760h" }}
+<div class="section-header">
+    <h1>Recent events</h1>
+</div>
+<div class="blog-grid">
+    {{ range .Pages.ByDate.Reverse }}
+        {{ $date_difference := now.Sub .Date }}
+        {{ if le $date_difference $hours_in_a_year }}
+            {{ if not .Params.featured }}
+                <div class="blog-box">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="blog-image-box">
+                            {{ with resources.Get .Params.image }}
+                            <img src="{{ .RelPermalink }}"></img>
+                            {{ end }}
+                        </div>
+                    </a>
+                <div class="blog-text-box">
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Description }}</p>
+                </div>
+                </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>
+
+<div class="section-header">
+    <h1>Older events</h1>
+</div>
+<div class="blog-grid">
+    {{ range .Pages.ByDate.Reverse }}
+        {{ $date_difference := now.Sub .Date }}
+        {{ if gt $date_difference $hours_in_a_year }}
+            {{ if not .Params.featured }}
+                <div class="blog-box">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="blog-image-box">
+                            {{ with resources.Get .Params.image }}
+                            <img src="{{ .RelPermalink }}"></img>
+                            {{ end }}
+                        </div>
+                    </a>
+                <div class="blog-text-box">
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Description }}</p>
+                </div>
+                </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+{{ end }}
