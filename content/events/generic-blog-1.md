@@ -4,7 +4,7 @@ Description = "Description"
 date = 2024-08-01
 [params]
     featured = 0
-    author = "Sam Fletcher"
+    author = "Siyi"
     image = "images/placeholder.png"
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Pizza at Topsham Brewery"
 Description = "Lunch at Topsham Brewery followed by ice cream and kayaking"
-date = "01/08/2024"
+date = 2024-08-01
 [params]
     featured = 1
     author = "Sam Fletcher"
