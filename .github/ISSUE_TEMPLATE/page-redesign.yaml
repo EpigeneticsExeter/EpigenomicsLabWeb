@@ -1,0 +1,30 @@
+name: Page Redesign
+description: Make a request to redesign how a page looks/functions
+title: "[Redesign]: "
+labels: ["redesign"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: textarea
+    id: where
+    attributes:
+      label: "What page needs redesigning?" 
+      description: Give a path to the page if possible
+    validations:
+      required: true
+  - type: textarea
+    id: problems
+    attributes:
+      label: "Problems" 
+      description: Give details for the current problems with the design of this page
+    validations:
+      required: true
+  - type: textarea
+    id: improvements
+    attributes:
+      label: "Suggested improvements" 
+      description: If at all possible, could you give some suggested ways to improve? You can provide an image if it makes explaining easier
+    validations:
+      required: false
