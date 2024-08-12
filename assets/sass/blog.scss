@@ -99,5 +99,9 @@
 
     .blog-article {
         @include small-main-text;
+
+        img {
+            width: 80%;
+        }
     }
 }

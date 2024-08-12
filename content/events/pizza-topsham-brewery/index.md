@@ -49,7 +49,8 @@ the hot summer day, leaving us feeling refreshed and satisfied.
 
 ## Kayaking Down the Canal
 
-![Kayaking](Kayaking.jpg)
+![Kayaking](/Images/events/Kayaking.jpg)
+![Kayaking 2](Kayaking.jpg)
 
 To top off our memorable day, we embarked on a thrilling kayaking adventure
 down the serene canal near Topsham Brewery. The tranquil waters and scenic
