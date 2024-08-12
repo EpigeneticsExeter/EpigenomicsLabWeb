@@ -42,6 +42,10 @@
     }
 }
 
+.featured-blog-box:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
+}
+
 .section-header {
     @include main-text;
     margin-left: 5%;
@@ -84,5 +88,9 @@
                 text-align: right;
             }
         }
+    }
+
+    .blog-box:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
     }
 }
