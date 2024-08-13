@@ -31,6 +31,7 @@
         align-self: flex-start;
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         h1 {
             @include main-text;
@@ -54,8 +55,8 @@
             margin-bottom: 2%;
 
             .author-image {
-                height: 5%;
-                width: 5%;
+                height: 5vh;
+                width: 5vh;
                 aspect-ratio: 1/1;
 
                 img {
