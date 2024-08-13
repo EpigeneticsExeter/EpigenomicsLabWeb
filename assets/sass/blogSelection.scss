@@ -16,6 +16,7 @@
     }
 
     .go-to-featured-article {
+        @include small-main-text;
         background-color: $base_green;
         border-radius: 8px;
         border-style: none;
