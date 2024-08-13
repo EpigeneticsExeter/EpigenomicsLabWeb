@@ -1,9 +1,11 @@
 #!/bin/bash
 
-PEOPLE_DIR="$(dirname "$0")/../content/people"
-ASSETS_DIR="$(dirname "$0")/../assets"
-IMAGES_DIR="$(dirname "$0")/../assets/images/profile_pictures"
-PYTHON_DIR="$(dirname "$0")/processing_scripts/"
+SCRIPTS_DIR="$(realpath "$(dirname "$0")")"
+PEOPLE_DIR="$SCRIPTS_DIR/../content/people"
+ALUMNI_DIR="$SCRIPTS_DIR/../content/alumni"
+ASSETS_DIR="$SCRIPTS_DIR/../assets"
+IMAGES_DIR="$SCRIPTS_DIR/../assets/images/profile_pictures"
+PYTHON_DIR="$SCRIPTS_DIR/processing_scripts/"
 
 cat << EOF
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -45,11 +47,16 @@ read -r github
 echo "Enter the person's ORCID username:"
 read -r orcid
 
+echo "Is this person Alumni? (y/n)"
+read -r alumni
+
 ## ================= ##
 ##   EMAIL PARSING   ##
 ## ================= ##
 
-formatted_email=$(python "${PYTHON_DIR}/parse_email.py" "${email}")
+if [[ -n "${email}" ]]; then
+    formatted_email=$(python "${PYTHON_DIR}/email_parse.py" "${email}")
+fi
 
 ## ================ ##
 ##   NAME PARSING   ##
@@ -83,7 +90,13 @@ relative_image_path=$(realpath -s --relative-to="${ASSETS_DIR}" "${image_path}")
 ##   GENERATION   ##
 ## ============== ##
 
-cat > "${PEOPLE_DIR}/${concatenated_name}.md" << EOF
+if [[ "${alumni}" == "y" ]]; then
+    out_file="${ALUMNI_DIR}/${concatenated_name}.md"
+else
+    out_file="${PEOPLE_DIR}/${concatenated_name}.md"
+fi
+
+cat > "${out_file}" << EOF
 +++
 [params]
   name = "${capitalized_name}"
