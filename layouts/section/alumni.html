@@ -1,0 +1,18 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/people.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+
+
+{{ define "main" }}
+{{ partial "partials/people.html" . }}
+{{ end }}
+
+
+{{ define "scripts" }}
+{{ with resources.Get "js/people_filtering.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
+{{ end }}
+
