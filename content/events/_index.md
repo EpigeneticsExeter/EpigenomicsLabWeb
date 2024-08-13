@@ -1,4 +1,4 @@
 +++
 title = "events"
-layout = "events"
+layout = "blogSelection"
 +++
