@@ -1,0 +1,32 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/projectsHome.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="main-container">
+    {{ with resources.Get "/images/our-projects-background.jpg" }}
+    <div class="our-projects-container" style="background-image: url('{{ .RelPermalink }}')"}>
+    {{ end }}
+        <h1>Our Projects</h1>
+        <div class="learn-more-button">
+            <a href="projects">
+                Learn More
+            </a>
+        </div>
+    </div>
+    {{ with resources.Get "/images/pty-projects-background.jpg" }}
+    <div class="pty-projects-container" style="background-image: url('{{ .RelPermalink }}')"}>
+    {{ end }}
+        <h1>PTY Projects</h1>
+        <div class="learn-more-button">
+            <a href="ptyProjects">
+                Learn More
+            </a>
+        </div>
+    </div>
+</div>
+<div class="caption">
+    <p>Woman carrying white and green textbook by @javatrueba on <a href="https://unsplash.com/photos/woman-carrying-white-and-green-textbook-iQPr1XkF5F0?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash">unsplash</a></p>
+</div>
+{{ end }}
