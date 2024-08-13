@@ -8,11 +8,11 @@
 {{ with index $featured_pages 0 }}
     <div class="featured-blog-box">
         <div class="featured-text-box">
-        <h2>Featured: {{ .Title }}</h2>
-        <p>{{ .Description }}</p>
-        <a href="{{ .RelPermalink }}">
-            <button class="go-to-featured-article">Read More</button>
-        </a>
+            <h2>Featured: {{ .Title }}</h2>
+            <p>{{ .Description }}</p>
+            <a href="{{ .RelPermalink }}">
+                <button class="go-to-featured-article">Read More</button>
+            </a>
         </div>
         <div class="featured-image-box">
             {{ with resources.Get .Params.image }}
