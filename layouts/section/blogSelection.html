@@ -1,5 +1,5 @@
 {{ define "extra_head" }}
-{{ $style := resources.Get "sass/blogSection.scss" | resources.ToCSS | resources.Fingerprint }}
+{{ $style := resources.Get "sass/blogSelection.scss" | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
 
