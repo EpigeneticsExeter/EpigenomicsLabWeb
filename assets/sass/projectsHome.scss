@@ -1,0 +1,92 @@
+@import "colours/light-mode.scss";
+@import "font/text.scss";
+
+@mixin learn-more {
+    display: flex;
+    justify-content: space-between;
+    background-color: $base_green;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 1%;
+
+    a {
+        text-decoration: none;
+        color: $text_dark_green;
+        @include navigation-text;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+}
+
+@mixin project-container {
+    display: flex;
+    align-items: center;
+    margin: 5% 1% 0 1%;
+    @include main-text;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin container-background {
+    background-size: cover;
+    height: 65vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin header {
+    padding: 5px;
+    background-color: $base_green;
+    margin: 1%;
+    border-radius: 10px;
+    font-size: 3rem;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    @include main-text;
+    color: white;
+    height: 100%;
+
+    .our-projects-container {
+        @include project-container;
+        @include container-background;
+
+        h1 {
+            align-self: flex-end;
+            @include header;
+        }
+
+        .learn-more-button {
+            align-self: flex-start;
+            @include learn-more;
+        }
+    }
+
+    .pty-projects-container {
+        @include project-container;
+        @include container-background;
+
+        h1 {
+            align-self: flex-start;
+            @include header;
+        }
+
+        .learn-more-button {
+            align-self: flex-end;
+            @include learn-more;
+        }
+    }
+}
+
+.caption {
+    display: flex;
+    justify-content: flex-end;
+    @include small-main-text;
+
+    p {
+        margin: 0 1%;
+    }
+}

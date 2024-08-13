@@ -1,5 +1,5 @@
 {{ define "extra_head" }}
-{{ $style := resources.Get "sass/events.scss" | resources.ToCSS | resources.Fingerprint }}
+{{ $style := resources.Get "sass/blogSelection.scss" | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
 
@@ -8,11 +8,11 @@
 {{ with index $featured_pages 0 }}
     <div class="featured-blog-box">
         <div class="featured-text-box">
-        <h2>Featured: {{ .Title }}</h2>
-        <p>{{ .Description }}</p>
-        <a href="{{ .RelPermalink }}">
-            <button class="go-to-featured-article">Read More</button>
-        </a>
+            <h2>Featured: {{ .Title }}</h2>
+            <p>{{ .Description }}</p>
+            <a href="{{ .RelPermalink }}">
+                <button class="go-to-featured-article">Read More</button>
+            </a>
         </div>
         <div class="featured-image-box">
             {{ with resources.Get .Params.image }}
@@ -41,10 +41,10 @@ recent is 'within the last year'-->
                             {{ end }}
                         </div>
                     </a>
-                <div class="blog-text-box">
-                    <h2>{{ .Title }}</h2>
-                    <p>{{ .Description }}</p>
-                </div>
+                    <div class="blog-text-box">
+                        <h2>{{ .Title }}</h2>
+                        <p>{{ .Description }}</p>
+                    </div>
                 </div>
             {{ end }}
         {{ end }}
@@ -67,10 +67,10 @@ recent is 'within the last year'-->
                             {{ end }}
                         </div>
                     </a>
-                <div class="blog-text-box">
-                    <h2>{{ .Title }}</h2>
-                    <p>{{ .Description }}</p>
-                </div>
+                    <div class="blog-text-box">
+                        <h2>{{ .Title }}</h2>
+                        <p>{{ .Description }}</p>
+                    </div>
                 </div>
             {{ end }}
         {{ end }}

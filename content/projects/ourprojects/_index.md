@@ -1,4 +1,4 @@
 +++
-title = "events"
+title = "projects"
 layout = "blogSelection"
 +++

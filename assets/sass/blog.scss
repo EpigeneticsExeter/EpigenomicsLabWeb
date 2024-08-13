@@ -31,24 +31,21 @@
         align-self: flex-start;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
 
         h1 {
             @include main-text;
-            align-self: flex-start;
             font-size: 1.5rem;
             margin-bottom: 0;
         }
 
         h3 {
             @include small-main-text;
-            align-self: flex-start;
             margin: 0;
         }
 
         p {
             @include small-main-text;
-            align-self: flex-start;
             margin: 0 0 2% 0;
         }
 
@@ -85,8 +82,10 @@
         }
 
         .blog-image-container {
+            align-self: center;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             max-height: 80%;
             max-width: 80%;
 

@@ -1,7 +1,7 @@
 +++
 [params]
   name = "Eilis Hannon"
-  image = "/images/profile_pictures/Eilis_Hannon.jfif"
+  image = "/images/profile_pictures/eilishannon.jpg"
   position = "PI"
   team = "analysis"
   [linktree]

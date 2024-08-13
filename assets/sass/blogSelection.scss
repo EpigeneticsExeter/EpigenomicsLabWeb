@@ -11,10 +11,12 @@
     margin-top: 2vh;
 
     .featured-text-box {
-        margin-right: 10px;
+        margin: 0 2%;
+        width: 50%;
     }
 
     .go-to-featured-article {
+        @include small-main-text;
         background-color: $base_green;
         border-radius: 8px;
         border-style: none;
