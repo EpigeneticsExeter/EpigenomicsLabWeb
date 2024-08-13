@@ -32,6 +32,9 @@
             {{ with resources.Get .Params.image }}
             <img src="{{ .RelPermalink }}"></img>
             {{ end }}
+            {{ if .Params.citation.name }}
+            <p> "{{ .Params.citation.name }}", from <a href="{{ .Params.citation.link }}">{{ .Params.citation.source_name }}</a></p>
+            {{ end }}
         </div>
 
     </div> 

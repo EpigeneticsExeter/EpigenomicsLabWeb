@@ -6,6 +6,10 @@ date = 2024-06-05
     featured = 1
     author = "Eilis Hannon"
     image = "images/projects/godmc.png"
+    [citation]
+        name = "go dmc greatest hits"
+        source_name = "godmc"
+        link = "http://mqtldb.godmc.org.uk/images/go_dmc_greatest_hits.png"
 +++
 
 # Genetics of DNA Methylation Consortium

@@ -84,7 +84,8 @@
         .blog-image-container {
             align-self: center;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             max-height: 80%;
             max-width: 80%;
 
