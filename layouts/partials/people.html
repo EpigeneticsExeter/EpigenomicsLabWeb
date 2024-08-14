@@ -5,6 +5,19 @@
 {{ $email := resources.Get "/svgs/email.svg"}}
 {{ $search_icon := resources.Get "/svgs/search_icon.svg" }}
 
+<!-- Parse people data -->
+{{ $people_data := dict }}
+{{ $path := "data/people.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $people_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+{{ $is_alumni_page := .Params.alumni }}
+
 <div class="main-container">
 
     <div class="filter-container">
@@ -26,42 +39,45 @@
 
 
     <div class="people-photo-grid">
-        {{ range .Pages }}
-        <div id='{{ replace .Params.name " " "" | lower}}' class="person-profile {{ .Params.team | lower }} {{ .Params.position | lower }}">
-            {{ with resources.Get .Params.image }}
+        {{ range $people_data }}
+        {{ if eq .alumni $is_alumni_page }}
+        <div id='{{ replace .name " " "" | lower}}' class="person-profile {{ .theme | lower }} {{ .position | lower }}">
+            {{ $profile_picture := printf "/images/profile_pictures/%s" .image }}
+            {{ with resources.Get $profile_picture }}
             <img class="profile_picture" src="{{ .RelPermalink }}"></img>
             {{ end }}
             <div class="link-tree">
-                {{ if .Params.linktree.github}}
-                <a href="https://github.com/{{ .Params.linktree.github}}" target="_blank">
+                {{ if .github }}
+                <a href="https://github.com/{{ .github}}" target="_blank">
                     <img src="{{ $github_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.linktree.x }}
-                <a href="https://x.com/{{ .Params.linktree.x }}" target="_blank">
+                {{ if .x }}
+                <a href="https://x.com/{{ .x }}" target="_blank">
                     <img src="{{ $X_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.linktree.linkedin }}
-                <a href="https://linkedin.com/in/{{ .Params.linktree.linkedin }}" target="_blank">
+                {{ if .linkedin }}
+                <a href="https://linkedin.com/in/{{ .linkedin }}" target="_blank">
                     <img src="{{ $linkedin_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.linktree.orcid }}
-                <a href="https://orcid.org/{{ .Params.linktree.orcid }}" target="_blank">
+                {{ if .orcid }}
+                <a href="https://orcid.org/{{ .orcid }}" target="_blank">
                     <img src="{{ $orcid_logo.RelPermalink }}">
                 </a>
                 {{ end }}
-                {{ if .Params.linktree.email }}
-                <a href="mailto:{{ .Params.linktree.email }}" target="_blank">
+                {{ if .email }}
+                <a href="mailto:{{ .email }}" target="_blank">
                     <img src="{{ $email.RelPermalink }}">
                 </a>
                 {{ end }}
             </div>
             <div class="name">
-                <h1>{{ .Params.name }}</h1>
+                <h1>{{ .name }}</h1>
             </div>
         </div>
+        {{ end }}
         {{ end}}
     </div>
 
