@@ -1,28 +1,4 @@
 {
-    "Sam Fletcher": {
-        "name": "Sam Fletcher",
-        "image": "samfletcher.jpg",
-        "alumni": false,
-        "position": "GRA",
-        "theme": "Analysis",
-        "github": "sof202",
-        "email": "s.o.fletcher@exeter.ac.uk",
-        "linkedin": "sam-fletcher-6830511b9",
-        "x": null,
-        "orcid": null
-    },
-    "Siyi Wang": {
-        "name": "Siyi Wang",
-        "image": "siyiwang.jpg",
-        "alumni": false,
-        "position": "GRA",
-        "theme": "Analysis",
-        "github": "siyiSEA",
-        "email": null,
-        "linkedin": null,
-        "x": null,
-        "orcid": null
-    },
     "Eilis Hannon": {
         "name": "Eilis Hannon",
         "image": "eilishannon.jpg",
@@ -44,6 +20,30 @@
         "github": "aspides-js",
         "email": null,
         "linkedin": null,
+        "x": null,
+        "orcid": null
+    },
+    "Siyi Wang": {
+        "name": "Siyi Wang",
+        "image": "siyiwang.jpg",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "analysis",
+        "github": "SiyiSEA",
+        "email": "s.w.wang@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null
+    },
+    "Sam Fletcher": {
+        "name": "Sam Fletcher",
+        "image": "samfletcher.jpg",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "Analysis Bioinformatics",
+        "github": "sof202",
+        "email": "s.o.fletcher@exeter.ac.uk",
+        "linkedin": "sam-fletcher-6830511b9",
         "x": null,
         "orcid": null
     }
