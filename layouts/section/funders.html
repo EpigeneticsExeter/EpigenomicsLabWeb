@@ -1,0 +1,40 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/funders.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+
+<!-- Parse funders data -->
+{{ $funder_data := dict }}
+{{ $path := "data/funders.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $funder_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+
+<div class="main-container">
+    <h1>Funders</h1>
+    <div class="funder-grid">
+        {{ range $funder_data }}
+            <!-- Can't directly pass .link into href for some reason
+                 I presume due to its type? -->
+            {{ $funder_link := .link }}
+            {{ $funder_image := printf "/images/funders/%s" .image }}
+
+            {{ with resources.Get $funder_image }}
+                <a href="{{ $funder_link }}" target="_blank">
+                    <div class="funder">
+                        <img src="{{ .RelPermalink }}"></img>
+                    </div>
+                </a>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
