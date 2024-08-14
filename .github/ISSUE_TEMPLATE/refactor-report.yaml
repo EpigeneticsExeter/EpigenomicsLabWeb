@@ -1,0 +1,40 @@
+name: Refactor Report
+description: File a code refactor report
+title: "[Refactor]: "
+labels: ["refactor"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this refactor report!
+  - type: textarea
+    id: file-path
+    attributes:
+      label: Path to affected file(s)
+      description: Please provide the path(s) to the file(s) that requires changing
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Type of refactor"
+      description: Please specify the type of change that needs to be implemented
+      multiple: true
+      options:
+        - Edge case error handling
+        - Code optimisation
+        - Comment improvement
+        - Code understandability improvement
+        - Code readability improvement
+        - Remove code repetition
+    validations:
+      required: true
+  - type: textarea
+    id: Fault
+    attributes:
+      label: Description of required code refactor
+      description: What is the problem currently and what steps can we take to ammend this?
+      placeholder: "Currently, [file] uses... It would be better to..."
+    validations:
+      required: true
