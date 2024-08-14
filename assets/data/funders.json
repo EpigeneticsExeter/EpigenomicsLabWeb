@@ -1,14 +1,70 @@
 {
-    "alzheimers association" : {
+    "Alzheimers association" : {
         "link": "https://www.alz.org",
-        "image": "alz_ass.jpg"
+        "image": "alzheimers-association.jpg"
     },
     "Alzheimers research uk" : {
         "link": "https://www.alzheimersresearchuk.org",
-        "image": "alz_research.jpg"
+        "image": "alzheimers-research.jpg"
     },
     "The Royal Society": {
         "link": "https://royalsociety.org",
-        "image": "royal.jpg"
+        "image": "royal-society.jpg"
+    },
+    "Alzheimers society": {
+        "link": "https://www.alzheimers.org.uk",
+        "image": "Alzheimers-society.jpg"
+    },
+    "American Asthma Foundation": {
+        "link": "https://en.wikipedia.org/wiki/American_Asthma_Foundation",
+        "image": "american-asthma.jpg"
+    },
+    "Autism speaks": {
+        "link": "https://www.autismspeaks.org",
+        "image": "autism-speaks.jpg"
+    },
+    "BBSRC": {
+        "link": "https://www.ukri.org/councils/bbsrc/",
+        "image": "BBSRC.png"
+    },
+    "BRACE": {
+        "link": "https://www.alzheimers-brace.org",
+        "image": "brace.jpg"
+    },
+    "Brain and Behaviour": {
+        "link": "https://bbrfoundation.org",
+        "image": "brain-behaviour.jpg"
+    },
+    "ESRC": {
+        "link": "https://www.ukri.org/councils/esrc/",
+        "image": "ESRC.png"
+    },
+    "GW4": {
+        "link": "https://gw4.ac.uk",
+        "image": "gw4.jpg"
+    },
+    "Lilly": {
+        "link": "https://www.lilly.com",
+        "image": "lilly.jpg"
+    },
+    "UKRI": {
+        "link": "https://www.ukri.org/councils/mrc/",
+        "image": "UKRI.png"
+    },
+    "NIH": {
+        "link": "https://www.nih.gov",
+        "image": "nih.jpg"
+    },
+    "Seventh Framework Programme": {
+        "link": "https://commission.europa.eu/research-and-innovation_en",
+        "image": "seventh-framework.jpg"
+    },
+    "SFARI": {
+        "link": "https://www.sfari.org",
+        "image": "SFARI.jpg"
+    },
+    "Wellcome": {
+        "link": "https://wellcome.org",
+        "image": "Wellcome-Trust.png"
     }
 }
