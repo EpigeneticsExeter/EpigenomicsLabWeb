@@ -1,0 +1,34 @@
+name: Funder request
+description: Make a request to add/remove/change data on a funder
+title: "[New funder]: "
+labels: ["funder"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: textarea
+    id: funder
+    attributes:
+      label: "Which funder are you requesting a change for" 
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Request type"
+      description: Please specify the type of change that needs to be addressed
+      multiple: true
+      options:
+        - Add a new funder
+        - Remove a funder
+        - Make a change to an existing funder (new image/website)
+    validations:
+      required: true
+  - type: textarea
+    id: Details
+    attributes:
+      label: "Please give us details about the change"
+      description: For a new funder or change to funder, please give a link to the image and/or the link to their website
+    validations:
+      required: false
