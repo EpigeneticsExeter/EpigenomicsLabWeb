@@ -1,0 +1,50 @@
+{
+    "Sam Fletcher": {
+        "name": "Sam Fletcher",
+        "image": "samfletcher.jpg",
+        "alumni": false,
+        "position": "GRA",
+        "theme": "Analysis",
+        "github": "sof202",
+        "email": "s.o.fletcher@exeter.ac.uk",
+        "linkedin": "sam-fletcher-6830511b9",
+        "x": null,
+        "orcid": null
+    },
+    "Siyi Wang": {
+        "name": "Siyi Wang",
+        "image": "siyiwang.jpg",
+        "alumni": false,
+        "position": "GRA",
+        "theme": "Analysis",
+        "github": "siyiSEA",
+        "email": null,
+        "linkedin": null,
+        "x": null,
+        "orcid": null
+    },
+    "Eilis Hannon": {
+        "name": "Eilis Hannon",
+        "image": "eilishannon.jpg",
+        "alumni": false,
+        "position": "PI",
+        "theme": "Analysis",
+        "github": "ejh243",
+        "email": null,
+        "linkedin": null,
+        "x": null,
+        "orcid": null
+    },
+    "Jessica Shields": {
+        "name": "Jessica Shields",
+        "image": "jessicashields.jpg",
+        "alumni": true,
+        "position": "GRA",
+        "theme": "Analysis",
+        "github": "aspides-js",
+        "email": null,
+        "linkedin": null,
+        "x": null,
+        "orcid": null
+    }
+}
