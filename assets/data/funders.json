@@ -1,0 +1,14 @@
+{
+    "alzheimers association" : {
+        "link": "https://www.alz.org",
+        "image": "alz_ass.jpg"
+    },
+    "Alzheimers research uk" : {
+        "link": "https://www.alzheimersresearchuk.org",
+        "image": "alz_research.jpg"
+    },
+    "The Royal Society": {
+        "link": "https://royalsociety.org",
+        "image": "royal.jpg"
+    }
+}
