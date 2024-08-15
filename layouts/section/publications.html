@@ -32,7 +32,7 @@
             <div class="publication">
                 <div class="publication-header"></div>
                 <div class="title">{{ .Params.title }}</div>
-                <div class="authors">
+                <div class="info">
                     {{ $max_number_authors := 7 }}
                     {{ $concatenated_authors := replace .Params.authors " " "" }}
                     {{ $number_of_authors := replace $concatenated_authors "," " " | countwords }}
@@ -47,8 +47,12 @@
                         {{ .Params.authors }}
                     {{ end }}
                 </div>
-                <div class="journal">{{ .Params.journal }}</div>
-                <div class="date">{{ .Params.date }}</div>
+                <div class="info">{{ .Params.journal }}</div>
+                <div class="info">{{ .Params.date }}</div>
+                <div class="data-container">
+                    
+                </div>
+                <div class="info">{{ .Params.abstract }}</div>
             </div>
         </a>
     {{ end }}

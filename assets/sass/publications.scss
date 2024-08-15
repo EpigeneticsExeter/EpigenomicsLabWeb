@@ -41,9 +41,7 @@
 
     }
 
-    .journal,
-    .date,
-    .authors {
+    .info {
         @include small-main-text;
         color: black;
         margin-left: 20px;
@@ -65,4 +63,11 @@
 
 .fade-in.show {
     opacity: 1;
+}
+
+/* ------ */
+/* HIDDEN */
+/* ------ */
+.hidden {
+    opacity: 0;
 }
