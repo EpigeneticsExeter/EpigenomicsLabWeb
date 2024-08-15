@@ -40,7 +40,7 @@
 
     <div class="publications-container">
     {{ range $publications_data }}
-            <div class="publication {{ replace .date " " "" }}" id=" {{ replace .title " " "" }} {{ replace .author " " "" }}">
+            <div class="publication {{ replace .date " " "" }}" id=" {{ replace .title " " "" }} {{ .author }}">
                 <div class="publication-header"></div>
                 <div class="title">{{ .title }}</div>
                 <div class="info subset-authors">
@@ -73,7 +73,7 @@
                     {{ if .doi }}
                         <div class="link-container">
                             <div class="link">
-                                <a href="{{ .Params.link }}" target="_blank">Publication Link</a>
+                                <a href="{{ .doi }}" target="_blank">Publication Link</a>
                             </div>
                         </div>
                     {{ end }}
