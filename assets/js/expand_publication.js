@@ -1,55 +1,41 @@
-function openPublicationClick(div) {
-    const clickedPublicationDiv = div.currentTarget;
+function setDisplay(publicationDiv, extraInfoDisplay, allAuthorsDisplay, subsetAuthorsDisplay) {
+    const elementsToDisplay = [
+        { element: publicationDiv.querySelector('div.extra-information-container'), display: extraInfoDisplay },
+        { element: publicationDiv.querySelector('div.all-authors'), display: allAuthorsDisplay },
+        { element: publicationDiv.querySelector('div.subset-authors'), display: subsetAuthorsDisplay },
+    ];
 
-    const extraInfoContainer = clickedPublicationDiv.querySelector('div.extra-information-container');
-    const allAuthorsDiv = clickedPublicationDiv.querySelector('div.all-authors');
-    const subsetAuthorsDiv = clickedPublicationDiv.querySelector('div.subset-authors');
+    elementsToDisplay.forEach(({ element, display }) => {
+        if (element) {
+            element.style.display = display;
+        }
+    });
+}
 
-    if (extraInfoContainer) {
-        extraInfoContainer.style.display = 'flex';
-    }
-    if (allAuthorsDiv) {
-        allAuthorsDiv.style.display = 'flex';
-    }
-    if (subsetAuthorsDiv) {
-        subsetAuthorsDiv.style.display = 'none';
-    }
-    const publicationDivs = document.querySelectorAll('.publication');
+function openPublication(event) {
+    const clickedPublicationDiv = event.currentTarget;
+
+    setDisplay(clickedPublicationDiv, 'flex', 'flex', 'none');
+
+    const publicationDivs = document.querySelectorAll('div.publication');
 
     publicationDivs.forEach(div => {
         if (div !== clickedPublicationDiv) {
-            closePublication(div); 
+            closePublication(div);
         }
     });
 }
 
 function closePublication(div) {
-    const publicationDiv = div;
-
-    const extraInfoContainer = publicationDiv.querySelector('div.extra-information-container');
-    const allAuthorsDiv = publicationDiv.querySelector('div.all-authors');
-    const subsetAuthorsDiv = publicationDiv.querySelector('div.subset-authors');
-
-    if (extraInfoContainer) {
-        extraInfoContainer.style.display = 'none';
-    }
-    if (allAuthorsDiv) {
-        allAuthorsDiv.style.display = 'none';
-    }
-    if (subsetAuthorsDiv) {
-        subsetAuthorsDiv.style.display = 'flex';
-    }
-
+    setDisplay(div, 'none', 'none', 'flex');
 }
 
 const publicationDivs = document.querySelectorAll('div.publication');
-console.log(publicationDivs);
-
 publicationDivs.forEach(div => {
-    closePublication(div)
+    closePublication(div);
 });
 
 publicationDivs.forEach(div => {
-    div.addEventListener('click', openPublicationClick);
+    div.addEventListener('click', openPublication);
 });
 
