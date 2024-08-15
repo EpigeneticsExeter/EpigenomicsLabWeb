@@ -55,18 +55,21 @@
                 <div class="info">{{ .Params.journal }}</div>
                 <div class="info">{{ .Params.date }}</div>
                 <div class="extra-information-container">
-                    {{ $number_of_geos :=  strings.CountWords .Params.geo_numbers }}
-                    {{ if gt  $number_of_geos 0 }}
-                        {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
-                        <div class="geo-grid">
-                            {{ range $geo_numbers }}
-                                <div class="geo-item">
-                                    {{ $geo_item := index . 0}}
-                                    <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc={{ $geo_item }}" target="_blank">{{ $geo_item }}</a>
-                                </div>
-                            {{ end }}
-                        </div>
-                    {{ end }}
+                    <div class="geo-container">
+                        {{ $number_of_geos :=  strings.CountWords .Params.geo_numbers }}
+                        {{ if gt  $number_of_geos 0 }}
+                            <h3>Geo Acession Numbers</h3>
+                            {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
+                            <div class="geo-grid">
+                                {{ range $geo_numbers }}
+                                    <div class="geo-item">
+                                        {{ $geo_item := index . 0}}
+                                        <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc={{ $geo_item }}" target="_blank">{{ $geo_item }}</a>
+                                    </div>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    </div>
                     <div class="info abstract">
                         {{ if .Params.abstract }}
                             <h3>Abstract</h3>
