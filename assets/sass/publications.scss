@@ -50,44 +50,31 @@
 
     }
 
-    .abstract {
-        display: flex;
-        flex-direction: column;
-
-        h3 {
-            margin: 1%;
-        }
-
-        p {
-            margin: 0 1% 2% 1%;
-        }
-
-    }
-
-    .geo-container {
+    .extra-information-container {
         display: flex;
         flex-direction: column;
         @include small-main-text;
 
-        h3 {
-            justify-self: flex-start;
-            margin: 5%;
+        h3,
+        h2 {
+            margin: 1%;
         }
 
-        .geo-grid {
-            display: grid;
-            align-self: center;
-            grid-template-columns: 1fr 1fr;
-            justify-items: center;
-            margin: 0 0 5% 10%;
-            gap: 2%;
+        p {
+            margin: 0 1% 1% 1%;
+        }
+
+        .geo-container {
+            display: flex;
+            margin: 1%;
 
             .geo-item {
                 display: flex;
-                border-radius: 10%;
+                border-radius: 7%;
                 background-color: $base_green;
                 padding: 10px;
                 @include small-main-text;
+                margin: 0 1%;
 
                 a {
                     text-decoration: none;
@@ -102,10 +89,6 @@
 
         }
     }
-
-
-
-
 }
 
 .publication:hover {

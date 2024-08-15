@@ -55,12 +55,21 @@
                 <div class="info">{{ .Params.journal }}</div>
                 <div class="info">{{ .Params.date }}</div>
                 <div class="extra-information-container">
-                    <div class="geo-container">
+                    {{ if or .Params.link .Params.geo_numbers .Params.abstract }}
+                        <h2>Paper information</h2>
+                    {{ end }}
+                    {{ if .Params.link }}
+                        <div class="geo-container">
+                            <div class="geo-item">
+                                <a href="{{ .Params.link }}" target="_blank">Publication Link</a>
+                            </div>
+                        </div>
+                    {{ end }}
                         {{ $number_of_geos :=  strings.CountWords .Params.geo_numbers }}
                         {{ if gt  $number_of_geos 0 }}
                             <h3>Geo Acession Numbers</h3>
                             {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
-                            <div class="geo-grid">
+                            <div class="geo-container">
                                 {{ range $geo_numbers }}
                                     <div class="geo-item">
                                         {{ $geo_item := index . 0}}
@@ -69,11 +78,9 @@
                                 {{ end }}
                             </div>
                         {{ end }}
-                    </div>
-                    <div class="info abstract">
                         {{ if .Params.abstract }}
-                            <h3>Abstract</h3>
-                            <p>{{ .Params.abstract }}</p>
+                        <h3>Abstract</h3>
+                        <p>{{ .Params.abstract }}</p>
                         {{ end }}
                     </div>
                 </div>
