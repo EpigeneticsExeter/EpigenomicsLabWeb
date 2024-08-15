@@ -2,7 +2,7 @@ const latestButton = document.getElementById('Latest')
 const oldestButton = document.getElementById('Oldest');
 const azButton = document.getElementById('A-Z');
 const zaButton = document.getElementById('Z-A');
-const publications = document.querySelectorAll('a.publication-link');
+const publications = document.querySelectorAll('div.publication');
 const searchInput = document.getElementById('searchInput');
 
 latestButton.addEventListener('click', () => sortPublicationsByDate('latestToOldest'));
@@ -36,7 +36,7 @@ function sequentiallyShowPublications(publications) {
 // ------- //
 
 function sortPublicationsByDate(sortOrder) {
-    const publications = Array.from(document.querySelectorAll('a.publication-link'));
+    const publications = Array.from(document.querySelectorAll('div.publication'));
 
     function getMonthNumber(month) {
         return new Date(Date.parse(month + " 1, 2000")).getMonth();
@@ -70,7 +70,7 @@ function sortPublicationsByDate(sortOrder) {
 }
 
 function sortPublicationsByName(sortOrder) {
-    const publications = Array.from(document.querySelectorAll('a.publication-link'));
+    const publications = Array.from(document.querySelectorAll('div.publication'));
     publications.sort((a, b) => {
         const nameA = a.id.toUpperCase();
         const nameB = b.id.toUpperCase();
