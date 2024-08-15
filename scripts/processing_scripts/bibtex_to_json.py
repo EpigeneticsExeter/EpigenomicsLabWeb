@@ -22,7 +22,7 @@ def convert_to_dictionary(bibliography):
 
 def remove_unneeded_entries(bibliography):
     keys_to_keep = ["title", "abstract", "author",
-                    "doi", "earlyaccessdate", "journal"]
+                    "doi", "earlyaccessdate", "journal", "year", "month"]
     subset_of_bibliography = {
         id: {key: value for key,
              value in details.items() if key in keys_to_keep}
@@ -47,6 +47,21 @@ def title_to_title_case(bibliography):
     for id, paper in bibliography.items():
         paper["title"] = paper["title"].title()
 
+    return bibliography
+
+
+def format_dates(bibliography):
+    for id, paper in bibliography.items():
+        if "earlyaccessdate" in paper.keys():
+            paper["date"] = paper["earlyaccessdate"]
+            del paper["earlyaccessdate"]
+        else:
+            if "month" not in paper.keys():
+                paper["month"] = "JAN"
+            formatted_date = paper["month"][0:3].upper() + " " + paper["year"]
+            paper["date"] = formatted_date
+            del paper["month"]
+            del paper["year"]
     return bibliography
 
 
@@ -84,6 +99,7 @@ def process_bibliography(bibliography):
     bibliography = remove_unneeded_entries(bibliography)
     bibliography = remove_escape_characters(bibliography)
     bibliography = title_to_title_case(bibliography)
+    bibliography = format_dates(bibliography)
     for id, paper in bibliography.items():
         paper["author"] = format_authors(paper["author"])
 

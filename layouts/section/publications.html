@@ -40,7 +40,7 @@
 
     <div class="publications-container">
     {{ range $publications_data }}
-            <div class="publication {{ replace .earlyaccessdate " " "" }}" id=" {{ replace .title " " "" }} {{ replace .author " " "" }}">
+            <div class="publication {{ replace .date " " "" }}" id=" {{ replace .title " " "" }} {{ replace .author " " "" }}">
                 <div class="publication-header"></div>
                 <div class="title">{{ .title }}</div>
                 <div class="info subset-authors">
@@ -65,7 +65,7 @@
                     {{ end }}
                 </div>
                 <div class="info">{{ .journal }}</div>
-                <div class="info">{{ .earlyaccessdate }}</div>
+                <div class="info">{{ .date }}</div>
                 <div class="extra-information-container">
                     {{ if or .doi .geo_numbers .abstract }}
                         <h2>Paper information</h2>
