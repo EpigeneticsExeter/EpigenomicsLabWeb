@@ -23,10 +23,12 @@
 
 .publication {
     display: flex;
+    width: 90%;
     flex-direction: column;
     align-items: flex-start;
     margin: 0px 0px 10px 0px;
     cursor: pointer;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
     .publication-header {
         background-image: linear-gradient(70deg, $base_green, $light_green);
@@ -45,12 +47,53 @@
         @include small-main-text;
         color: black;
         margin-left: 20px;
+
     }
+
+    .abstract {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            margin: 0;
+        }
+
+    }
+
+
+    .geo-grid {
+        display: grid;
+        align-self: center;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin: 1%;
+
+        .geo-item {
+            display: flex;
+            border-radius: 10%;
+            background-color: $base_green;
+            padding: 10px;
+            @include small-main-text;
+            margin: 1%;
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+            }
+        }
+
+        .geo-item:hover {
+            background-color: $dark_green;
+        }
+
+    }
+
 
 }
 
 .publication:hover {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* ------- */
@@ -63,11 +106,4 @@
 
 .fade-in.show {
     opacity: 1;
-}
-
-/* ------ */
-/* HIDDEN */
-/* ------ */
-.hidden {
-    opacity: 0;
 }
