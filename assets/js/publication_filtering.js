@@ -12,6 +12,7 @@ zaButton.addEventListener('click', () => sortPublicationsByName('ZtoA'));
 
 // Show all publications with fade-in effect initially
 sequentiallyShowPublications(publications);
+sortPublicationsByDate("latestToOldest")
 
 function sequentiallyShowPublications(publications) {
     const parentDiv = publications[0].parentNode;
