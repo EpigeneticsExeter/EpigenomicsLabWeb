@@ -28,11 +28,10 @@
 
     <div class="publications-container">
     {{ range .Pages }}
-        <a class="publication-link {{ replace .Params.date " " "" }}" id=" {{ replace .Params.title " " "" }} {{ replace .Params.authors " " "" }}" href="{{ .RelPermalink }}">
-            <div class="publication">
+            <div class="publication {{ replace .Params.date " " "" }}" id=" {{ replace .Params.title " " "" }} {{ replace .Params.authors " " "" }}" href="{{ .RelPermalink }}">
                 <div class="publication-header"></div>
                 <div class="title">{{ .Params.title }}</div>
-                <div class="authors">
+                <div class="info subset-authors">
                     {{ $max_number_authors := 7 }}
                     {{ $concatenated_authors := replace .Params.authors " " "" }}
                     {{ $number_of_authors := replace $concatenated_authors "," " " | countwords }}
@@ -47,10 +46,46 @@
                         {{ .Params.authors }}
                     {{ end }}
                 </div>
-                <div class="journal">{{ .Params.journal }}</div>
-                <div class="date">{{ .Params.date }}</div>
+                <div class="info all-authors">
+                    {{ $all_authors := findRESubmatch `[^,]*` .Params.authors }}
+                    {{ range $index, $author := $all_authors }}
+                        {{ index $author 0 }}{{ if (lt $index (sub $number_of_authors 1)) }},{{ end }}
+                    {{ end }}
+                </div>
+                <div class="info">{{ .Params.journal }}</div>
+                <div class="info">{{ .Params.date }}</div>
+                <div class="extra-information-container">
+                    {{ if or .Params.link .Params.geo_numbers .Params.abstract }}
+                        <h2>Paper information</h2>
+                    {{ end }}
+                    {{ if .Params.link }}
+                        <div class="link-container">
+                            <div class="link">
+                                <a href="{{ .Params.link }}" target="_blank">Publication Link</a>
+                            </div>
+                        </div>
+                    {{ end }}
+                        {{ $number_of_geos :=  strings.CountWords .Params.geo_numbers }}
+                        {{ if gt  $number_of_geos 0 }}
+                            <h3>Geo Acession Numbers</h3>
+                            {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
+                            <div class="link-container">
+                                {{ range $geo_numbers }}
+                                    <div class="link">
+                                        {{ $geo_item := index . 0}}
+                                        <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc={{ $geo_item }}" target="_blank">{{ $geo_item }}</a>
+                                    </div>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                        {{ if .Params.abstract }}
+                        <h3>Abstract</h3>
+                        <p>{{ .Params.abstract }}</p>
+                        {{ end }}
+                    </div>
+                </div>
+
             </div>
-        </a>
     {{ end }}
 
     </div>
@@ -62,6 +97,10 @@
 
 {{ define "scripts" }}
 {{ with resources.Get "js/publication_filtering.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
+
+{{ with resources.Get "js/expand_publication.js" }}
 <script type="application/javascript" src="{{ .Permalink }}"></script>
 {{ end }}
 {{ end }}
