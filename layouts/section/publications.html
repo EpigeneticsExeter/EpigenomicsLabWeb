@@ -8,6 +8,18 @@
 {{ define "main" }}
 {{ $search_icon := resources.Get "/svgs/search_icon.svg" }}
 
+<!-- Parse publications data -->
+{{ $publications_data := dict }}
+{{ $path := "data/publications.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $publications_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+
 <div class="main-container">
 
     <div class="filter-container">
@@ -27,15 +39,15 @@
     </div>
 
     <div class="publications-container">
-    {{ range .Pages }}
-            <div class="publication {{ replace .Params.date " " "" }}" id=" {{ replace .Params.title " " "" }} {{ replace .Params.authors " " "" }}" href="{{ .RelPermalink }}">
+    {{ range $publications_data }}
+            <div class="publication {{ replace .earlyaccessdate " " "" }}" id=" {{ replace .title " " "" }} {{ replace .author " " "" }}">
                 <div class="publication-header"></div>
-                <div class="title">{{ .Params.title }}</div>
+                <div class="title">{{ .title }}</div>
                 <div class="info subset-authors">
                     {{ $max_number_authors := 7 }}
-                    {{ $concatenated_authors := replace .Params.authors " " "" }}
+                    {{ $concatenated_authors := replace .author " " "" }}
                     {{ $number_of_authors := replace $concatenated_authors "," " " | countwords }}
-                    {{ $subsetted_authors := findRESubmatch `[^,]*` .Params.authors $max_number_authors }}
+                    {{ $subsetted_authors := findRESubmatch `[^,]*` .author $max_number_authors }}
 
                     {{ if (gt $number_of_authors $max_number_authors) }}
                         {{ range $index, $author := $subsetted_authors }}
@@ -43,32 +55,32 @@
                         {{ end }}
                         <i>+ {{ sub $number_of_authors $max_number_authors }} more</i>
                     {{ else }}
-                        {{ .Params.authors }}
+                        {{ .author }}
                     {{ end }}
                 </div>
                 <div class="info all-authors">
-                    {{ $all_authors := findRESubmatch `[^,]*` .Params.authors }}
+                    {{ $all_authors := findRESubmatch `[^,]*` .author }}
                     {{ range $index, $author := $all_authors }}
                         {{ index $author 0 }}{{ if (lt $index (sub $number_of_authors 1)) }},{{ end }}
                     {{ end }}
                 </div>
-                <div class="info">{{ .Params.journal }}</div>
-                <div class="info">{{ .Params.date }}</div>
+                <div class="info">{{ .journal }}</div>
+                <div class="info">{{ .earlyaccessdate }}</div>
                 <div class="extra-information-container">
-                    {{ if or .Params.link .Params.geo_numbers .Params.abstract }}
+                    {{ if or .doi .geo_numbers .abstract }}
                         <h2>Paper information</h2>
                     {{ end }}
-                    {{ if .Params.link }}
+                    {{ if .doi }}
                         <div class="link-container">
                             <div class="link">
                                 <a href="{{ .Params.link }}" target="_blank">Publication Link</a>
                             </div>
                         </div>
                     {{ end }}
-                        {{ $number_of_geos :=  strings.CountWords .Params.geo_numbers }}
+                        {{ $number_of_geos :=  strings.CountWords .geo_numbers }}
                         {{ if gt  $number_of_geos 0 }}
                             <h3>Geo Acession Numbers</h3>
-                            {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
+                            {{ $geo_numbers := findRESubmatch `[^,]*` .geo_numbers }}
                             <div class="link-container">
                                 {{ range $geo_numbers }}
                                     <div class="link">
@@ -78,9 +90,9 @@
                                 {{ end }}
                             </div>
                         {{ end }}
-                        {{ if .Params.abstract }}
+                        {{ if .abstract }}
                         <h3>Abstract</h3>
-                        <p>{{ .Params.abstract }}</p>
+                        <p>{{ .abstract }}</p>
                         {{ end }}
                     </div>
                 </div>
