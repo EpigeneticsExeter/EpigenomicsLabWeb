@@ -98,4 +98,5 @@ def main():
     convert_bibtex(args.bibtex_file_path, args.json_file_path)
 
 
-main()
+if __name__ == "__main__":
+    main()
