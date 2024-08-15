@@ -40,7 +40,7 @@
 
     <div class="publications-container">
     {{ range $publications_data }}
-            <div class="publication {{ replace .date " " "" }}" id=" {{ replace .title " " "" }} {{ .author }}">
+            <div class="publication">
                 <div class="publication-header"></div>
                 <div class="title">{{ .title }}</div>
                 <div class="info subset-authors">

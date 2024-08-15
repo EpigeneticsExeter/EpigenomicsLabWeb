@@ -65,6 +65,21 @@ function sortPublicationsByDate(sortOrder) {
         }
     });
     sequentiallyShowPublications(publications);
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    publications.forEach(publication => {
+        const publicationName = publication.id.toLowerCase();
+  
+        if (publicationName.includes(searchTerm)) {
+            publication.style.display = 'flex';
+            publication.classList.add('show');
+        } else {
+            publication.style.display = 'none';
+            publication.classList.remove('show');
+        }
+    });
+});
 }
 
 function sortPublicationsByName(sortOrder) {
@@ -96,14 +111,18 @@ zaButton.onclick = function(){ window.scrollTo(0,0); };
 // --------- //
 // SEARCHING //
 // --------- //
-
 searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
 
     publications.forEach(publication => {
-        const publicationName = publication.id.toLowerCase();
-  
-        if (publicationName.includes(searchTerm)) {
+        const publicationTitle = publication.querySelector('.title')?.textContent.toLowerCase() || '';
+        const allAuthors = publication.querySelector('.all-authors')?.textContent.toLowerCase() || '';
+
+        const abstractText = publication.querySelector('.extra-information-container p')?.textContent.toLowerCase() || '';
+
+        if (publicationTitle.includes(searchTerm) || 
+            allAuthors.includes(searchTerm) || 
+            abstractText.includes(searchTerm)) {
             publication.style.display = 'flex';
             publication.classList.add('show');
         } else {
