@@ -10,8 +10,9 @@ oldestButton.addEventListener('click', () => sortPublicationsByDate('oldestToLat
 azButton.addEventListener('click', () => sortPublicationsByName('AtoZ'));
 zaButton.addEventListener('click', () => sortPublicationsByName('ZtoA'));
 
-// Show all publications with fade-in effect initially
+// Initially show publications from latest to oldest
 sequentiallyShowPublications(publications);
+sortPublicationsByDate("latestToOldest")
 
 function sequentiallyShowPublications(publications) {
     const parentDiv = publications[0].parentNode;
@@ -24,10 +25,7 @@ function sequentiallyShowPublications(publications) {
 
         publication.style.display = 'flex';
         publication.classList.add('fade-in')
-        setTimeout(() => {
-            publication.classList.add('show');
-        }, 100 * (index + 1))
-
+        publication.classList.add('show');
     });
 }
 
@@ -38,42 +36,75 @@ function sequentiallyShowPublications(publications) {
 function sortPublicationsByDate(sortOrder) {
     const publications = Array.from(document.querySelectorAll('div.publication'));
 
-    function getMonthNumber(month) {
-        return new Date(Date.parse(month + " 1, 2000")).getMonth();
+    function parseDate(dateStr) {
+        const months = {
+            'JAN': 0,
+            'FEB': 1,
+            'MAR': 2,
+            'APR': 3,
+            'MAY': 4,
+            'JUN': 5,
+            'JUL': 6,
+            'AUG': 7,
+            'SEP': 8,
+            'OCT': 9,
+            'NOV': 10,
+            'DEC': 11
+        };
+
+        const [monthAbbr, year] = dateStr.split(' ');
+        const month = months[monthAbbr.toUpperCase()];
+
+        return new Date(year, month);
     }
 
     publications.sort((a, b) => {
-        const classListA = a.className.split(' ');
-        const classListB = b.className.split(' ');
+        const dateA = parseDate(a.querySelector(".date")?.textContent || '');
+        const dateB = parseDate(b.querySelector(".date")?.textContent || '');
 
-        // Get the date part from the second class name
-        const dateA = classListA.length > 1 ? classListA[1] : '';
-        const yearA = parseInt(dateA.slice(3));
-        const dateB = classListB.length > 1 ? classListB[1] : '';
-        const yearB = parseInt(dateB.slice(3));
+        const yearA = dateA.getFullYear();
+        const yearB = dateB.getFullYear();
+
+        const monthA = dateA.getMonth();
+        const monthB = dateB.getMonth();
 
         if (sortOrder === 'latestToOldest') {
             if (yearA !== yearB) {
                 return yearB - yearA;
             } else {
-                return getMonthNumber(dateB) - getMonthNumber(dateA);
+                return monthB - monthA; 
             }
         } else if (sortOrder === 'oldestToLatest') {
             if (yearA !== yearB) {
                 return yearA - yearB;
             } else {
-                return getMonthNumber(dateA) - getMonthNumber(dateB);
+                return monthA - monthB; 
             }
         }
     });
     sequentiallyShowPublications(publications);
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    publications.forEach(publication => {
+        const publicationName = publication.id.toLowerCase();
+  
+        if (publicationName.includes(searchTerm)) {
+            publication.style.display = 'flex';
+            publication.classList.add('show');
+        } else {
+            publication.style.display = 'none';
+            publication.classList.remove('show');
+        }
+    });
+});
 }
 
 function sortPublicationsByName(sortOrder) {
     const publications = Array.from(document.querySelectorAll('div.publication'));
     publications.sort((a, b) => {
-        const nameA = a.id.toUpperCase();
-        const nameB = b.id.toUpperCase();
+        const nameA = a.querySelector('.title').textContent?.toUpperCase() || '';
+        const nameB = b.querySelector('.title').textContent?.toUpperCase() || '';
 
         if (sortOrder === 'AtoZ') {
             return nameA.localeCompare(nameB);
@@ -84,6 +115,17 @@ function sortPublicationsByName(sortOrder) {
     sequentiallyShowPublications(publications);
 }
 
+// ----------- //
+// BACK TO TOP //
+// ----------- //
+
+
+latestButton.onclick = function() { window.scrollTo(0,0); };
+oldestButton.onclick = function(){ window.scrollTo(0,0); };
+azButton.onclick = function(){ window.scrollTo(0,0); };
+zaButton.onclick = function(){ window.scrollTo(0,0); };
+
+
 // --------- //
 // SEARCHING //
 // --------- //
@@ -92,9 +134,14 @@ searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
 
     publications.forEach(publication => {
-        const publicationName = publication.id.toLowerCase();
-  
-        if (publicationName.includes(searchTerm)) {
+        const publicationTitle = publication.querySelector('.title')?.textContent.toLowerCase() || '';
+        const allAuthors = publication.querySelector('.all-authors')?.textContent.toLowerCase() || '';
+
+        const abstractText = publication.querySelector('.extra-information-container p')?.textContent.toLowerCase() || '';
+
+        if (publicationTitle.includes(searchTerm) || 
+            allAuthors.includes(searchTerm) || 
+            abstractText.includes(searchTerm)) {
             publication.style.display = 'flex';
             publication.classList.add('show');
         } else {
