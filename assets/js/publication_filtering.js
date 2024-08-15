@@ -24,10 +24,7 @@ function sequentiallyShowPublications(publications) {
 
         publication.style.display = 'flex';
         publication.classList.add('fade-in')
-        setTimeout(() => {
-            publication.classList.add('show');
-        }, 100 * (index + 1))
-
+        publication.classList.add('show');
     });
 }
 
