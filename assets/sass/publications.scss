@@ -64,11 +64,11 @@
             margin: 0 1% 1% 1%;
         }
 
-        .geo-container {
+        .link-container {
             display: flex;
             margin: 1%;
 
-            .geo-item {
+            .link {
                 display: flex;
                 border-radius: 7%;
                 background-color: $base_green;
@@ -83,16 +83,12 @@
                 }
             }
 
-            .geo-item:hover {
+            .link:hover {
                 background-color: $dark_green;
             }
 
         }
     }
-}
-
-.publication:hover {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* ------- */

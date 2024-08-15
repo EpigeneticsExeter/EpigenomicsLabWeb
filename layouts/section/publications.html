@@ -59,8 +59,8 @@
                         <h2>Paper information</h2>
                     {{ end }}
                     {{ if .Params.link }}
-                        <div class="geo-container">
-                            <div class="geo-item">
+                        <div class="link-container">
+                            <div class="link">
                                 <a href="{{ .Params.link }}" target="_blank">Publication Link</a>
                             </div>
                         </div>
@@ -69,9 +69,9 @@
                         {{ if gt  $number_of_geos 0 }}
                             <h3>Geo Acession Numbers</h3>
                             {{ $geo_numbers := findRESubmatch `[^,]*` .Params.geo_numbers }}
-                            <div class="geo-container">
+                            <div class="link-container">
                                 {{ range $geo_numbers }}
-                                    <div class="geo-item">
+                                    <div class="link">
                                         {{ $geo_item := index . 0}}
                                         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc={{ $geo_item }}" target="_blank">{{ $geo_item }}</a>
                                     </div>
