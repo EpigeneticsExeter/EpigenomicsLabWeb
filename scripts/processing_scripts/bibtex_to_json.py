@@ -43,6 +43,13 @@ def remove_escape_characters(bibliography):
     return bibliography
 
 
+def title_to_title_case(bibliography):
+    for id, paper in bibliography.items():
+        paper["title"] = paper["title"].title()
+
+    return bibliography
+
+
 def format_authors(author_field):
     authors = author_field.split(" and ")
     formatted_authors = []
@@ -76,6 +83,7 @@ def process_bibliography(bibliography):
     bibliography = convert_to_dictionary(bibliography)
     bibliography = remove_unneeded_entries(bibliography)
     bibliography = remove_escape_characters(bibliography)
+    bibliography = title_to_title_case(bibliography)
     for id, paper in bibliography.items():
         paper["author"] = format_authors(paper["author"])
 
