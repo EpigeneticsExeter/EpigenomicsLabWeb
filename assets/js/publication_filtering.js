@@ -82,6 +82,17 @@ function sortPublicationsByName(sortOrder) {
     sequentiallyShowPublications(publications);
 }
 
+// ----------- //
+// BACK TO TOP //
+// ----------- //
+
+
+latestButton.onclick = function() { window.scrollTo(0,0); };
+oldestButton.onclick = function(){ window.scrollTo(0,0); };
+azButton.onclick = function(){ window.scrollTo(0,0); };
+zaButton.onclick = function(){ window.scrollTo(0,0); };
+
+
 // --------- //
 // SEARCHING //
 // --------- //
