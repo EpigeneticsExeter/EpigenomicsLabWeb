@@ -17,12 +17,13 @@
         font-size: 2rem;
     }
 
-    .opportunity {
+    .opportunity,
+    .zero_opportunities {
         width: 90%;
         flex-direction: column;
         align-items: flex-start;
         margin: 0px 0px 10px 0px;
-        cursor: pointer;
+        cursor: default;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
         .opportunity-header {
@@ -33,16 +34,18 @@
 
         .title {
             @include large-main-text;
-            color: black;
             margin-left: 10px;
 
         }
 
         .info {
             @include small-main-text;
-            color: black;
-            margin-left: 20px;
+            margin: 0.5% 2%;
 
         }
+    }
+
+    .zero_opportunities {
+        display: none;
     }
 }
