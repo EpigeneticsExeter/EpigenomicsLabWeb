@@ -1,0 +1,34 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/opportunities.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="main-container">
+
+    <div class="filter-container" style="justify-content: flex-start;">
+        <h1>Filter</h1>
+        <div class="filter-grid">
+            <button type="button" id="all">All</button>
+            <button type="button" id="postdoc">Postdoc</button>
+            <button type="button" id="phd">PhD</button>
+            <button type="button" id="gra">GRA</button>
+            <button type="button" id="pty">PTY</button>
+        </div>
+    </div>
+
+    <div class="opportunities-container">
+<h1 class="page-name">Current Opportunities</h1>
+        <div class="opportunity GRA">
+            <div class="opportunity-header"></div>
+            <div class="title">Title</div>
+            <div class="info">
+                Here's a yummy description
+            </div>
+            <div class="info">
+                Here's who to contact
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
