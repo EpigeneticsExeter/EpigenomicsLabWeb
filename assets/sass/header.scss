@@ -4,84 +4,69 @@
 /* ------------------- */
 /* MAIN NAVIGATION BAR */
 /* ------------------- */
+
 .main-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     background-color: $base_green;
     position: sticky;
     top: 0;
     width: 100%;
-}
 
-.inner-navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: $base_green;
-}
+    #logo {
+        justify-self: flex-start;
+        margin-right: 10%;
 
-
-.main-navbar a,
-.dropdown {
-    background-color: $base_green;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    @include navigation-text;
-}
-
-.inner-navbar a {
-    padding: 5px 15px;
-    margin: 5px 25px;
+        img {
+            margin-right: 10%;
+            width: 200px;
+        }
+    }
 }
 
 
-#logo img {
-    width: 120px;
+.main-nav {
+    display: grid;
+    padding-top: 1%;
+    margin-left: 2%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
+    ul {
+        list-style-type: none;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+
+        .nav-item-link {
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            @include navigation-text;
+        }
+
+        .sub-nav {
+            display: flex;
+            padding: 10% 0 0 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: 120;
+            min-width: 80vh;
+
+            .sub-nav-item {
+                margin: 0 1%;
+                white-space: nowrap;
+            }
+        }
+
+    }
 }
 
-#contact-us {
-    padding: 5px 15px;
-    margin: 5px 10px;
-}
-
-/*  Get dropdown menu to look like the anchors */
-.dropdown {
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-}
-
-/* ---------------------- */
-/* RESEARCH DROPDOWN MENU */
-/* ---------------------- */
-.dropdown-content {
-    display: none;
-    position: absolute;
-
-    /* ensures centering of dropdown menu, though very hacky */
-    left: -42%;
-
-    top: 100%;
-    background-color: $base_green;
-    border-radius: 0px 0px 10px 10px;
-}
-
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-}
-
-/* ----- */
-/* HOVER */
-/* ----- */
-
-/* logo is an anchor, but we don't want it to have hover properties */
-.main-navbar a:not(#logo):hover {
-    background-color: $dark_green;
-    border-radius: 5px;
+.nav-text:hover {
+    color: #AAAAAA;
 }
