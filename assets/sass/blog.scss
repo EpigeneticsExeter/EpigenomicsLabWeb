@@ -92,6 +92,8 @@
             img {
                 height: 100%;
                 width: 100%;
+                max-width: 50vh;
+                max-height: 50vh;
             }
         }
     }
