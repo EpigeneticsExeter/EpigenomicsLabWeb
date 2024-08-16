@@ -158,4 +158,5 @@ def main():
     action(args.json_file)
 
 
-main()
+if __name__ == "__main__":
+    main()

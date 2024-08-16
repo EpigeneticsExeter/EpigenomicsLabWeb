@@ -157,4 +157,5 @@ def main():
     action(args.json_file, args.name, args.profile_picture)
 
 
-main()
+if __name__ == "__main__":
+    main()
