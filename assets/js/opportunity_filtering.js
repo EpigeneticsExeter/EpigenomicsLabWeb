@@ -12,6 +12,10 @@ phdButton.addEventListener('click', () => filteropportunities('phd'));
 postdocButton.addEventListener('click', () => filteropportunities('postdoc'));
 ptyButton.addEventListener('click', () => filteropportunities('pty'));
 
+if (noOpportunities()) {
+    zeroOpportunities.style.display = 'flex';
+}
+
 function filteropportunities(category) {
     zeroOpportunities.style.display = 'none';
     opportunities.forEach(opportunity => {
