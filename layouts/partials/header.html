@@ -6,24 +6,75 @@
     <a id="logo" href="/EpigenomicsLabWeb">
         <img src="{{ $logo_image.RelPermalink }}">
     </a>
-    <div class="inner-navbar">
-        <div class="dropdown">People
-            <div class="dropdown-content">
-                <a href="/EpigenomicsLabWeb/people">People</a>
-                <a href="/EpigenomicsLabWeb/alumni">Alumni</a>
-            </div>
-        </div>
-        <div class="dropdown">Research
-            <div class="dropdown-content">
-                <a href="/EpigenomicsLabWeb/publications">Publications</a>
-                <a href="/EpigenomicsLabWeb/code">Code</a>
-                <a href="/EpigenomicsLabWeb/projects">Projects</a>
-                <a href="/EpigenomicsLabWeb/funders">Funders</a>
-            </div>
-        </div>
-        <a href="/EpigenomicsLabWeb/collaborators">Collaborators</a>
-        <a href="/EpigenomicsLabWeb/events">Events</a>
-    </div>
-
-    <a id="contact-us" href="/EpigenomicsLabWeb/contact-us">Contact Us</a>
+        <ul class="main-nav">
+            <li class="nav-item">
+                <a href="/EpigenomicsLabWeb" class="nav-item-link">
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link">
+                    <span class="nav-text">Research</span>
+                </a>
+                <ul class="sub-nav">
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/publications" class="nav-item-link">
+                            <span class="nav-text">Publications</span>
+                        </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/projects" class="nav-item-link">
+                            <span class="nav-text">Projects</span>
+                        </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/code" class="nav-item-link">
+                            <span class="nav-text">Code</span>
+                        </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/" class="nav-item-link">
+                            <span class="nav-text">Opportunities</span>
+                        </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/funders" class="nav-item-link">
+                            <span class="nav-text">Funders</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link">
+                    <span class="nav-text">People</span>
+                </a>
+                <ul class="sub-nav">
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/people" class="nav-item-link">
+                            <span class="nav-text">Current Members</span>
+                        </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/alumni" class="nav-item-link">
+                            <span class="nav-text">Alumni</span>
+                        </a>
+                    </li>
+                    <li class="sub-nav-item">
+                        <a href="/EpigenomicsLabWeb/collaborators" class="nav-item-link">
+                            <span class="nav-text">Collaborators</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="/EpigenomicsLabWeb/events" class="nav-item-link">
+                    <span class="nav-text">Events</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/EpigenomicsLabWeb/contact-us" class="nav-item-link">
+                    <span class="nav-text">Contact Us</span>
+                </a>
+            </li>
+        </ul>
 </div>

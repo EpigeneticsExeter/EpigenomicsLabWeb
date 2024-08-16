@@ -33,6 +33,10 @@
     {{ block "scripts" . }}
     {{ end }}
 
+    {{ with resources.Get "js/sub_navigation.js" }}
+    <script type="application/javascript" src="{{ .Permalink }}"></script>
+    {{ end }}
+
 </body>
 
 </html>
