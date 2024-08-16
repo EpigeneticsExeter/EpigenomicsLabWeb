@@ -1,6 +1,24 @@
 @import "colours/light-mode.scss";
 @import "font/text.scss";
 
+.back-button {
+    display: flex;
+    width: 4%;
+    justify-content: space-between;
+    margin: 1%;
+    background-color: $base_green;
+    border-radius: 10px;
+    padding: 5px;
+    position: fixed;
+
+    a {
+        text-decoration: none;
+        color: $text_dark_green;
+        @include navigation-text;
+        font-weight: bold;
+    }
+}
+
 .featured-blog-box {
     display: flex;
     justify-content: space-around;
