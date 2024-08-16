@@ -23,7 +23,6 @@ profiles.forEach((profile,index) => {
 });
 
 function filterProfiles(category) {
-    console.log("running")
     // displays profiles sequentially depending on the button clicked
     let delay = 100;
     profiles.forEach(profile => {
