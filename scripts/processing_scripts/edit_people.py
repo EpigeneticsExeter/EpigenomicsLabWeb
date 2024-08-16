@@ -49,7 +49,7 @@ def get_people_information(name, field):
     example_texts = {
         "name": "Ex: Jane Doe",
         "image": "Ex: janedoe.png [make sure this exists in profile_pictures]",
-        "position": "Pick from: PI, PostDoc, PhD, GRA",
+        "position": "Pick from: PI, PostDoc, PhD, GRA, PTY",
         "themes": "Pick from: Analysis, Lab, Bioinformatics",
         "github": "Your github username",
         "email": "Ex: j.a.doe@exeter.ac.uk",

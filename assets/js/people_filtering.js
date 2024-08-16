@@ -3,6 +3,7 @@ const graButton = document.getElementById('gra');
 const piButton = document.getElementById('pi');
 const phdButton = document.getElementById('phd');
 const postdocButton = document.getElementById('postdoc');
+const ptyButton = document.getElementById('pty');
 const profiles = document.querySelectorAll('div.person-profile');
 const searchInput = document.getElementById('searchInput');
 
@@ -11,6 +12,7 @@ graButton.addEventListener('click', () => filterProfiles('gra'));
 piButton.addEventListener('click', () => filterProfiles('pi'));
 phdButton.addEventListener('click', () => filterProfiles('phd'));
 postdocButton.addEventListener('click', () => filterProfiles('postdoc'));
+ptyButton.addEventListener('click', () => filterProfiles('pty'));
 
 // Show all profiles with fade-in effect initially
 profiles.forEach((profile,index) => {
@@ -21,6 +23,7 @@ profiles.forEach((profile,index) => {
 });
 
 function filterProfiles(category) {
+    console.log("running")
     // displays profiles sequentially depending on the button clicked
     let delay = 100;
     profiles.forEach(profile => {
