@@ -51,7 +51,12 @@
         @include small-main-text;
     }
 
-    h1 {
+    h1,
+    h3 {
         @include main-text;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
