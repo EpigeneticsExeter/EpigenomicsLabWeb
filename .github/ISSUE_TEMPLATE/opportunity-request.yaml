@@ -1,0 +1,28 @@
+name: Opportunity Request 
+description: Make a request to add/remove/change data on the current opportunities in the group.
+title: "[Opportunity Request]: "
+labels: ["opportunity"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Request type"
+      description: Please specify the type of change that needs to be addressed
+      multiple: true
+      options:
+        - Add an opportunity
+        - Remove a historic opportunity
+        - Make a change to an existing opportunity (new information)
+    validations:
+      required: true
+  - type: textarea
+    id: Details
+    attributes:
+      label: "Please give us details about the change"
+    validations:
+      required: true
+
