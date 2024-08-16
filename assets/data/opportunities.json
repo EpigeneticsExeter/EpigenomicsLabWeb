@@ -1,0 +1,20 @@
+{
+    "PTY opportunity for epigenetic clocks": {
+        "title": "PTY opportunity for epigenetic clocks",
+        "type": "PTY",
+        "description": "Fancy description here",
+        "contact": "Sam Fletcher, s.o.fletcher@exeter.ac.uk"
+    },
+    "PhD opportunity for epigenomic something something": {
+        "title": "PhD opportunity for epigenomic something something",
+        "type": "PhD",
+        "description": "Fancy description here",
+        "contact": "Sam Fletcher, s.o.fletcher@exeter.ac.uk"
+    },
+    "GRA opportunity for epigenomic something something": {
+        "title": "GRA opportunity for epigenomic something something",
+        "type": "GRA",
+        "description": "Fancy description here",
+        "contact": "Eilis Hannon, E.J.Hannon@exeter.ac.uk"
+    }
+}

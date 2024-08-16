@@ -29,12 +29,35 @@
             height: 50%;
         }
     }
-}
 
-p {
-    @include small-main-text;
-}
+    button {
+        appearance: none;
+        background-color: $base_green;
+        border: 0px;
+        border-radius: 10px;
+        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+        box-sizing: border-box;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        @include main-text;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+        text-align: center;
 
-h1 {
-    @include main-text;
+    }
+
+    p {
+        @include small-main-text;
+    }
+
+    h1,
+    h3 {
+        @include main-text;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
 }

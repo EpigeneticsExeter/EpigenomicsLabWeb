@@ -1,0 +1,63 @@
+{{ define "extra_head" }}
+{{ $style := resources.Get "sass/opportunities.scss" | resources.ToCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+{{ define "main" }}
+
+<!-- Parse people data -->
+{{ $opportunities_data := dict }}
+{{ $path := "data/opportunities.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $opportunities_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+<div class="main-container">
+
+    <div class="filter-container" style="justify-content: flex-start;">
+        <h1>Filter</h1>
+        <div class="filter-grid">
+            <button type="button" id="all">All</button>
+            <button type="button" id="postdoc">Postdoc</button>
+            <button type="button" id="phd">PhD</button>
+            <button type="button" id="gra">GRA</button>
+            <button type="button" id="pty">PTY</button>
+        </div>
+    </div>
+
+    <div class="opportunities-container">
+        <h1 class="page-name">Current Opportunities</h1>
+        {{ range $opportunities_data }}
+        <div class="opportunity {{ .type | lower }}">
+            <div class="opportunity-header"></div>
+            <div class="title">{{ .title }}</div>
+            <div class="info">{{ .description }}</div>
+            <div class="info">{{ .contact }}</div>
+        </div>
+        {{ end }}
+        <div class="zero_opportunities">
+            <div class="opportunity-header"></div>
+            <div class="title">No opportunties available</div>
+            <div class="info">
+                Sorry, there are no opportunities advertised for the selected
+                filter. If you clicked 'All', then no opportunities are being
+                advertised at this time.
+            </div>
+            <div class="info">
+                We are still excited to hear that you want to join us, please
+                email us at: blahblah@exeter.ac.uk to get in touch!
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+{{ with resources.Get "js/opportunity_filtering.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
+{{ end }}
