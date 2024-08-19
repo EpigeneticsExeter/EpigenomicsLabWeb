@@ -6,8 +6,39 @@
 {{ define "main" }}
 <main class="text-centre">
     <h1>404 Not Found</h1>
-    <p>The page you are looking for doesn't exist, sorry.
-        Please return to home by clicking the link below</p>
+    <p>The page you are looking for doesn't exist, sorry.</p>
+    <p>
+        You will be automatically redirected in <span id="seconds">9</span>
+        seconds.
+    </p>
     <a class="button" href="javascript:window.history.back()">Back</a>
+    <script>
+        var seconds = 8;
+        var foo;
+
+        function redirect() {
+            document.location.href = window.history.back();
+        }
+
+        function updateSecs() {
+            document.getElementById("seconds").innerHTML = seconds;
+            seconds--;
+            // This is so that the timer shows 0 seconds
+            if (seconds < 0) {
+                clearInterval(foo);
+                redirect();
+            }
+        }
+
+        function countdownTimer() {
+            foo = setInterval(function () {
+                updateSecs()
+            }, 1000);
+        }
+
+        countdownTimer();
+    </script>
 </main>
 {{ end }}
+
+
