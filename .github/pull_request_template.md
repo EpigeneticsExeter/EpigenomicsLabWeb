@@ -8,6 +8,7 @@ This pull request will...
 - [ ] Page Redesign
 - [ ] Content addition/change
 - [ ] Code refactor
+- [ ] Documentation
 
 ## Checklist:
 - [ ] I have checked that the site runs with no errors locally
