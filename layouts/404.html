@@ -14,7 +14,7 @@
     <a class="button" href="javascript:window.history.back()">Back</a>
     <script>
         var seconds = 8;
-        var foo;
+        var interval;
 
         function redirect() {
             document.location.href = window.history.back();
@@ -31,7 +31,7 @@
         }
 
         function countdownTimer() {
-            foo = setInterval(function () {
+            interval = setInterval(function () {
                 updateSecs()
             }, 1000);
         }
