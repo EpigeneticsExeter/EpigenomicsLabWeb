@@ -64,8 +64,9 @@ date = ${the_date}
     featured = 0
     # Put your name here
     author = ""
-    # Put the path to your blog's image here 
+    # Put the path to your blog's image here
     # (starting the path from the /assets directory)
+    # IMPORTANT: Please make sure your image is no larger than 200KB in size.
     image = "images/placeholder.png"
 +++
 EOF
