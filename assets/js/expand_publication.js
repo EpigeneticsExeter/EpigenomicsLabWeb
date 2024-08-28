@@ -20,11 +20,21 @@ function removeBoxShadow(publicationDiv) {
     publicationDiv.style.boxShadow = '0px 5px 10px 0 rgba(0,0,0, 0.1)';
 }
 
+function addAutoCursor(publicationDiv) {
+    publicationDiv.style.cursor = "auto"
+}
+
+function removeAutoCursor(publicationDiv) {
+    // default is pointer
+    publicationDiv.style.cursor = "pointer"
+}
+
 function openPublication(event) {
     const clickedPublicationDiv = event.currentTarget;
 
     setDisplay(clickedPublicationDiv, 'flex', 'flex', 'none');
     addBoxShadow(clickedPublicationDiv)
+    addAutoCursor(clickedPublicationDiv)
 
     const publicationDivs = document.querySelectorAll('div.publication');
 
@@ -38,6 +48,7 @@ function openPublication(event) {
 function closePublication(div) {
     setDisplay(div, 'none', 'none', 'flex');
     removeBoxShadow(div)
+    removeAutoCursor(div)
 }
 
 const publicationDivs = document.querySelectorAll('div.publication');
