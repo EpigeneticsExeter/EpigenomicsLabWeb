@@ -37,6 +37,18 @@ EOF
     exit 1
 fi
 
+pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
+if [[ "${pp_size}" -gt 200 ]]; then
+cat << EOF
+WARNING: Please do not use large images for your profile picture as it slows
+the site down (the image will be small anyways so you can't even view the
+higher quality). 
+Currently your image has size: $pp_size KB
+We recommend gettting this below 200KB. There are various tools online to help
+with this.
+EOF
+fi
+
 profile_picture="$(basename "${profile_picture_path}")"
 
 ## ======== ##
