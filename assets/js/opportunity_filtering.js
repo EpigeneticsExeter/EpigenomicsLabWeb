@@ -42,3 +42,8 @@ function noOpportunities() {
         opportunity.style.display !== 'none'
     );
 }
+
+if (sessionStorage.getItem("pty-clicked") === "true" ) {
+    filteropportunities('pty')
+    sessionStorage.removeItem("pty-clicked")
+}
