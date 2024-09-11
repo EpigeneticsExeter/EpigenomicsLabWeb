@@ -42,6 +42,22 @@
     {{ end }}
     </div>
 </div>
+
+{{ range $collaborators_data }}
+    {{ if not .featured }}
+        <div class="non-featured-collaborator-card">
+            <div class="image-box">
+                {{ with resources.Get .image }}
+                <img src="{{ .RelPermalink }}"></img>
+                {{ end }}
+            </div>
+            <div>
+                <p>{{ .description }}</p>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
+
 {{ end }}
 
 {{ define "scripts" }}

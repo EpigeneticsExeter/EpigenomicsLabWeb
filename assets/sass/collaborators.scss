@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
+    margin-bottom: 2%;
 
     .slide {
         display: flex;
@@ -92,5 +93,28 @@
 
     to {
         opacity: 0.1;
+    }
+}
+
+
+.non-featured-collaborator-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 8%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    height: 25vh;
+
+    .image-box {
+        display: flex;
+        width: 30%;
+        margin: 0.5%;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    p {
+        margin: 1%;
     }
 }
