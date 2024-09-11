@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         link.addEventListener('mouseleave', function() {
             setTimeout(() => {
-                if (!subNav.style.opacity == 1) {
+                if (subNav && !subNav.style.opacity == 1) {
                     subNav.style.opacity = '0'; 
                     subNav.style.visibility = 'hidden'; 
                     subNav.style.transition = "opacity 0.5s, visibility 1s"
