@@ -1,5 +1,6 @@
 @import "colours/light-mode.scss";
 @import "font/text.scss";
+@import "global-variables.scss";
 
 .slideshow-container {
     display: flex;
@@ -7,6 +8,7 @@
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 2%;
+    z-index: $slideshow_index;
 
     .slide {
         display: flex;
