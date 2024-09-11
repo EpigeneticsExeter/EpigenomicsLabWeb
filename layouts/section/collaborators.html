@@ -18,27 +18,27 @@
 
 <div id="slideshow" class="slideshow-container">
     {{ range $collaborators_data }}
-    {{ if .featured }}
-    <div class="slide fade-in">
-        <div class="image-container">
-        {{ with resources.Get .image }}
-        <img src="{{ .RelPermalink }}"></img>
+        {{ if .featured }}
+        <div class="slide fade-in">
+            <div class="image-container">
+            {{ with resources.Get .image }}
+            <img src="{{ .RelPermalink }}"></img>
+            {{ end }}
+            </div>
+            <div class="description">
+                <h1>{{ .name }}</h1>
+                <p>{{ .description }}</p>
+            </div>
+        </div>
         {{ end }}
-        </div>
-        <div class="description">
-            <h1>{{ .name }}</h1>
-            <p>{{ .description }}</p>
-        </div>
-    </div>
-    {{ end }}
     {{ end }}
     <div class="slideshow-navigation-container">
     {{ $index := 1}}
     {{ range $collaborators_data }}
-    {{ if .featured }}
-        <span class="dot-indicator" onclick="switchSlide({{ $index }})"></span>
-        {{ $index = add $index 1 }}
-    {{ end }}
+        {{ if .featured }}
+            <span class="dot-indicator" onclick="switchSlide({{ $index }})"></span>
+            {{ $index = add $index 1 }}
+        {{ end }}
     {{ end }}
     </div>
 </div>
