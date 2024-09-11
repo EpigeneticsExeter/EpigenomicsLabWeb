@@ -1,4 +1,4 @@
-let slideIndex = 0;
+let slideIndex = 1;
 let slideshowInterval;
 
 showSlides();
@@ -12,7 +12,6 @@ function showSlides() {
         dots[i].classList.remove("active");
     }
 
-    slideIndex++;
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
@@ -20,7 +19,15 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].classList.add("active");
 
-    slideshowInterval = setTimeout(showSlides, 5000); 
+    slideIndex ++;
+}
+
+function startSlideshow() {
+    clearInterval(slideshowInterval);
+
+    slideshowInterval = setInterval(() => {
+        showSlides();
+    }, 5000);
 }
 
 function switchSlide(index) {
@@ -39,8 +46,8 @@ if (slideshowContainer) {
     });
 
     slideshowContainer.addEventListener("mouseleave", () => {
-        clearTimeout(timeoutID)
-        timeoutID = setTimeout(showSlides, 1000);
+        setTimeout(startSlideshow, 1000);
     });
 }
 
+startSlideshow();
