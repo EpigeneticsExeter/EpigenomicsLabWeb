@@ -1,0 +1,26 @@
+{
+    "Collaborator 1": {
+        "name": "Collaborator 1",
+        "image": "images/placeholder.png",
+        "description": "This collaborator has worked with us for x years and blah blah blah sciency talk blah blah blah",
+        "featured": false
+    },
+    "Collaborator 2": {
+        "name": "Collaborator 2",
+        "image": "images/placeholder.png",
+        "description": "This collaborator has worked with us for y years and blah blah blah sciency talk blah blah blah",
+        "featured": true
+    },
+    "Collaborator 3": {
+        "name": "Collaborator 3",
+        "image": "images/placeholder.png",
+        "description": "This collaborator has worked with us for z years and blah blah blah sciency talk blah blah blah",
+        "featured": false
+    },
+    "Collaborator 4": {
+        "name": "Collaborator 4",
+        "image": "images/placeholder.png",
+        "description": "This collaborator has worked with us for w years and blah blah blah sciency talk blah blah blah",
+        "featured": true
+    }
+}

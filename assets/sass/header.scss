@@ -1,5 +1,6 @@
 @import "colours/light-mode";
 @import "font/text.scss";
+@import "global-variables.scss";
 
 /* ------------------- */
 /* MAIN NAVIGATION BAR */
@@ -12,6 +13,7 @@
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: $navbar_index;
 
     #logo {
         justify-self: flex-start;

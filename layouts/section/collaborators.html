@@ -5,30 +5,59 @@
 
 {{ define "main" }}
 {{ $tech_background := resources.Get "images/tech-background.svg" }}
+
+{{ $collaborators_data := dict }}
+{{ $path := "data/collaborators.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $collaborators_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
 <div id="slideshow" class="slideshow-container">
-    {{ range .Pages }}
-    {{ if .Params.featured }}
-    <div class="slide fade-in">
-        <div class="image-container">
-        {{ with resources.Get "images/placeholder.png" }}
-        <img src="{{ .RelPermalink }}"></img>
+    {{ range $collaborators_data }}
+        {{ if .featured }}
+        <div class="slide fade-in">
+            <div class="image-container">
+            {{ with resources.Get .image }}
+            <img src="{{ .RelPermalink }}"></img>
+            {{ end }}
+            </div>
+            <div class="description">
+                <h1>{{ .name }}</h1>
+                <p>{{ .description }}</p>
+            </div>
+        </div>
         {{ end }}
-        </div>
-        <div class="description">
-            <h1>{{ .Params.name }}</h1>
-            <p>{{ .Content }}</p>
-        </div>
-    </div>
-    {{ end }}
     {{ end }}
     <div class="slideshow-navigation-container">
-    {{ range $index, $page := .Pages }}
-    {{ if .Params.featured }}
-        <span class="dot-indicator" onclick="switchSlide({{ $index }})"></span>
-    {{ end }}
+    {{ $index := 1}}
+    {{ range $collaborators_data }}
+        {{ if .featured }}
+            <span class="dot-indicator" onclick="switchSlide({{ $index }})"></span>
+            {{ $index = add $index 1 }}
+        {{ end }}
     {{ end }}
     </div>
 </div>
+
+{{ range $collaborators_data }}
+    {{ if not .featured }}
+        <div class="non-featured-collaborator-card">
+            <div class="image-box">
+                {{ with resources.Get .image }}
+                <img src="{{ .RelPermalink }}"></img>
+                {{ end }}
+            </div>
+            <div>
+                <p>{{ .description }}</p>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
+
 {{ end }}
 
 {{ define "scripts" }}
