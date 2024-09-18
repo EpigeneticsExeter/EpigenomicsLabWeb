@@ -44,7 +44,7 @@
         {{ if eq .alumni $is_alumni_page }}
         <div id='{{ replace .name " " "" | lower}}' class="person-profile {{ .theme | lower }} {{ .position | lower }}">
             {{ $profile_picture := printf "/images/profile_pictures/%s" .image }}
-            <a class="profile_picture_container" href="https://experts.exeter.ac.uk/{{ .biosketch }}" targer="_blank">
+            <a class="profile_picture_container" href="https://experts.exeter.ac.uk/{{ .biosketch }}" target="_blank">
                 {{ with resources.Get $profile_picture }}
                 <img class="profile_picture" src="{{ .RelPermalink }}"></img>
                 {{ end }}
