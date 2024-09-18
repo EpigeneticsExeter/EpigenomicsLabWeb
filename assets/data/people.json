@@ -9,7 +9,8 @@
         "email": null,
         "linkedin": null,
         "x": null,
-        "orcid": null
+        "orcid": null,
+        "biosketch": "23540-eilis-hannon"
     },
     "Jessica Shields": {
         "name": "Jessica Shields",
@@ -21,7 +22,8 @@
         "email": null,
         "linkedin": null,
         "x": null,
-        "orcid": null
+        "orcid": null,
+        "biosketch": "38292-jessica-shields"
     },
     "Siyi Wang": {
         "name": "Siyi Wang",
@@ -33,7 +35,8 @@
         "email": "s.w.wang@exeter.ac.uk",
         "linkedin": null,
         "x": null,
-        "orcid": null
+        "orcid": null,
+        "biosketch": null
     },
     "Sam Fletcher": {
         "name": "Sam Fletcher",
@@ -45,6 +48,7 @@
         "email": "s.o.fletcher@exeter.ac.uk",
         "linkedin": "sam-fletcher-6830511b9",
         "x": null,
-        "orcid": null
+        "orcid": null,
+        "biosketch": "41890-sam-fletcher"
     }
 }

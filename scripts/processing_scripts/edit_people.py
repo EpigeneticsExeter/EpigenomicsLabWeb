@@ -55,7 +55,8 @@ def get_people_information(name, field):
         "email": "Ex: j.a.doe@exeter.ac.uk",
         "linkedin": "The string after the last '/' in your profile's url",
         "x": "Your X username, don't include the @",
-        "orcid": "16 digit number, Ex: 0009-0000-4090-9258"
+        "orcid": "16 digit number, Ex: 0009-0000-4090-9258",
+        "biosketch": "The string after the last '/' in your biosketch's url"
     }
     example_text = example_texts.get(field, "")
     if field == "alumni":
@@ -80,7 +81,8 @@ def add_person(json_file, name, profile_picture):
                           "email": None,
                           "linkedin": None,
                           "x": None,
-                          "orcid": None}
+                          "orcid": None,
+                          "biosketch": None}
 
     print(f"""
 ===============================================================================

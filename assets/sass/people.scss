@@ -30,6 +30,11 @@
 /* ------------------- */
 /* INDIVIDUAL PROFILES */
 /* ------------------- */
+.profile_picture_container {
+    display: flex;
+    justify-content: center;
+}
+
 .profile_picture {
     object-fit: cover;
     width: 70%;
@@ -41,7 +46,7 @@
 .person-profile h1 {
     margin: 0;
     height: 10%;
-    cursor: default;
+    color: $text_dark_green;
 }
 
 .person-profile .link-tree {
@@ -67,6 +72,10 @@
     height: 100%;
     width: 100%;
     max-height: 100px;
+}
+
+.name-container {
+    text-decoration: none;
 }
 
 /* ------- */
