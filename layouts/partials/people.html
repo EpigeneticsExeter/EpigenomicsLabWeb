@@ -44,9 +44,11 @@
         {{ if eq .alumni $is_alumni_page }}
         <div id='{{ replace .name " " "" | lower}}' class="person-profile {{ .theme | lower }} {{ .position | lower }}">
             {{ $profile_picture := printf "/images/profile_pictures/%s" .image }}
-            {{ with resources.Get $profile_picture }}
-            <img class="profile_picture" src="{{ .RelPermalink }}"></img>
-            {{ end }}
+            <a class="profile_picture_container" href="https://experts.exeter.ac.uk/{{ .biosketch }}">
+                {{ with resources.Get $profile_picture }}
+                <img class="profile_picture" src="{{ .RelPermalink }}"></img>
+                {{ end }}
+            </a>
             <div class="link-tree">
                 {{ if .github }}
                 <a href="https://github.com/{{ .github}}" target="_blank">
@@ -74,9 +76,9 @@
                 </a>
                 {{ end }}
             </div>
-            <div class="name">
+            <a class="name-container" href="https://experts.exeter.ac.uk/{{ .biosketch }}">
                 <h1>{{ .name }}</h1>
-            </div>
+            </a>
         </div>
         {{ end }}
         {{ end}}
