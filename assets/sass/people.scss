@@ -1,4 +1,4 @@
-@import "colours/light-mode.scss";
+@import "theme.scss";
 @import "font/text.scss";
 @import "filter_boxes.scss";
 
@@ -46,7 +46,14 @@
 .person-profile h1 {
     margin: 0;
     height: 10%;
-    color: $text_dark_green;
+}
+
+@include themify($themes) {
+
+    .person-profile h1 {
+        color: themed('text');
+        background-color: themed('bg')
+    }
 }
 
 .person-profile .link-tree {

@@ -1,4 +1,4 @@
-@import "colours/light-mode.scss";
+@import "theme.scss";
 @import "font/text.scss";
 @import "filter_boxes.scss";
 
@@ -73,7 +73,7 @@
                 display: flex;
                 border-radius: 7%;
                 background-color: $base_green;
-                padding: 10px;
+                infopadding: 10px;
                 @include small-main-text;
                 margin: 0 1%;
 
@@ -89,6 +89,18 @@
             }
 
         }
+    }
+}
+
+@include themify($themes) {
+
+    h2,
+    h3,
+    p,
+    .title,
+    .info {
+        color: themed('text');
+        background-color: themed('bg')
     }
 }
 

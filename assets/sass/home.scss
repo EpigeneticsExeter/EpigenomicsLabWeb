@@ -1,4 +1,4 @@
-@import "colours/light-mode";
+@import "theme.scss";
 @import "font/text.scss";
 
 #team-photo-container {
@@ -23,7 +23,14 @@
 #about-container p {
     @include main-text;
     text-align: center;
-    color: $text_dark_green;
+}
+
+
+@include themify($themes) {
+    #about-container p {
+        color: themed('text');
+        background-color: themed('bg');
+    }
 }
 
 /* --------- */
