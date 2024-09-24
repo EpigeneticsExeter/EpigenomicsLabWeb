@@ -31,7 +31,7 @@
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
     .publication-header {
-        background-image: linear-gradient(70deg, $base_green, $light_green);
+        background-image: linear-gradient(70deg, $base_colour, $light_accent_colour);
         width: 150px;
         height: 4px;
     }
@@ -72,7 +72,7 @@
             .link {
                 display: flex;
                 border-radius: 7%;
-                background-color: $base_green;
+                background-color: $base_colour;
                 infopadding: 10px;
                 @include small-main-text;
                 margin: 0 1%;
@@ -85,7 +85,7 @@
             }
 
             .link:hover {
-                background-color: $dark_green;
+                background-color: $dark_accent_colour;
             }
 
         }

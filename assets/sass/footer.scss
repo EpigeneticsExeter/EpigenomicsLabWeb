@@ -4,7 +4,7 @@
 .main-footer-box {
     display: flex;
     justify-content: space-between;
-    background-color: $dark_green;
+    background-color: $dark_accent_colour;
     @include navigation-text;
     color: white;
     flex-shrink: 0;

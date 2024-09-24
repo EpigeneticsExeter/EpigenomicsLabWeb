@@ -26,7 +26,7 @@
 
         h1 {
             padding: 5px;
-            background-color: $base_green;
+            background-color: $base_colour;
             margin: 1%;
             border-radius: 10px;
             font-size: 3rem;
@@ -35,14 +35,14 @@
         .learn-more-button {
             display: flex;
             justify-content: space-between;
-            background-color: $base_green;
+            background-color: $base_colour;
             border-radius: 10px;
             padding: 5px;
             margin: 1%;
 
             a {
                 text-decoration: none;
-                color: $text_dark_green;
+                color: $dark_text_colour;
                 @include navigation-text;
                 font-weight: bold;
                 font-size: 2rem;

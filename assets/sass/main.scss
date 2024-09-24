@@ -8,7 +8,7 @@
 body {
     display: flex;
     flex-direction: column;
-    color: $text_dark_green;
+    color: $dark_text_colour;
     margin: auto;
     min-height: 100vh;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .button {
-    background-color: $base-green;
+    background-color: $base_colour;
     border-radius: 5px;
     color: white;
     padding: 5px;
