@@ -45,21 +45,37 @@
     color: white;
     width: 50%;
     opacity: 0;
-    transition: opacity 0.5s ease-out 0.5s, transform 1.5s ease-out;
+    transform: translateY(20px);
 
-    &:nth-of-type(even) {
-        transform: translateX(20px);
-
+    &>h2,
+    &>p {
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
 
-    &:nth-of-type(odd) {
-        transform: translateX(-20px);
+    &>h2 {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
+    &>p {
+        opacity: 0;
+        transform: translateY(10px);
     }
 
     &.show {
         opacity: 1;
-        transform: translateY(0);
+
+        &>h2 {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+
+        &>p {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.6s;
+        }
     }
 }
 
