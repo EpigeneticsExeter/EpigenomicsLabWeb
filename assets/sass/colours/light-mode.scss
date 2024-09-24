@@ -9,3 +9,27 @@ $dark_green: #002727;
 $text_green: #007D69;
 $text_light_green: #00DDA5;
 $text_dark_green: #003333;
+
+
+$themes: (
+    light: (text: #333333,
+        bg: #ffffff,
+
+    ),
+    dark: (text: #ffffff,
+        bg: #333333,
+    ),
+);
+
+@mixin themify($themes) {
+    @each $name, $values in $themes {
+        .#{$name}-theme {
+            $theme-map: $values !global;
+            @content;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

@@ -19,6 +19,13 @@ body {
     flex-direction: column;
 }
 
+@include themify($themes) {
+    .content {
+        color: themed('text');
+        background-color: themed('bg')
+    }
+}
+
 /* -------- */
 /* 404 PAGE */
 /* -------- */
