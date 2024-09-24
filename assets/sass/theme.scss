@@ -26,6 +26,8 @@ $theme-map: null;
             @content;
         }
     }
+
+    $theme-map: null !global;
 }
 
 @function themed($key) {
