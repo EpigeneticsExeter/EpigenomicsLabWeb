@@ -72,3 +72,9 @@
     </div>
 </div>
 {{ end }}
+
+{{ define "scripts" }}
+{{ with resources.Get "js/scroll-animation.js" }}
+<script type="application/javascript" src="{{ .Permalink }}"></script>
+{{ end }}
+{{ end }}
