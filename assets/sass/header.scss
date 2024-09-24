@@ -8,7 +8,7 @@
 
 .main-navbar {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 150px 1fr 50px;
     background-color: $base_green;
     position: sticky;
     top: 0;
@@ -23,6 +23,12 @@
             margin-right: 10%;
             width: 200px;
         }
+    }
+
+    #dark-toggle {
+        margin-right: 10vh;
+        justify-self: center;
+        align-self: center;
     }
 }
 
@@ -67,6 +73,7 @@
         }
 
     }
+
 }
 
 .nav-text:hover {
