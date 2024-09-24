@@ -35,6 +35,7 @@ window.onload = function() {
         isDarkMode = false;
         setLightMode()
     }
+    document.body.style.visibility = 'visible';
 };
 
 darkModeButton.addEventListener('click', toggleDarkMode)
