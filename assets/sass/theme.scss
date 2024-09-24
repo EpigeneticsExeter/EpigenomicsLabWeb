@@ -17,6 +17,8 @@ $themes: (
     ),
 );
 
+$theme-map: null;
+
 @mixin themify($themes) {
     @each $name, $values in $themes {
         .#{$name}-theme {
