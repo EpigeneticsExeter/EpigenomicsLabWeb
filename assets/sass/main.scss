@@ -30,7 +30,7 @@ body {
 /* 404 PAGE */
 /* -------- */
 .text-centre {
-    @include main-text;
+    @include main-text(1rem);
     text-align: center;
 }
 

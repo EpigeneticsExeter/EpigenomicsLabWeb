@@ -1,21 +1,14 @@
-@mixin navigation-text {
+@mixin main-text($font-size) {
     font-family: 'Outfit', sans-serif;
-    font-size: 20px;
+    font-size: $font-size;
+}
+
+@mixin navigation-text($font-size) {
+    @include main-text($font-size);
     color: white;
 }
 
-@mixin main-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 20px
-}
-
-@mixin large-main-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 25px;
+@mixin bold-main-text($font-size) {
+    @include main-text($font-size);
     font-weight: bold;
-}
-
-@mixin small-main-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px
 }

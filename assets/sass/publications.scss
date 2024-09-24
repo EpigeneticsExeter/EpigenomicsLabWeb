@@ -37,14 +37,13 @@
     }
 
     .title {
-        @include large-main-text;
-        color: black;
+        @include bold-main-text(1.75rem);
         margin-left: 10px;
 
     }
 
     .info {
-        @include small-main-text;
+        @include main-text(1rem);
         color: black;
         margin-left: 20px;
 
@@ -53,7 +52,7 @@
     .extra-information-container {
         display: flex;
         flex-direction: column;
-        @include small-main-text;
+        @include main-text(1rem);
 
         h3,
         h2 {
@@ -73,8 +72,8 @@
                 display: flex;
                 border-radius: 7%;
                 background-color: $base_colour;
-                infopadding: 10px;
-                @include small-main-text;
+                padding: 10px;
+                @include main-text(1rem);
                 margin: 0 1%;
 
                 a {

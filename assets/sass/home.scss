@@ -21,7 +21,7 @@
 }
 
 #about-container p {
-    @include main-text;
+    @include main-text(1.2rem);
     text-align: center;
 }
 
@@ -48,7 +48,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @include navigation-text;
+    @include navigation-text(1.2rem);
     color: white;
     width: 50%;
     opacity: 0;

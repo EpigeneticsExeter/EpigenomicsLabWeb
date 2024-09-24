@@ -10,7 +10,7 @@
 
     h1 {
         align-self: flex-start;
-        @include main-text;
+        @include main-text(1rem);
         font-size: 3rem;
     }
 

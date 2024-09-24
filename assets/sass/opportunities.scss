@@ -13,8 +13,7 @@
     h1.page-name {
         align-self: flex-start;
         margin-left: 5%;
-        @include large-main-text;
-        font-size: 2rem;
+        @include main-text(2rem);
     }
 
     .opportunity,
@@ -33,13 +32,13 @@
         }
 
         .title {
-            @include large-main-text;
+            @include bold-main-text(1.75rem);
             margin-left: 10px;
 
         }
 
         .info {
-            @include small-main-text;
+            @include main-text(1rem);
             margin: 0.5% 2%;
 
         }

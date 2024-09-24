@@ -11,11 +11,11 @@
     color: white;
 
     h1 {
-        @include main-text;
+        @include main-text(2rem);
     }
 
     p {
-        @include small-main-text;
+        @include main-text(1rem);
     }
 }
 

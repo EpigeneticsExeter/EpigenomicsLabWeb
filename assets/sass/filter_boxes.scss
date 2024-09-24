@@ -21,7 +21,7 @@
     color: white;
     padding-bottom: 50px;
     border-radius: 10px;
-    @include main-text;
+    @include main-text(1rem);
 }
 
 .filter-grid {
@@ -39,10 +39,9 @@
     border-radius: 10px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
-    color: white;
+    @include navigation-text(1.3rem);
     cursor: pointer;
     display: inline-block;
-    @include main-text;
     padding: 5px 10px;
     margin-bottom: 5px;
     text-align: center;
@@ -70,12 +69,12 @@
     padding-right: 40px;
     color: white;
     box-sizing: border-box;
-    @include main-text;
+    @include main-text(1rem);
 }
 
 .input-search::placeholder {
     color: rgba(255, 255, 255, .5);
-    @include main-text;
+    @include main-text(1rem);
 }
 
 .btn-search {
