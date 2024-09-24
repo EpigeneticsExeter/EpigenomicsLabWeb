@@ -6,12 +6,12 @@
 {{ define "main" }}
 {{ $featured_pages := where .Pages ".Params.featured" "eq" 1 }}
 {{ if not .Params.is_event_page }}
-<div class="back-button">
-    <a href="javascript:window.history.back()">
+<a href="javascript:window.history.back()">
+    <button class="back-button" type="button">
         ←
         Back
-    </a>
-</div>
+    </button>
+</a>
 {{ end }}
 {{ with index $featured_pages 0 }}
     <div class="featured-blog-box">

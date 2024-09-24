@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/button.scss";
 
 .main-container {
     display: flex;
@@ -31,19 +32,7 @@
     }
 
     button {
-        appearance: none;
-        background-color: $base_colour;
-        border: 0px;
-        border-radius: 10px;
-        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-        box-sizing: border-box;
-        @include navigation-text(1.2rem);
-        cursor: pointer;
-        display: inline-block;
-        padding: 5px 10px;
-        margin-bottom: 5px;
-        text-align: center;
-
+        @include button($base_colour);
     }
 
     p {

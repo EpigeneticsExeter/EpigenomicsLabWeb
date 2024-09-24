@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/button.scss";
 
 
 .main-container {
@@ -32,19 +33,9 @@
             font-size: 3rem;
         }
 
-        .learn-more-button {
-            display: flex;
-            justify-content: space-between;
-            background-color: $base_colour;
-            border-radius: 10px;
-            padding: 5px;
-            margin: 1%;
-
-            a {
-                text-decoration: none;
-                @include navigation-text(2rem);
-                font-weight: bold;
-            }
+        button {
+            @include button($base_colour);
+            @include bold-main-text(2rem);
         }
     }
 

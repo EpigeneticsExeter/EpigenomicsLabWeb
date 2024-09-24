@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/button.scss";
 
 /* --------------------- */
 /* OVERARCHING STRUCTURE */
@@ -30,15 +31,10 @@ body {
 /* 404 PAGE */
 /* -------- */
 .text-centre {
-    @include main-text(1rem);
+    @include main-text(1.2rem);
     text-align: center;
 }
 
-.button {
-    background-color: $base_colour;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
+.previous-page-button {
+    @include button($base_colour);
 }

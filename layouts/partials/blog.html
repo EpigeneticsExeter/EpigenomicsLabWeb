@@ -5,12 +5,12 @@
 {{ $author_no_spaces := replace .Params.author " " "" }}
 {{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_no_spaces }}
 
-<div class="back-button">
-    <a href="javascript:window.history.back()">
+<a href="javascript:window.history.back()">
+    <button class="back-button" type="button">
         ←
         Back
-    </a>
-</div>
+    </button>
+</a>
 
 <div class="main-container">
    <div class="blog-article-top">
