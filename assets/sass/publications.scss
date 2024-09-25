@@ -87,13 +87,16 @@
 }
 
 @include themify($themes) {
+    .publication {
 
-    h2,
-    h3,
-    p,
-    .title,
-    .info {
-        color: themed('text');
-        background-color: themed('bg')
+        h2,
+        h3,
+        p,
+        .title,
+        .info {
+            color: themed('text');
+            background-color: themed('bg')
+        }
+
     }
 }
