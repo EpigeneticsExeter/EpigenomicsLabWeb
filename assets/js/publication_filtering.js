@@ -49,8 +49,8 @@ function sortPublicationsByDate(sortOrder) {
             'DEC': 12
         };
 
-        const [monthAbbr, year] = dateStr.split(' ');
-        const month = months[monthAbbr.toUpperCase()];
+        const [monthAbbreviation, year] = dateStr.split(' ');
+        const month = months[monthAbbreviation.toUpperCase()];
 
         return new Date(year, month);
     }
