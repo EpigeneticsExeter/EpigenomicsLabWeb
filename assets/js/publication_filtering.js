@@ -16,16 +16,13 @@ sortPublicationsByDate("latestToOldest")
 
 function sequentiallyShowPublications(publications) {
     const parentDiv = publications[0].parentNode;
-    
+
     publications.forEach((publication, index) => {
-        publication.classList.remove('show');
         publication.style.display = 'none';
 
         parentDiv.appendChild(publication);
 
         publication.style.display = 'flex';
-        publication.classList.add('fade-in')
-        publication.classList.add('show');
     });
 }
 
@@ -38,22 +35,22 @@ function sortPublicationsByDate(sortOrder) {
 
     function parseDate(dateStr) {
         const months = {
-            'JAN': 0,
-            'FEB': 1,
-            'MAR': 2,
-            'APR': 3,
-            'MAY': 4,
-            'JUN': 5,
-            'JUL': 6,
-            'AUG': 7,
-            'SEP': 8,
-            'OCT': 9,
-            'NOV': 10,
-            'DEC': 11
+            'JAN': 1,
+            'FEB': 2,
+            'MAR': 3,
+            'APR': 4,
+            'MAY': 5,
+            'JUN': 6,
+            'JUL': 7,
+            'AUG': 8,
+            'SEP': 9,
+            'OCT': 10,
+            'NOV': 11,
+            'DEC': 12
         };
 
-        const [monthAbbr, year] = dateStr.split(' ');
-        const month = months[monthAbbr.toUpperCase()];
+        const [monthAbbreviation, year] = dateStr.split(' ');
+        const month = months[monthAbbreviation.toUpperCase()];
 
         return new Date(year, month);
     }
@@ -83,21 +80,6 @@ function sortPublicationsByDate(sortOrder) {
         }
     });
     sequentiallyShowPublications(publications);
-searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-
-    publications.forEach(publication => {
-        const publicationName = publication.id.toLowerCase();
-  
-        if (publicationName.includes(searchTerm)) {
-            publication.style.display = 'flex';
-            publication.classList.add('show');
-        } else {
-            publication.style.display = 'none';
-            publication.classList.remove('show');
-        }
-    });
-});
 }
 
 function sortPublicationsByName(sortOrder) {
@@ -143,10 +125,8 @@ searchInput.addEventListener('input', () => {
             allAuthors.includes(searchTerm) || 
             abstractText.includes(searchTerm)) {
             publication.style.display = 'flex';
-            publication.classList.add('show');
         } else {
             publication.style.display = 'none';
-            publication.classList.remove('show');
         }
     });
 });
