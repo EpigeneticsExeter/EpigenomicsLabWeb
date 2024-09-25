@@ -30,6 +30,11 @@
         justify-self: center;
         align-self: center;
         cursor: pointer;
+        fill: white;
+
+        &:hover {
+            fill: $navigation_hover_colour;
+        }
     }
 
     .main-nav {
@@ -56,7 +61,7 @@
                 @include navigation-text(1.4rem);
 
                 .nav-text:hover {
-                    color: #AAAAAA;
+                    color: $navigation_hover_colour;
                 }
             }
 
