@@ -1,5 +1,6 @@
-@import "theme.scss";
-@import "font/text.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
+@import "partials/button.scss";
 
 .main-container {
     display: flex;
@@ -17,11 +18,11 @@
     width: 30%;
     margin: 5px;
     height: 30vh;
-    background-color: $base_green;
+    background-color: $base_colour;
     color: white;
     padding-bottom: 50px;
     border-radius: 10px;
-    @include main-text;
+    @include main-text(1rem);
 }
 
 .filter-grid {
@@ -33,19 +34,7 @@
 }
 
 .filter-grid button {
-    appearance: none;
-    background-color: $dark_green;
-    border: 0px;
-    border-radius: 10px;
-    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-    box-sizing: border-box;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    @include main-text;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-    text-align: center;
+    @include button($dark_accent_colour);
 }
 
 /* ---------- */
@@ -66,16 +55,16 @@
     outline: none;
     border-radius: 50%;
     transition: all .5s ease;
-    background-color: $dark_green;
+    background-color: $dark_accent_colour;
     padding-right: 40px;
     color: white;
     box-sizing: border-box;
-    @include main-text;
+    @include main-text(1rem);
 }
 
 .input-search::placeholder {
     color: rgba(255, 255, 255, .5);
-    @include main-text;
+    @include main-text(1rem);
 }
 
 .btn-search {
@@ -88,13 +77,13 @@
     position: absolute;
     right: 0px;
     color: white;
-    background-color: $dark_green;
+    background-color: $dark_accent_colour;
 }
 
 .btn-search:focus~.input-search {
     width: 200px;
     border-radius: 0px;
-    background-color: $dark_green;
+    background-color: $dark_accent_colour;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     transition: all 500ms cubic-bezier(0, 0, 0, 1);
 }
@@ -102,6 +91,6 @@
 .input-search:focus {
     width: 200px;
     border-radius: 0px;
-    background-color: $dark_green;
+    background-color: $dark_accent_colour;
     border-bottom: 1px solid rgba(255, 255, 255, .5);
 }

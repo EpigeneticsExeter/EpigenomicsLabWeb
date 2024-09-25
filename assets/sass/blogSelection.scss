@@ -1,22 +1,9 @@
-@import "theme.scss";
-@import "font/text.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
+@import "partials/button.scss";
 
 .back-button {
-    display: flex;
-    width: 4%;
-    justify-content: space-between;
-    margin: 1%;
-    background-color: $base_green;
-    border-radius: 10px;
-    padding: 5px;
-    position: fixed;
-
-    a {
-        text-decoration: none;
-        color: $text_dark_green;
-        @include navigation-text;
-        font-weight: bold;
-    }
+    @include back_button($base_colour);
 }
 
 .featured-blog-box {
@@ -25,7 +12,7 @@
     align-self: center;
     width: 70%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.50);
-    @include main-text;
+    @include main-text(1rem);
     margin-top: 2vh;
 
     .featured-text-box {
@@ -34,8 +21,8 @@
     }
 
     .go-to-featured-article {
-        @include small-main-text;
-        background-color: $base_green;
+        @include main-text(1rem);
+        background-color: $base_colour;
         border-radius: 8px;
         border-style: none;
         color: white;
@@ -45,7 +32,7 @@
 
     .go-to-featured-article:hover,
     .go-to-featured-article:focus {
-        background-color: $dark_green;
+        background-color: $dark_accent_colour;
     }
 
     .featured-image-box {
@@ -63,14 +50,15 @@
             max-height: 40vh;
         }
     }
+
+    &:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
+    }
 }
 
-.featured-blog-box:hover {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
-}
 
 .section-header {
-    @include main-text;
+    @include main-text(1rem);
     margin-left: 5%;
 }
 
@@ -101,7 +89,7 @@
         .blog-text-box {
             display: flex;
             margin: 0 5%;
-            @include main-text;
+            @include main-text(1rem);
             align-items: center;
             justify-content: space-between;
 

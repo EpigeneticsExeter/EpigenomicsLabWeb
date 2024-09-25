@@ -1,5 +1,6 @@
-@import "theme.scss";
-@import "font/text.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
+@import "partials/button.scss";
 
 /* --------------------- */
 /* OVERARCHING STRUCTURE */
@@ -8,7 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
-    color: $text_dark_green;
+    color: $dark_text_colour;
     margin: auto;
     min-height: 100vh;
 }
@@ -30,15 +31,10 @@ body {
 /* 404 PAGE */
 /* -------- */
 .text-centre {
-    @include main-text;
+    @include main-text(1.2rem);
     text-align: center;
 }
 
-.button {
-    background-color: $base-green;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
+.previous-page-button {
+    @include button($base_colour);
 }

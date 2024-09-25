@@ -1,0 +1,23 @@
+@import "partials/text.scss";
+
+@mixin button($colour) {
+    appearance: none;
+    background-color: $colour;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    @include navigation-text(1.2rem);
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+@mixin back_button($colour) {
+    @include button($colour);
+    width: 4%;
+    margin: 1%;
+    position: fixed;
+}

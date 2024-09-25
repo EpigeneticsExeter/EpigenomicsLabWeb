@@ -1,5 +1,5 @@
-@import "theme.scss";
-@import "font/text.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
 
 #team-photo-container {
     display: flex;
@@ -14,15 +14,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-#about-container img {
-    height: 100px;
-}
+    img {
+        height: 100px;
 
-#about-container p {
-    @include main-text;
-    text-align: center;
+    }
+
+    p {
+        @include main-text(1.2rem);
+        text-align: center;
+
+    }
 }
 
 
@@ -40,77 +42,77 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $base_green;
-}
+    background-color: $base_colour;
 
-.sub-team-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @include navigation-text;
-    color: white;
-    width: 50%;
-    opacity: 0;
-    transform: translateY(20px);
-
-    h2,
-    p {
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    h2 {
+    .sub-team-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include navigation-text(1.2rem);
+        color: white;
+        width: 50%;
         opacity: 0;
-        transform: translateY(-10px);
-    }
+        transform: translateY(20px);
 
-    p {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    &.show {
-        opacity: 1;
+        h2,
+        p {
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
 
         h2 {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: 0.3s;
+            opacity: 0;
+            transform: translateY(-10px);
         }
 
         p {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        &.show {
             opacity: 1;
-            transform: translateY(0);
-            transition-delay: 0.6s;
+
+            h2 {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0.3s;
+            }
+
+            p {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0.6s;
+            }
         }
     }
-}
 
-.sub-team-photo {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    .sub-team-photo {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        opacity: 0;
+        transition: opacity 1s ease-out, transform 1s ease-out;
 
-    &:nth-of-type(even) {
-        transform: translateX(20px);
+        &:nth-of-type(even) {
+            transform: translateX(20px);
 
+        }
+
+        &:nth-of-type(odd) {
+            transform: translateX(-20px);
+
+        }
+
+        &.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        img {
+            width: 80%
+        }
     }
-
-    &:nth-of-type(odd) {
-        transform: translateX(-20px);
-
-    }
-
-    &.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.sub-team-photo img {
-    width: 80%
 }

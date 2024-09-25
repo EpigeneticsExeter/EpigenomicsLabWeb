@@ -1,0 +1,35 @@
+$base_colour: #003C3C;
+$light_accent_colour: #00DEA9;
+$dark_accent_colour: #002727;
+
+$base_text_colour: #007D69;
+$light_text_colour: #00DDA5;
+$dark_text_colour: #003333;
+
+
+$themes: (
+    light: (text: $dark_text_colour,
+        bg: white,
+
+    ),
+    dark: (text: white,
+        bg: #333333,
+    ),
+);
+
+$theme-map: null;
+
+@mixin themify($themes) {
+    @each $name, $values in $themes {
+        .#{$name}-theme {
+            $theme-map: $values !global;
+            @content;
+        }
+    }
+
+    $theme-map: null !global;
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

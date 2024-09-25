@@ -1,22 +1,9 @@
-@import "theme.scss";
-@import "font/text.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
+@import "partials/button.scss";
 
 .back-button {
-    display: flex;
-    width: 4%;
-    justify-content: space-between;
-    margin: 1%;
-    background-color: $base_green;
-    border-radius: 10px;
-    padding: 5px;
-    position: fixed;
-
-    a {
-        text-decoration: none;
-        color: $text_dark_green;
-        @include navigation-text;
-        font-weight: bold;
-    }
+    @include back_button($base_colour);
 }
 
 .main-container {
@@ -33,18 +20,17 @@
         width: 100%;
 
         h1 {
-            @include main-text;
-            font-size: 1.5rem;
+            @include main-text(3rem);
             margin-bottom: 0;
         }
 
         h3 {
-            @include small-main-text;
+            @include main-text(1.5rem);
             margin: 0;
         }
 
         p {
-            @include small-main-text;
+            @include main-text(2rem);
             margin: 0 0 2% 0;
         }
 
@@ -76,7 +62,7 @@
         }
 
         p {
-            @include small-main-text;
+            @include main-text(1rem);
         }
 
         .blog-image-container {
@@ -95,7 +81,7 @@
     }
 
     .blog-article {
-        @include small-main-text;
+        @include main-text(1rem);
 
         img {
             width: 80%;

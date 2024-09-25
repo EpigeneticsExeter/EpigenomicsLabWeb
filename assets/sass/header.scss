@@ -1,6 +1,6 @@
-@import "theme.scss";
-@import "font/text.scss";
-@import "global-variables.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
+@import "partials/global-variables.scss";
 
 /* ------------------- */
 /* MAIN NAVIGATION BAR */
@@ -9,7 +9,7 @@
 .main-navbar {
     display: grid;
     grid-template-columns: 150px 1fr 50px;
-    background-color: $base_green;
+    background-color: $base_colour;
     position: sticky;
     top: 0;
     width: 100%;
@@ -31,52 +31,52 @@
         align-self: center;
         cursor: pointer;
     }
-}
 
+    .main-nav {
+        display: grid;
+        padding-top: 1%;
+        margin-left: 2%;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 
-.main-nav {
-    display: grid;
-    padding-top: 1%;
-    margin-left: 2%;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-
-    ul {
-        list-style-type: none;
-    }
-
-    .nav-item {
-        display: flex;
-        flex-direction: column;
-        white-space: nowrap;
-
-        .nav-item-link {
-            cursor: pointer;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            @include navigation-text;
+        ul {
+            list-style-type: none;
         }
 
-        .sub-nav {
+        .nav-item {
             display: flex;
-            padding: 10% 0 0 0;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.5s;
-            z-index: 120;
-            min-width: 80vh;
+            flex-direction: column;
+            white-space: nowrap;
 
-            .sub-nav-item {
-                margin: 0 1%;
-                white-space: nowrap;
+            .nav-item-link {
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                @include navigation-text(1.4rem);
+
+                .nav-text:hover {
+                    color: #AAAAAA;
+                }
             }
+
+            .sub-nav {
+                display: flex;
+                padding: 10% 0 0 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s;
+                z-index: 120;
+                min-width: 80vh;
+
+                .sub-nav-item {
+                    margin: 0 1%;
+                    white-space: nowrap;
+                }
+            }
+
         }
 
+
     }
-
-}
-
-.nav-text:hover {
-    color: #AAAAAA;
 }

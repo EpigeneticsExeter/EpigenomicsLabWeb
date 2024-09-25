@@ -1,5 +1,6 @@
-@import "theme.scss";
-@import "font/text.scss";
+@import "partials/theme.scss";
+@import "partials/text.scss";
+@import "partials/button.scss";
 
 
 .main-container {
@@ -9,7 +10,7 @@
     gap: 1%;
     justify-content: center;
     align-self: center;
-    @include main-text;
+    @include main-text(1rem);
     color: white;
     width: 80%;
     margin-top: 0.5%;
@@ -21,32 +22,20 @@
         align-items: flex-start;
         background-size: cover;
         height: 42vh;
-        @include main-text;
+        @include main-text(1rem);
         background-repeat: no-repeat;
 
         h1 {
             padding: 5px;
-            background-color: $base_green;
+            background-color: $base_colour;
             margin: 1%;
             border-radius: 10px;
             font-size: 3rem;
         }
 
-        .learn-more-button {
-            display: flex;
-            justify-content: space-between;
-            background-color: $base_green;
-            border-radius: 10px;
-            padding: 5px;
-            margin: 1%;
-
-            a {
-                text-decoration: none;
-                color: $text_dark_green;
-                @include navigation-text;
-                font-weight: bold;
-                font-size: 2rem;
-            }
+        button {
+            @include button($base_colour);
+            @include bold-main-text(2rem);
         }
     }
 
@@ -67,9 +56,9 @@
 .caption {
     display: flex;
     justify-content: flex-end;
-    @include small-main-text;
 
     p {
         margin: 0.5% 10%;
+        @include main-text(1rem)
     }
 }
