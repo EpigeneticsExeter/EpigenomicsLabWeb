@@ -1,0 +1,10 @@
+site_name: Website Documentation
+repo_url: https://github.com/EpigeneticsExeter/EpigenomicsLabWeb/
+site_description: "Documentation for Epigenetics Exeter Lab Website"
+site_author: "EpigeneticsExeter"
+copyright: "© 2024 - Epigenomics Group"
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
