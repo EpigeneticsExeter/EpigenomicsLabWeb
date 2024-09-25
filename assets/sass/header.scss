@@ -33,7 +33,7 @@
         fill: white;
 
         &:hover {
-            fill: #AAAAAA;
+            fill: $navigation_hover_colour;
         }
     }
 
@@ -61,7 +61,7 @@
                 @include navigation-text(1.4rem);
 
                 .nav-text:hover {
-                    color: #AAAAAA;
+                    color: $navigation_hover_colour;
                 }
             }
 
