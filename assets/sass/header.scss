@@ -30,6 +30,11 @@
         justify-self: center;
         align-self: center;
         cursor: pointer;
+        fill: white;
+
+        &:hover {
+            fill: #AAAAAA;
+        }
     }
 
     .main-nav {
