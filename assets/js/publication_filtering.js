@@ -18,14 +18,11 @@ function sequentiallyShowPublications(publications) {
     const parentDiv = publications[0].parentNode;
     
     publications.forEach((publication, index) => {
-        publication.classList.remove('show');
         publication.style.display = 'none';
 
         parentDiv.appendChild(publication);
 
         publication.style.display = 'flex';
-        publication.classList.add('fade-in')
-        publication.classList.add('show');
     });
 }
 
