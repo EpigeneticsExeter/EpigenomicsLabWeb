@@ -6,6 +6,23 @@
     display: flex;
     margin-top: 2%;
 
+    button {
+        @include button($base_colour);
+    }
+
+    p {
+        @include main-text(1rem);
+    }
+
+    h3 {
+        @include main-text(1.2rem);
+    }
+
+    h1 {
+        @include main-text(2rem);
+        margin: 0;
+    }
+
     .contact-and-join-container {
         display: flex;
         flex-direction: column;
@@ -31,21 +48,4 @@
         }
     }
 
-    button {
-        @include button($base_colour);
-    }
-
-    p {
-        @include main-text(1rem);
-    }
-
-    h1,
-    h3 {
-        @include main-text(1.1rem);
-    }
-
-    h1 {
-        @include main-text(2rem);
-        margin: 0;
-    }
 }

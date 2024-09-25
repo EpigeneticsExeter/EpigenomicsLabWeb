@@ -50,11 +50,12 @@
             max-height: 40vh;
         }
     }
+
+    &:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
+    }
 }
 
-.featured-blog-box:hover {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
-}
 
 .section-header {
     @include main-text(1rem);

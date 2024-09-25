@@ -14,79 +14,74 @@
     justify-content: flex-start;
     width: 70%;
     margin: 5px 5px 0px 30.5%;
-}
 
-.publication-link {
-    text-decoration: none;
-    width: 90%;
-}
-
-.publication {
-    display: none;
-    width: 90%;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0px 0px 10px 0px;
-    cursor: pointer;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-
-    .publication-header {
-        background-image: linear-gradient(70deg, $base_colour, $light_accent_colour);
-        width: 150px;
-        height: 4px;
-    }
-
-    .title {
-        @include bold-main-text(1.75rem);
-        margin-left: 10px;
-
-    }
-
-    .info {
-        @include main-text(1rem);
-        color: black;
-        margin-left: 20px;
-
-    }
-
-    .extra-information-container {
-        display: flex;
+    .publication {
+        display: none;
+        width: 90%;
         flex-direction: column;
-        @include main-text(1rem);
+        align-items: flex-start;
+        margin: 0px 0px 10px 0px;
+        cursor: pointer;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
-        h3,
-        h2 {
-            margin: 1%;
-            width: 100%;
+        .publication-header {
+            background-image: linear-gradient(70deg, $base_colour, $light_accent_colour);
+            width: 150px;
+            height: 4px;
         }
 
-        p {
-            margin: 0 1% 1% 1%;
+        .title {
+            @include bold-main-text(1.75rem);
+            margin-left: 10px;
+
         }
 
-        .link-container {
+        .info {
+            @include main-text(1rem);
+            color: black;
+            margin-left: 20px;
+
+        }
+
+        .extra-information-container {
             display: flex;
-            margin: 1%;
+            flex-direction: column;
+            @include main-text(1rem);
 
-            .link {
+            h3,
+            h2 {
+                margin: 1%;
+                width: 100%;
+            }
+
+            p {
+                margin: 0 1% 1% 1%;
+            }
+
+            .link-container {
                 display: flex;
-                border-radius: 7%;
-                background-color: $base_colour;
-                padding: 10px;
-                @include main-text(1rem);
-                margin: 0 1%;
+                margin: 1%;
 
-                a {
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: white;
+                .link {
+                    display: flex;
+                    border-radius: 7%;
+                    background-color: $base_colour;
+                    padding: 10px;
+                    @include main-text(1rem);
+                    margin: 0 1%;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: white;
+                    }
                 }
-            }
 
-            .link:hover {
-                background-color: $dark_accent_colour;
-            }
+                .link:hover {
+                    background-color: $dark_accent_colour;
+                }
 
+            }
         }
     }
 }
@@ -101,16 +96,4 @@
         color: themed('text');
         background-color: themed('bg')
     }
-}
-
-/* ------- */
-/* FADE IN */
-/* ------- */
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.25s;
-}
-
-.fade-in.show {
-    opacity: 1;
 }
