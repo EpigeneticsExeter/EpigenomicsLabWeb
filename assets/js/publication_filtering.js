@@ -80,21 +80,6 @@ function sortPublicationsByDate(sortOrder) {
         }
     });
     sequentiallyShowPublications(publications);
-searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-
-    publications.forEach(publication => {
-        const publicationName = publication.id.toLowerCase();
-  
-        if (publicationName.includes(searchTerm)) {
-            publication.style.display = 'flex';
-            publication.classList.add('show');
-        } else {
-            publication.style.display = 'none';
-            publication.classList.remove('show');
-        }
-    });
-});
 }
 
 function sortPublicationsByName(sortOrder) {
@@ -140,10 +125,8 @@ searchInput.addEventListener('input', () => {
             allAuthors.includes(searchTerm) || 
             abstractText.includes(searchTerm)) {
             publication.style.display = 'flex';
-            publication.classList.add('show');
         } else {
             publication.style.display = 'none';
-            publication.classList.remove('show');
         }
     });
 });
