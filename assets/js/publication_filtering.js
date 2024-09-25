@@ -16,7 +16,7 @@ sortPublicationsByDate("latestToOldest")
 
 function sequentiallyShowPublications(publications) {
     const parentDiv = publications[0].parentNode;
-    
+
     publications.forEach((publication, index) => {
         publication.style.display = 'none';
 
