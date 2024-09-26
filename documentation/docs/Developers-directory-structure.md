@@ -261,10 +261,12 @@ Partials can be imported using:
 There are some partials that can help you to achieve certain functionality on
 the site without having to write everything yourself.
 
-The first of these is a partial to import some sass. To use it add the
-following into your script:
+##### sass
 
-```
+The first of these is a partial to import some sass. To use it add the
+following into your template:
+
+```go
 {{ define "extra_head" }}
 {{ partial "partials/addSass.html" (dict "style" "sass/file-name.scss") }}
 {{ end }}
