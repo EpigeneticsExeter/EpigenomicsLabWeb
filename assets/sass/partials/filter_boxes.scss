@@ -4,93 +4,87 @@
 
 .main-container {
     display: flex;
-}
 
-/* -------------- */
-/* FILTERING AREA */
-/* -------------- */
-.filter-container {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
-    margin: 5px;
-    height: 30vh;
-    background-color: $base_colour;
-    color: white;
-    padding-bottom: 50px;
-    border-radius: 10px;
-    @include main-text(1rem);
-}
+    .filter-container {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+        margin: 5px;
+        height: 35vh;
+        background-color: $base_colour;
+        color: white;
+        border-radius: 10px;
+        @include main-text(1rem);
 
-.filter-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 2%;
-    row-gap: 2%;
-    margin: 10px
-}
+        .filter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 2%;
+            row-gap: 2%;
+            margin: 10px;
 
-.filter-grid button {
-    @include button($dark_accent_colour);
-}
+            button {
+                @include button($dark_accent_colour);
+            }
+        }
+    }
 
-/* ---------- */
-/* SEARCH BAR */
-/* ---------- */
 
-.search-box {
-    width: fit-content;
-    height: fit-content;
-    position: relative;
-}
+    .search-box {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        margin-bottom: 5vh;
 
-.input-search {
-    height: 50px;
-    width: 50px;
-    border-style: none;
-    padding: 10px;
-    outline: none;
-    border-radius: 50%;
-    transition: all .5s ease;
-    background-color: $dark_accent_colour;
-    padding-right: 40px;
-    color: white;
-    box-sizing: border-box;
-    @include main-text(1rem);
-}
+        .input-search {
+            height: 50px;
+            width: 50px;
+            border-style: none;
+            padding: 10px;
+            outline: none;
+            border-radius: 50%;
+            transition: all .5s ease;
+            background-color: $dark_accent_colour;
+            padding-right: 40px;
+            color: white;
+            box-sizing: border-box;
+            @include main-text(1rem);
 
-.input-search::placeholder {
-    color: rgba(255, 255, 255, .5);
-    @include main-text(1rem);
-}
+            &::placeholder {
+                color: rgba(255, 255, 255, .5);
+                @include main-text(1rem);
+            }
 
-.btn-search {
-    width: 50px;
-    height: 50px;
-    border-style: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50%;
-    position: absolute;
-    right: 0px;
-    color: white;
-    background-color: $dark_accent_colour;
-}
+            &:focus {
+                width: 200px;
+                border-radius: 0px;
+                background-color: $dark_accent_colour;
+                border-bottom: 1px solid rgba(255, 255, 255, .5);
+            }
+        }
 
-.btn-search:focus~.input-search {
-    width: 200px;
-    border-radius: 0px;
-    background-color: $dark_accent_colour;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
-    transition: all 500ms cubic-bezier(0, 0, 0, 1);
-}
+        .btn-search {
+            width: 50px;
+            height: 50px;
+            border-style: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color: white;
+            background-color: $dark_accent_colour;
+        }
+    }
 
-.input-search:focus {
-    width: 200px;
-    border-radius: 0px;
-    background-color: $dark_accent_colour;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    .btn-search:focus~.input-search {
+        width: 200px;
+        border-radius: 0px;
+        background-color: $dark_accent_colour;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        transition: all 500ms cubic-bezier(0, 0, 0, 1);
+    }
 }

@@ -6,7 +6,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 70%;
-    margin-left: 30%;
+    grid-template-rows: repeat(auto-fill, 35vh);
+    margin: 5px 5px 0 31%;
 
     .person-profile {
         display: flex;
@@ -14,8 +15,8 @@
         align-items: center;
         justify-content: space-evenly;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-        margin: 2px;
         border-radius: 5px;
+        height: 100%;
 
         .link-tree {
             visibility: hidden;
@@ -75,6 +76,13 @@
     .person-profile h1 {
         color: themed('text');
         background-color: themed('bg')
+    }
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .people-photo-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
