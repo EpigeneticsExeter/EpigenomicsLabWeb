@@ -1,6 +1,5 @@
 {{ define "extra_head" }}
-{{ $style := resources.Get "sass/home.scss" | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ partial "partials/addSass.html" (dict "style" "sass/home.scss") }}
 {{ end }}
 
 {{ define "main" }}

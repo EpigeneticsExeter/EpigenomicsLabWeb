@@ -6,8 +6,9 @@
     <meta name="keywords" content="Epigenetics, Epigenomics, Lab, Exeter, Alzheimers, Schizophrenia, ADHD, Autism, Brain, Cancer, DNA, Methylation">
     <meta name="description" content="The home of epigentics research in Exeter UK">
     <link rel="icon" type="image/x-icon" href="/EpigenomicsLabWeb/favicon.ico">
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    {{ partial "partials/addSass.html" (dict "style" "sass/main.scss") }}
+
     <title>
         {{ block "title" . }}
         {{ .Site.Title }}
