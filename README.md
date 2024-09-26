@@ -10,4 +10,5 @@ make this a private repository (hopefully the deployment still works).
 ## Documentation
 
 To learn how to run the site and how to contribute (*etc.*) head on over to the
-`documentation` directory of this repository.
+[documentation](https://github.com/EpigeneticsExeter/EpigenomicsLabWeb/tree/main/documentation) 
+directory of this repository.
