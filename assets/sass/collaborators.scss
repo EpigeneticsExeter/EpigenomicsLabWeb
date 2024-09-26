@@ -32,14 +32,14 @@
             width: 40%;
 
             h1 {
-                @include main-text(1rem);
+                @include main-text(2rem);
                 text-align: center;
             }
 
             p {
                 width: 95%;
                 text-align: right;
-                @include main-text(0.5rem);
+                @include main-text(1rem);
             }
         }
     }
@@ -117,6 +117,7 @@
     }
 
     p {
+        @include main-text(1rem);
         margin: 1%;
     }
 }
