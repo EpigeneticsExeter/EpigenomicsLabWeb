@@ -10,8 +10,6 @@
 
 
 {{ define "scripts" }}
-{{ with resources.Get "js/people_filtering.js" }}
-<script type="application/javascript" src="{{ .Permalink }}"></script>
-{{ end }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/people_filtering.js") }}
 {{ end }}
 

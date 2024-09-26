@@ -60,7 +60,5 @@
 {{ end }}
 
 {{ define "scripts" }}
-{{ with resources.Get "js/collaborator_slideshow.js" }}
-<script type="application/javascript" src="{{ .Permalink }}"></script>
-{{ end }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/collaborator_slideshow.js") }}
 {{ end }}

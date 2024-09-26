@@ -56,7 +56,5 @@
 {{ end }}
 
 {{ define "scripts" }}
-{{ with resources.Get "js/opportunity_filtering.js" }}
-<script type="application/javascript" src="{{ .Permalink }}"></script>
-{{ end }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/opportunity_filtering.js") }}
 {{ end }}
