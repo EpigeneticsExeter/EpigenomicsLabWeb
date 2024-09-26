@@ -102,7 +102,7 @@ pales in comparison). Other supersets of css exist of course, but the fact that
 hugo supports sass directly makes it the obvious choice.
 
 To add sass into your template, I emplore you to check out
-[this section](#important-partials).
+[this section](#sass-partial).
 
 ## Content
 
@@ -261,7 +261,7 @@ Partials can be imported using:
 There are some partials that can help you to achieve certain functionality on
 the site without having to write everything yourself.
 
-##### sass
+##### Sass partial
 
 The first of these is a partial to import some sass. To use it add the
 following into your template:
@@ -275,7 +275,7 @@ following into your template:
 You'll want to change `file-name.scss` to the name of your `scss` file found
 in the `assets/sass` folder for this to work.
 
-##### Javascript
+##### Javascript partial
 
 If you want to use javascript, then add this to your template:
 
