@@ -1,6 +1,5 @@
 {{ define "extra_head" }}
-{{ $style := resources.Get "sass/publications.scss" | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ partial "partials/addSass.html" (dict "style" "sass/publications.scss") }}
 {{ end }}
 
 
@@ -108,11 +107,6 @@
 
 
 {{ define "scripts" }}
-{{ with resources.Get "js/publication_filtering.js" }}
-<script type="application/javascript" src="{{ .Permalink }}"></script>
-{{ end }}
-
-{{ with resources.Get "js/expand_publication.js" }}
-<script type="application/javascript" src="{{ .Permalink }}"></script>
-{{ end }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/publication_filtering.js") }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/expand_publication.js") }}
 {{ end }}

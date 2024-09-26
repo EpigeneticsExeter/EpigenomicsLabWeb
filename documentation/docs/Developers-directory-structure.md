@@ -253,6 +253,11 @@ Partials can be imported using:
 {{ partial "partials/name-of-partial.html" }}
 ```
 
+#### Useful partials
+
+For some partials that will save you lots of time, head on over to 
+[this page](./Developers-useful-partials.md).
+
 ## Public
 
 Don't touch anything in this directory (though looking around might

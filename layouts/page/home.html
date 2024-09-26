@@ -1,6 +1,5 @@
 {{ define "extra_head" }}
-{{ $style := resources.Get "sass/home.scss" | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ partial "partials/addSass.html" (dict "style" "sass/home.scss") }}
 {{ end }}
 
 {{ define "main" }}
@@ -74,7 +73,5 @@
 {{ end }}
 
 {{ define "scripts" }}
-{{ with resources.Get "js/scroll-animation.js" }}
-<script type="application/javascript" src="{{ .Permalink }}"></script>
-{{ end }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/scroll-animation.js") }}
 {{ end }}
