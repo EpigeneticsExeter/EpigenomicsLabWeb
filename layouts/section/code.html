@@ -3,6 +3,16 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $repo_data := dict }}
+{{ $path := "data/repositories.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $repo_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
 <div class="description-container">
     <h1>Our Code Repositories</h1>
     <p>
@@ -14,10 +24,10 @@
     </p>
 </div>
 <div class="repository-grid">
-    {{ $theme := "default"}}
-    {{ range .Pages }}
-    <a href="https://github.com/{{ .Params.username }}/{{ .Params.repo }}" target="_blank" >
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username={{ .Params.username }}&repo={{ .Params.repo }}&theme={{ $theme }}">
+    {{ $theme := "default" }}
+    {{ range $repo_data }}
+    <a href="https://github.com/{{ .username }}/{{ .repo }}" target="_blank" >
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username={{ .username }}&repo={{ .repo }}&theme={{ $theme }}">
     </a>
     {{ end }}
 </div>
