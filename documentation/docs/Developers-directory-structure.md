@@ -101,9 +101,6 @@ one. Sass allows for partial files, mixins, global variables and more (css
 pales in comparison). Other supersets of css exist of course, but the fact that
 hugo supports sass directly makes it the obvious choice.
 
-To add sass into your template, I emplore you to check out
-[this section](#sass-partial).
-
 ## Content
 
 The markdown files found in this directory directly correspond with pages on
