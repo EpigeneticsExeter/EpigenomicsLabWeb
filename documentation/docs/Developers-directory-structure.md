@@ -101,6 +101,9 @@ one. Sass allows for partial files, mixins, global variables and more (css
 pales in comparison). Other supersets of css exist of course, but the fact that
 hugo supports sass directly makes it the obvious choice.
 
+To add sass into your template, I emplore you to check out
+[this section](#important-partials).
+
 ## Content
 
 The markdown files found in this directory directly correspond with pages on
@@ -252,6 +255,23 @@ Partials can be imported using:
 ```go
 {{ partial "partials/name-of-partial.html" }}
 ```
+
+#### Important partials
+
+There are some partials that can help you to achieve certain functionality on
+the site without having to write everything yourself.
+
+The first of these is a partial to import some sass. To use it add the
+following into your script:
+
+```
+{{ define "extra_head" }}
+{{ partial "partials/addSass.html" (dict "style" "sass/file-name.scss") }}
+{{ end }}
+```
+
+You'll want to change `file-name.scss` to the name of your `scss` file found
+in the `assets/sass` folder for this to work.
 
 ## Public
 
