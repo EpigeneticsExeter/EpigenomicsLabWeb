@@ -17,10 +17,9 @@
     justify-content: space-between;
     width: 30%;
     margin: 5px;
-    height: 30vh;
+    height: 35vh;
     background-color: $base_colour;
     color: white;
-    padding-bottom: 50px;
     border-radius: 10px;
     @include main-text(1rem);
 }
@@ -45,6 +44,7 @@
     width: fit-content;
     height: fit-content;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .input-search {
