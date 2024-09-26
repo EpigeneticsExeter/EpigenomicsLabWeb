@@ -117,6 +117,7 @@
     }
 
     p {
+        @include main-text(1rem);
         margin: 1%;
     }
 }
