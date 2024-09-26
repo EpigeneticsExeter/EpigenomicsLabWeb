@@ -273,6 +273,19 @@ following into your script:
 You'll want to change `file-name.scss` to the name of your `scss` file found
 in the `assets/sass` folder for this to work.
 
+##### Javascript
+
+If you want to use javascript, then add this to your template:
+
+```go
+{{ define "scripts" }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/file-name.js") }}
+{{ end }}
+```
+
+You'll want to change `file-name.js` to the name of your `js` file found
+in the `assets/js` folder for this to work.
+
 ## Public
 
 Don't touch anything in this directory (though looking around might
