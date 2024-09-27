@@ -4,6 +4,10 @@
 <!-- Assumes author's profile picture has filename ~= person name -->
 {{ $author_no_spaces := replace .Params.author " " "" }}
 {{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_no_spaces }}
+{{ $profile_picture := resources.GetMatch $author_picture_pattern}}
+{{ if not $profile_picture }}
+{{ $profile_picture = resources.Get "svgs/default-profile.svg" }}
+{{ end }}
 
 <a href="javascript:window.history.back()">
     <button class="back-button" type="button">
@@ -19,9 +23,7 @@
         <p> ({{ $word_count }} words, {{ $read_time }} - {{ add $read_time 1}} minute read)</p>
         <div class="author-container">
             <div class="author-image">
-                {{ with resources.GetMatch $author_picture_pattern }}
-                <img src="{{ .RelPermalink }}"></img>
-                {{ end }}
+                <img src="{{ $profile_picture.RelPermalink }}"></img>
             </div>
             <div class="author-information">
                 <p>Posted by {{ .Params.author }}</p>
