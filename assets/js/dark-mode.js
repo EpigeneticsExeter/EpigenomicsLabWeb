@@ -27,7 +27,8 @@ function toggleDarkMode() {
     }
     localStorage.setItem("theme", isDarkMode);
 }
-window.onload = function () {
+
+globalThis.onload = function () {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "true") {
         isDarkMode = true;
