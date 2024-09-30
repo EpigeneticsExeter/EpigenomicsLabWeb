@@ -114,16 +114,16 @@ function sortPublicationsByName(sortOrder) {
 // ----------- //
 
 latestButton.onclick = function () {
-    window.scrollTo(0, 0);
+    globalThis.scrollTo(0, 0);
 };
 oldestButton.onclick = function () {
-    window.scrollTo(0, 0);
+    globalThis.scrollTo(0, 0);
 };
 azButton.onclick = function () {
-    window.scrollTo(0, 0);
+    globalThis.scrollTo(0, 0);
 };
 zaButton.onclick = function () {
-    window.scrollTo(0, 0);
+    globalThis.scrollTo(0, 0);
 };
 
 // --------- //
