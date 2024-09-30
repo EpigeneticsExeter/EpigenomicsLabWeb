@@ -19,7 +19,7 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].classList.add("active");
 
-    slideIndex ++;
+    slideIndex++;
 }
 
 function startSlideshow() {
@@ -32,7 +32,7 @@ function startSlideshow() {
 
 function switchSlide(index) {
     clearInterval(slideshowInterval); // Stop the automatic slideshow
-    slideIndex = index; 
+    slideIndex = index;
     showSlides();
 }
 
@@ -42,7 +42,7 @@ let timeoutID = null;
 
 if (slideshowContainer) {
     slideshowContainer.addEventListener("mouseenter", () => {
-        clearInterval(slideshowInterval); 
+        clearInterval(slideshowInterval);
     });
 
     slideshowContainer.addEventListener("mouseleave", () => {
