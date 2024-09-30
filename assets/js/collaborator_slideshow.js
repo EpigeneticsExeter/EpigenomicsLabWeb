@@ -30,7 +30,7 @@ function startSlideshow() {
     }, 5000);
 }
 
-function switchSlide(index) {
+function _switchSlide(index) {
     clearInterval(slideshowInterval); // Stop the automatic slideshow
     slideIndex = index;
     showSlides();
