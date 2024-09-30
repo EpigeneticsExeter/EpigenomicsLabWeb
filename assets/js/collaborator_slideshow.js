@@ -4,8 +4,8 @@ let slideshowInterval;
 showSlides();
 
 function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot-indicator");
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot-indicator");
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
