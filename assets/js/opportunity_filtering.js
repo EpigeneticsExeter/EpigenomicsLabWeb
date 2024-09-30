@@ -21,7 +21,7 @@ function filteropportunities(category) {
     opportunities.forEach((opportunity) => {
         opportunity.style.display = "none";
     });
-    opportunities.forEach((opportunity, index) => {
+    opportunities.forEach((opportunity) => {
         if (category === "all" || opportunity.classList.contains(category)) {
             opportunity.style.display = "flex";
         }

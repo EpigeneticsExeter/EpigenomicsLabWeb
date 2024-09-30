@@ -7,7 +7,7 @@ const observerOptions = {
     threshold: 0.5,
 };
 
-const observer = new IntersectionObserver(function (elements, observer) {
+const observer = new IntersectionObserver(function (elements) {
     elements.forEach((element) => {
         if (element.isIntersecting) {
             element.target.classList.add("show");

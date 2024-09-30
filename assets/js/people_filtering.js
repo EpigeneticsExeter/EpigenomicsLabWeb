@@ -29,7 +29,7 @@ function filterProfiles(category) {
         profile.classList.remove("show");
         profile.style.display = "none";
     });
-    profiles.forEach((profile, index) => {
+    profiles.forEach((profile) => {
         if (category === "all" || profile.classList.contains(category)) {
             setTimeout(() => {
                 profile.style.display = "flex";
