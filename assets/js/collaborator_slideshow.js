@@ -1,7 +1,7 @@
 let slideIndex = 1;
 let slideshowInterval;
 
-showSlides();
+switchSlide(slideIndex);
 
 function showSlides() {
     const slides = document.getElementsByClassName("slide");
@@ -30,15 +30,13 @@ function startSlideshow() {
     }, 5000);
 }
 
-function _switchSlide(index) {
+function switchSlide(index) {
     clearInterval(slideshowInterval); // Stop the automatic slideshow
     slideIndex = index;
     showSlides();
 }
 
 const slideshowContainer = document.getElementById("slideshow");
-
-let timeoutID = null;
 
 if (slideshowContainer) {
     slideshowContainer.addEventListener("mouseenter", () => {
