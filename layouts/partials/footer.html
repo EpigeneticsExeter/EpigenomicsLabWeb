@@ -1,10 +1,12 @@
+{{ $uoe_logo := resources.Get "svgs/uoe-logo.svg" }}
 <div class="main-footer-box">
     <div class="copyright-box">
-        <p>© Copyright - Epigenomics Group {{ time.Now | time.Format "2006" }}</p>
+        <p>© Copyright - Complex Disease Epigenomics Group {{ time.Now | time.Format "2006" }}</p>
     </div>
     <div class="additional-links">
-        <a href="#">LinkedIn</a>
-        <a href="https://medicine.exeter.ac.uk/research/facilities/rild/" target="_blank">UoE</a>
+        <a href="https://www.exeter.ac.uk" target="_blank">
+            <img src="{{ $uoe_logo.RelPermalink }}">
+        </a>
         <a href="https://x.com/PsyEpigenetics/" target="_blank">X</a>
         <a href="/EpigenomicsLabWeb/sitemap.xml">Sitemap</a>
     </div>
