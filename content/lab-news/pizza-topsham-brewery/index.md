@@ -5,7 +5,7 @@ date = 2024-08-01
 [params]
     featured = 1
     author = "Sam Fletcher"
-    image = "images/events/Topsham-brewery.jpg"
+    image = "images/lab-news/Topsham-brewery.jpg"
 +++
 
 # Exploring Topsham Brewery: A Perfect Day of Pizza, Sunshine, and Adventure

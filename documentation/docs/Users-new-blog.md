@@ -41,7 +41,7 @@ be put at the top of the blog selection page.
 
 You might be a little confused about the `image` field.
 This field is for the image that is displayed on the blog selection page
-(look at the events page for current examples). If you don't have an image to
+(look at the lab-news page for current examples). If you don't have an image to
 use, leave this alone. If you *do* have an image to use however, move that 
 image into the `assets` directory of the repository and provide the path to it.
 

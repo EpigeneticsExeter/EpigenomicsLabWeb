@@ -3,7 +3,7 @@
 SCRIPTS_DIR="$(realpath "$(dirname "$0")")"
 CONTENT_DIR="$SCRIPTS_DIR/../content"
 CONTENT_DIR=$(realpath "$CONTENT_DIR")
-EVENTS_DIR="$CONTENT_DIR/events"
+NEWS_DIR="$CONTENT_DIR/lab-news"
 PROJECTS_DIR="$CONTENT_DIR/projects"
 
 convert_to_lower() {
@@ -44,7 +44,7 @@ done
 
 
 case "${blog_type}" in
-    event ) blog_path="$EVENTS_DIR/${dir_name}"  ;;
+    event ) blog_path="$NEWS_DIR/${dir_name}"  ;;
     phd ) blog_path="$PROJECTS_DIR/phdprojects/${dir_name}" ;;
     pty ) blog_path="$PROJECTS_DIR/ptyprojects/${dir_name}" ;;
     general ) blog_path="$PROJECTS_DIR/ourprojects/${dir_name}" ;;

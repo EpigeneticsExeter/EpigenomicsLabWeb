@@ -33,7 +33,7 @@
 recent is 'within the last year'-->
 {{ $hours_in_a_year := time.ParseDuration "8760h" }}
 <div class="section-header">
-    <h1>Recent events</h1>
+    <h1>Recent News</h1>
 </div>
 <div class="blog-grid">
     {{ range .Pages.ByDate.Reverse }}
@@ -59,7 +59,7 @@ recent is 'within the last year'-->
 </div>
 
 <div class="section-header">
-    <h1>Older events</h1>
+    <h1>Older News</h1>
 </div>
 <div class="blog-grid">
     {{ range .Pages.ByDate.Reverse }}
