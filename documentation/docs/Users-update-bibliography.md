@@ -49,5 +49,13 @@ future, the `change_author_format.py` file will need to be changed.
 
 Specifically, this line will need to have ";" replaced with the new delimiter:
 ```python
-authors = author_field.split(";")
+authors = author_field.split(";"
 ```
+
+One further problem that I cannot automate is that some titles will start with
+a number (possibly followed by a "." character). I presume we don't want these
+numbers before the publication title, so it is best to remove these manually.
+You can use the sort functionality on the website to find the culprits. This
+is just what happens when data is bad, I can't really automate it in a way I
+know won't delete false positives (for example, a paper begins with 5-mC
+which is perfectly fine).
