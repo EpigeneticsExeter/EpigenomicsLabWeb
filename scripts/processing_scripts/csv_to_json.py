@@ -23,8 +23,9 @@ def argument_parser():
 
 
 def read_csv(csv_file_path):
-    csv_file = pd.read_csv(csv_file_path, header=0)
-    return csv_file
+    csv_data = pd.read_csv(csv_file_path, header=0)
+    csv_data.fillna('null', inplace=True)
+    return csv_data
 
 
 def remove_unwanted_columns(csv_data, columns_to_keep):
