@@ -1,32 +1,61 @@
 # Users: How to update the bibliography
 
-This is all (hopefully) done for you by a script found in the `scripts`
-directory provided in this repository.
+## Getting an up to date bibliography
 
-To use this script, you'll need:
+To update the bibliography, you'll want to head over to
+[Dimensions](https://app.dimensions.ai/discover/publication?search_mode=content&order=date&or_facet_researcher=ur.01337470631.76&or_facet_researcher=ur.0634726306.30&or_facet_researcher=ur.01040701516.28&or_facet_researcher=ur.0724251750.63&or_facet_researcher=ur.015375054345.08&or_facet_researcher=ur.01310756701.08&or_facet_research_org=grid.8391.3&or_facet_publication_type=article&or_facet_publication_type=preprint)
+. From here, the filters should be good enough to work with. You can of course
+change them to your heart's content. From here, you'll want to click on the
+export button next to the search bar at the top of the page.
 
-- python3
-- The `bibtexparser` python library
+After clicking on the export button, get a full record in CSV format. We
+previously used BibTex, but the publication dates are not full enough for 
+our use case. I'd reccomend clicking on 'Send email when export is ready'
+if you are not familiar with Dimensions as you'll probably struggle to find
+your download link.
 
-Without these the script will fail.
+## Creating the bibliography
 
-## Use of the script
+Next step is to download the csv file and put it somewhere in this directory.
+It doesn't matter where it is, just make sure it isn't commited to the
+repository at any point.
 
-Firstly, you'll want to get a bibtex file that describes all of the
-publications from the group. Next, put the `.bib` file anywhere in the
-repository, the script currently finds it for you. Then just run the script
-like so:
+Before continuing, make sure that you have a python installation on your
+`PATH` with the `pandas` and `dateparser` python libaries installed. You can
+install all of these into a conda environment if you so wish (recommended).
 
-```bash
-path/to/update-bibliography.sh
+The csv isn't in the correct format, we want it in json format. To accomplish
+this, a script is provided in `scripts` called `update-bibliography.sh`.
+Use this script by simply running it with `.../update-bibliography.sh`.
+
+The script will run through things with you, answer the questions and it should
+do the rest for you. Most of the time you can just copy and paste answers from
+the output to the terminal. The path should be copied and pasted as it will
+make things easier for you. The script asks the user what the name of each
+column is as I can't reasonably automate this and it may be subject to change
+in the future (especially if a different provider is used to get the list
+of publicaitons).
+
+## Quirks
+
+The only problem you might have is that the first row of your downloaded file
+might not be the header row. I don't know if this will always be the case, so I
+do not remove the first row automatically in the script (though a suitable
+warning pops up if the first row is predicted to not be a header row).
+
+In the future, the authors field may be separated by a different value.
+Currently each name is separated by a semi colon (;). If this changes in the
+future, the `change_author_format.py` file will need to be changed. 
+
+Specifically, this line will need to have ";" replaced with the new delimiter:
+```python
+authors = author_field.split(";")
 ```
 
-## In the event of problems
-
-Hopefully your bibtex file is in the correct format and has the right fields.
-If not, then you might need to edit the file or create an issue on github to
-raise this as a problem.
-
-The current script is very reliant on the input bibliography. If the file isn't
-in the expected format, the script will fail.
-
+One further problem that I cannot automate is that some titles will start with
+a number (possibly followed by a "." character). I presume we don't want these
+numbers before the publication title, so it is best to remove these manually.
+You can use the sort functionality on the website to find the culprits. This
+is just what happens when data is bad, I can't really automate it in a way I
+know won't delete false positives (for example, a paper begins with 5-mC
+which is perfectly fine).

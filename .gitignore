@@ -1,3 +1,6 @@
 public/
 resources/
 raw_bibliography/
+*.csv
+*.bib
+__pycache__

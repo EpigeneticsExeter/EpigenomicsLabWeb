@@ -7,28 +7,21 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this request!
-  - type: textarea
-    id: name
+  - type: dropdown
+    id: found
     attributes:
-      label: "What is the title of the publication?" 
+      label: "Can the publication be found on Dimensions?"
+      description: "Go to app.dimensions.ai and try to find your publication using the filters."
+      multiple: false
+      options:
+        - Yes
+        - No
     validations:
       required: true
   - type: textarea
-    id: Who
+    id: How
     attributes:
-      label: "Which members of the Lab worked on this paper?"
-    validations:
-      required: true
-  - type: textarea
-    id: Where
-    attributes:
-      label: "Where can the publication be found?"
-    validations:
-      required: true
-  - type: textarea
-    id: What
-    attributes:
-      label: "Give a short summary of the publication"
-      description: This is to ensure that we add the correct tags to the publication
+      label: "How can the publication be found on Dimensions?"
+      description: "Ideally it can be found by filtering to a PI in our team. If so, please just enter the PI's name here."
     validations:
       required: true
