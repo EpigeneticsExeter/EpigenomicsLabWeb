@@ -25,8 +25,8 @@ Before continuing, make sure that you have a python installation on your
 install all of these into a conda environment if you so wish (recommended).
 
 The csv isn't in the correct format, we want it in json format. To accomplish
-this, a script is provided in `scripts` called `update-bibliography-csv.sh`.
-Use this script by simply running it with `.../update-bibliography-csv.sh`.
+this, a script is provided in `scripts` called `update-bibliography.sh`.
+Use this script by simply running it with `.../update-bibliography.sh`.
 
 The script will run through things with you, answer the questions and it should
 do the rest for you. Most of the time you can just copy and paste answers from
@@ -49,7 +49,7 @@ future, the `change_author_format.py` file will need to be changed.
 
 Specifically, this line will need to have ";" replaced with the new delimiter:
 ```python
-authors = author_field.split(";"
+authors = author_field.split(";")
 ```
 
 One further problem that I cannot automate is that some titles will start with
