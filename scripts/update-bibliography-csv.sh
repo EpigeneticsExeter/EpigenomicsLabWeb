@@ -13,6 +13,7 @@ fi
 
 cat << EOF
 Found these raw bibliographies: 
+
 ${raw_publication_data}
 
 Please copy and paste the one you want to use with the publications page
@@ -41,7 +42,9 @@ fi
     column_names=$(head -n 1 "${bibliography_path}" | sed 's/,/\n/g')
 
 cat << EOF
-The following column names were found in the selected file::
+
+The following column names were found in the selected file:
+Please copy and paste these entries into the questions below.
 
 $column_names
 
@@ -69,8 +72,9 @@ echo "Please give the name of a suitable id column (might be under Publication I
         --input_fields "${doi},${abstract},${journal},${title},${author},${date}" \
         --output_fields "doi,abstract,journal,title,author,date"
 
-    python "${PYTHON_DIR}/change_date_format.py" \
-        "${PROCESSED_PUBLICATION_DATA}"
+    if eval python "${PYTHON_DIR}/change_date_format.py" "${PROCESSED_PUBLICATION_DATA}"; then
+        echo "Completed successfully"
+    fi
 
 else
 echo "ERROR: ${bibliography_path} does not exist. Make sure you typed it correctly"
