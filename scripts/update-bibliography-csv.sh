@@ -72,9 +72,11 @@ echo "Please give the name of a suitable id column (might be under Publication I
         --input_columns "${doi},${abstract},${journal},${title},${author},${date}" \
         --output_columns "doi,abstract,journal,title,author,date"
 
-    if eval python "${PYTHON_DIR}/change_date_format.py" "${PROCESSED_PUBLICATION_DATA}"; then
-        echo "Completed successfully"
-    fi
+    python "${PYTHON_DIR}/change_date_format.py" \
+        "${PROCESSED_PUBLICATION_DATA}"
+
+    python "${PYTHON_DIR}/change_author_format.py" \
+        "${PROCESSED_PUBLICATION_DATA}"
 
 else
 echo "ERROR: ${bibliography_path} does not exist. Make sure you typed it correctly"
