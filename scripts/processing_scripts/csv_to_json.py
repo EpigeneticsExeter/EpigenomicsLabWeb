@@ -58,14 +58,20 @@ def main():
     args = argument_parser()
     csv_data = read_csv(args.csv_file_path)
     csv_data.columns = csv_data.columns.str.lower()
-    csv_data = remove_unwanted_columns(csv_data,
-                                       args.input_columns + [args.id_column])
-    csv_data = rename_columns(csv_data,
-                              args.input_columns,
-                              args.output_columns)
-    json_data = convert_dataframe_to_dictionary(csv_data,
-                                                args.id_column.lower(),
-                                                args.input_columns)
+    csv_data = remove_unwanted_columns(
+        csv_data,
+        args.input_columns + [args.id_column.lower()]
+    )
+    csv_data = rename_columns(
+        csv_data,
+        args.input_columns,
+        args.output_columns
+    )
+    json_data = convert_dataframe_to_dictionary(
+        csv_data,
+        args.id_column.lower(),
+        args.input_columns
+    )
     write_json(json_data, args.json_file_path)
 
 
