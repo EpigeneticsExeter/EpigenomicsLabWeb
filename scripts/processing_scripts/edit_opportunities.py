@@ -1,5 +1,5 @@
 import argparse
-import json
+from IO import read_json, write_json
 
 
 def argument_parser():
@@ -15,23 +15,6 @@ def argument_parser():
 def quit_with_message(_, __, ___):
     print("ERROR: Type of change must be one of: add, change or remove")
     quit()
-
-
-def load_data(file):
-    try:
-        with open(file, "r") as opportunity_json:
-            opportunity_data = json.load(opportunity_json)
-            return opportunity_data
-    except (FileNotFoundError, json.JSONDecodeError):
-        return
-
-
-def write_data(file, data):
-    try:
-        with open(file, "w") as opportunity_json:
-            json.dump(data, opportunity_json, indent=4)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return
 
 
 def list_opportunities(opportunities):
@@ -90,18 +73,18 @@ Hit enter for N/A.
     for entry in opportunity_information.keys():
         opportunity_information[entry] = get_opportunity_information(entry)
 
-    opportunity_data = load_data(json_file)
+    opportunity_data = read_json(json_file)
 
     title = opportunity_information["title"]
     if title is None:
         print("ERROR: No title was given, this is required")
         return
     opportunity_data[title] = opportunity_information
-    write_data(json_file, opportunity_data)
+    write_json(json_file, opportunity_data)
 
 
 def change_opportunity(json_file):
-    opportunity_data = load_data(json_file)
+    opportunity_data = read_json(json_file)
 
     print("Please select the opportunity that you would like to change:")
     list_opportunities(opportunity_data)
@@ -129,11 +112,11 @@ The current value for {field_to_change} is:
                 opportunity_data[new_value] = opportunity_data.pop(title)
                 title = new_value
 
-    write_data(json_file, opportunity_data)
+    write_json(json_file, opportunity_data)
 
 
 def remove_opportunity(json_file):
-    opportunity_data = load_data(json_file)
+    opportunity_data = read_json(json_file)
 
     print("Please select the opportunity that you would like to change:")
     list_opportunities(opportunity_data)
@@ -142,7 +125,7 @@ def remove_opportunity(json_file):
 
     del opportunity_data[title]
 
-    write_data(json_file, opportunity_data)
+    write_json(json_file, opportunity_data)
 
 
 def main():

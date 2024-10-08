@@ -1,6 +1,6 @@
-import json
 import argparse
 import dateparser
+from IO import read_json, write_json
 
 
 def argument_parser():
@@ -10,17 +10,6 @@ def argument_parser():
 
     args = parser.parse_args()
     return args
-
-
-def read_json(file_path):
-    with open(file_path, 'r') as json_file:
-        json_file = json.load(json_file)
-    return (json_file)
-
-
-def write_json(file_path, json_data):
-    with open(file_path, 'w') as json_file:
-        json.dump(json_data, json_file, indent=4)
 
 
 def change_date_format(json_data):

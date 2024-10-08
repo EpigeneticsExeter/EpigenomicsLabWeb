@@ -1,5 +1,5 @@
 import argparse
-import json
+from IO import read_json, write_json
 
 
 def argument_parser():
@@ -17,23 +17,6 @@ def argument_parser():
 def quit_with_message(_, __, ___):
     print("ERROR: Type of change must be one of: add, change or remove")
     quit()
-
-
-def load_data(file):
-    try:
-        with open(file, "r") as people_json:
-            people_data = json.load(people_json)
-            return people_data
-    except (FileNotFoundError, json.JSONDecodeError):
-        return
-
-
-def write_data(file, data):
-    try:
-        with open(file, "w") as people_json:
-            json.dump(data, people_json, indent=4)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return
 
 
 def get_alumni_information(name):
@@ -98,13 +81,13 @@ Use white space separation if {name} falls under multiple themes.
     if person_information["alumni"] is None:
         person_information["alumni"] = False
 
-    people_data = load_data(json_file)
+    people_data = read_json(json_file)
     people_data[name] = person_information
-    write_data(json_file, people_data)
+    write_json(json_file, people_data)
 
 
 def change_person(json_file, name, profile_picture):
-    people_data = load_data(json_file)
+    people_data = read_json(json_file)
 
     if name not in people_data:
         print(f"ERROR: {name} is not in {json_file}. Please add them first.")
@@ -131,11 +114,11 @@ def change_person(json_file, name, profile_picture):
                 people_data[new_value] = people_data.pop(name)
                 name = new_value
 
-    write_data(json_file, people_data)
+    write_json(json_file, people_data)
 
 
 def remove_person(json_file, name, profile_picture):
-    people_data = load_data(json_file)
+    people_data = read_json(json_file)
 
     try:
         del people_data[name]
@@ -143,7 +126,7 @@ def remove_person(json_file, name, profile_picture):
         print(f"ERROR: {name} is not in {json_file}. Please add them first.")
         return
 
-    write_data(json_file, people_data)
+    write_json(json_file, people_data)
 
 
 def main():

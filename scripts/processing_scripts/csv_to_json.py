@@ -1,6 +1,6 @@
 import argparse
-import json
 import pandas as pd
+from IO import read_csv, write_json
 
 
 def list_of_strings(arg):
@@ -20,12 +20,6 @@ def argument_parser():
 
     args = parser.parse_args()
     return args
-
-
-def read_csv(csv_file_path):
-    csv_data = pd.read_csv(csv_file_path, header=0)
-    csv_data.fillna('null', inplace=True)
-    return csv_data
 
 
 def remove_unwanted_columns(csv_data, columns_to_keep):
@@ -49,14 +43,9 @@ def convert_dataframe_to_dictionary(csv_data, id_column, columns):
     return data
 
 
-def write_json(json_data, json_file_path):
-    with open(json_file_path, 'w') as json_file:
-        json.dump(json_data, json_file, indent=4)
-
-
 def main():
     args = argument_parser()
-    csv_data = read_csv(args.csv_file_path)
+    csv_data = read_csv(args.csv_file_path, 'null')
     csv_data.columns = csv_data.columns.str.lower()
     csv_data = remove_unwanted_columns(
         csv_data,
