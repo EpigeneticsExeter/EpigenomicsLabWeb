@@ -47,6 +47,7 @@ def main():
     args = argument_parser()
     csv_data = read_csv(args.csv_file_path, 'null')
     csv_data.columns = csv_data.columns.str.lower()
+    print(csv_data)
     csv_data = remove_unwanted_columns(
         csv_data,
         args.input_columns + [args.id_column.lower()]
@@ -61,7 +62,7 @@ def main():
         args.id_column.lower(),
         args.input_columns
     )
-    write_json(json_data, args.json_file_path)
+    write_json(args.json_file_path, json_data)
 
 
 if __name__ == "__main__":
