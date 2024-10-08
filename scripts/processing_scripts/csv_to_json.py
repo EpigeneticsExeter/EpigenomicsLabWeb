@@ -47,7 +47,6 @@ def main():
     args = argument_parser()
     csv_data = read_csv(args.csv_file_path, 'null')
     csv_data.columns = csv_data.columns.str.lower()
-    print(csv_data)
     csv_data = remove_unwanted_columns(
         csv_data,
         args.input_columns + [args.id_column.lower()]

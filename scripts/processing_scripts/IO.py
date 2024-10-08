@@ -21,5 +21,9 @@ def write_json(file_path, json_data):
 
 def read_csv(csv_file_path, na_value):
     csv_data = pd.read_csv(csv_file_path, header=0)
-    csv_data.fillna(na_value, inplace=True)
+    for column in csv_data.columns:
+        if csv_data[column].isnull().any():
+            csv_data[column] = csv_data[column].astype(object)
+
+            csv_data.fillna({column: na_value}, inplace=True)
     return csv_data
