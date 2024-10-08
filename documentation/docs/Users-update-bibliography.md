@@ -36,9 +36,18 @@ column is as I can't reasonably automate this and it may be subject to change
 in the future (especially if a different provider is used to get the list
 of publicaitons).
 
-## Quirk
+## Quirks
 
 The only problem you might have is that the first row of your downloaded file
 might not be the header row. I don't know if this will always be the case, so I
 do not remove the first row automatically in the script (though a suitable
 warning pops up if the first row is predicted to not be a header row).
+
+In the future, the authors field may be separated by a different value.
+Currently each name is separated by a semi colon (;). If this changes in the
+future, the `change_author_format.py` file will need to be changed. 
+
+Specifically, this line will need to have ";" replaced with the new delimiter:
+```python
+authors = author_field.split(";")
+```
