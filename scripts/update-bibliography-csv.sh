@@ -69,8 +69,8 @@ echo "Please give the name of a suitable id column (might be under Publication I
         "${bibliography_path}" \
         "${PROCESSED_PUBLICATION_DATA}" \
         "${id}" \
-        --input_fields "${doi},${abstract},${journal},${title},${author},${date}" \
-        --output_fields "doi,abstract,journal,title,author,date"
+        --input_columns "${doi},${abstract},${journal},${title},${author},${date}" \
+        --output_columns "doi,abstract,journal,title,author,date"
 
     if eval python "${PYTHON_DIR}/change_date_format.py" "${PROCESSED_PUBLICATION_DATA}"; then
         echo "Completed successfully"
