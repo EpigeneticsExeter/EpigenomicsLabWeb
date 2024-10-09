@@ -1,6 +1,7 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
 @import "partials/button.scss";
+@import "partials/global-variables.scss";
 
 .main-container {
     display: flex;
@@ -96,6 +97,7 @@
 
         .filter-container {
             width: 98vw;
+            z-index: $filterbox_index;
 
 
         }

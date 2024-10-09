@@ -86,6 +86,29 @@
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .people-photo-grid {
+        width: 95%;
+        margin: 15vh 5px 0 5px;
+        grid-template-columns: 1fr 1fr;
+
+        .person-profile {
+            .link-tree {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .people-photo-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* --------- */
 /* ANIMATION */
 /* --------- */
