@@ -28,3 +28,32 @@
     }
 
 }
+
+@media only screen and (max-width:1400px) {
+    .main-container {
+        .funder-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .main-container {
+        .funder-grid {
+            grid-template-columns: 1fr 1fr;
+            /* Fuck knows why this is required without it, the footer */
+            /* can overlap with the grid on some devices */
+            margin-bottom: 10vh;
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .main-container {
+        .funder-grid {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+    }
+}
