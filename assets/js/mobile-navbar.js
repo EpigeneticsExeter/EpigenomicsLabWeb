@@ -1,6 +1,7 @@
 const toggleMenuButton = document.getElementById("toggle-menu");
 const navItems = document.querySelectorAll(".nav-item");
 const mainNav = document.querySelector(".main-nav");
+const mobileModeWidth = 1000;
 
 toggleMenuButton.addEventListener("click", toggleMenu);
 
@@ -12,7 +13,7 @@ function toggleMenu() {
     }
 }
 
-if (globalThis.innerWidth < 1000) {
+if (globalThis.innerWidth < mobileModeWidth) {
     navItems.forEach((item) => {
         const link = item.querySelector(".nav-item-link");
         const subNav = item.querySelector(".sub-nav");
