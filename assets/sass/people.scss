@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 70%;
     grid-template-rows: repeat(auto-fill, 35vh);
-    margin: 5px 5px 0 31%;
+    margin: 1vh 5px 0 31vw;
 
     .person-profile {
         display: flex;
@@ -102,7 +102,7 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
     .people-photo-grid {
         display: flex;
         flex-direction: column;
