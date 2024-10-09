@@ -6,7 +6,7 @@
 <div id="team-photo-container">
     <div>
         {{ with resources.Get "images/placeholder.png" }}
-        <img style="height:400px" src="{{ .RelPermalink }}"></img>
+        <img src="{{ .RelPermalink }}"></img>
         {{ end }}
     </div>
 </div>
@@ -23,7 +23,6 @@
     <img src="{{ $dna_gif.RelPermalink }}"></img>
 </div>
 <div class="sub-team-container">
-
     <div class="sub-team-info">
         <h2>Team 1</h2>
         <p>Here is some fascinating information about team 1</p>
@@ -35,19 +34,17 @@
     </div>
 </div>
 <div class="sub-team-container">
-
+    <div class="sub-team-info">
+        <h2>Team 2</h2>
+        <p>Here is some fascinating information about team 2</p>
+    </div>
     <div class="sub-team-photo">
         {{ with resources.Get "images/placeholder.png" }}
         <img src="{{ .RelPermalink }}"></img>
         {{ end }}
     </div>
-    <div class="sub-team-info">
-        <h2>Team 2</h2>
-        <p>Here is some fascinating information about team 2</p>
-    </div>
 </div>
 <div class="sub-team-container">
-
     <div class="sub-team-info">
         <h2>Team 3</h2>
         <p>Here is some fascinating information about team 3</p>
@@ -59,15 +56,14 @@
     </div>
 </div>
 <div class="sub-team-container">
-
+    <div class="sub-team-info">
+        <h2>Team 4</h2>
+        <p>Here is some fascinating information about team 4</p>
+    </div>
     <div class="sub-team-photo">
         {{ with resources.Get "images/placeholder.png" }}
         <img src="{{ .RelPermalink }}"></img>
         {{ end }}
-    </div>
-    <div class="sub-team-info">
-        <h2>Team 4</h2>
-        <p>Here is some fascinating information about team 4</p>
     </div>
 </div>
 {{ end }}
