@@ -100,3 +100,10 @@
 
     }
 }
+
+@media only screen and (max-width:1000px) {
+    .publications-container {
+        width: 98vw;
+        margin: 15vh 1vw 0 1vw;
+    }
+}
