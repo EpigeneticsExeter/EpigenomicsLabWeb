@@ -10,7 +10,6 @@
     gap: 1%;
     justify-content: center;
     align-self: center;
-    @include main-text(1rem);
     color: white;
     width: 80%;
     margin-top: 0.5%;
@@ -22,15 +21,15 @@
         align-items: flex-start;
         background-size: cover;
         height: 42vh;
-        @include main-text(1rem);
         background-repeat: no-repeat;
+        background-position: center;
 
         h1 {
             padding: 5px;
             background-color: $base_colour;
             margin: 1%;
             border-radius: 10px;
-            font-size: 3rem;
+            @include main-text(3rem);
         }
 
         button {
@@ -60,5 +59,38 @@
     p {
         margin: 0.5% 10%;
         @include main-text(1rem)
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+        .projects-container {
+            margin: 1%;
+        }
+    }
+
+}
+
+@media only screen and (max-width:500px) {
+    .main-container {
+        .projects-container {
+            h1 {
+                @include main-text(2rem);
+            }
+
+            button {
+                @include bold-main-text(1.5rem);
+            }
+        }
+    }
+
+    .caption {
+        p {
+            @include main-text(0.75rem);
+
+        }
     }
 }
