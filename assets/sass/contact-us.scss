@@ -44,8 +44,40 @@
 
         img {
             border-radius: 2%;
-            height: 50%;
+            width: 80%;
         }
     }
 
+}
+
+@media only screen and (max-width:1000px) {
+    .main-container {
+        flex-direction: column;
+
+        .contact-and-join-container {
+            width: 95%;
+            margin-left: 2%;
+        }
+
+        .address-container {
+            width: 95%;
+            margin: 1%;
+            align-items: flex-start;
+
+            h1 {
+                text-align: left;
+                margin-left: 10%;
+            }
+
+            p {
+                text-align: left;
+                margin-left: 10%;
+            }
+
+            img {
+                align-self: center;
+            }
+
+        }
+    }
 }
