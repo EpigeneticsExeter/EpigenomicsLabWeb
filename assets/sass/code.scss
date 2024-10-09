@@ -12,10 +12,12 @@
 
     h1 {
         @include main-text(2rem);
+        margin: 2%;
     }
 
     p {
         @include main-text(1rem);
+        margin: 2%;
     }
 }
 
@@ -30,5 +32,20 @@
 @media only screen and (max-width: 1400px) {
     .repository-grid {
         grid-template-columns: 1fr 1fr;
+
+        img {
+            width: 45vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .repository-grid {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 90vw;
+        }
     }
 }
