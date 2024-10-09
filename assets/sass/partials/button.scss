@@ -17,7 +17,6 @@
 
 @mixin back_button($colour) {
     @include button($colour);
-    width: 4%;
     margin: 1%;
     position: fixed;
 }
