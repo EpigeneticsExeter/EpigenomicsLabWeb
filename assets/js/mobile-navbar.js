@@ -12,17 +12,19 @@ function toggleMenu() {
     }
 }
 
-navItems.forEach((item) => {
-    const link = item.querySelector(".nav-item-link");
-    const subNav = item.querySelector(".sub-nav");
-    const allSubNavs = document.querySelectorAll(".sub-nav");
+if (globalThis.innerWidth < 1000) {
+    navItems.forEach((item) => {
+        const link = item.querySelector(".nav-item-link");
+        const subNav = item.querySelector(".sub-nav");
+        const allSubNavs = document.querySelectorAll(".sub-nav");
 
-    link.addEventListener("click", function () {
-        allSubNavs.forEach((item) => {
-            item.style.display = "none";
+        link.addEventListener("click", function () {
+            allSubNavs.forEach((item) => {
+                item.style.display = "none";
+            });
+            if (subNav) {
+                subNav.style.display = "flex";
+            }
         });
-        if (subNav) {
-            subNav.style.display = "flex";
-        }
     });
-});
+}
