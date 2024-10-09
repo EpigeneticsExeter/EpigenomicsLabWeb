@@ -41,6 +41,7 @@
         flex-direction: column;
 
         .copyright-box {
+            justify-content: center;
             width: 100%;
             margin: 0;
             @include navigation-text(1rem);
