@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SCRIPTS_DIR="$(realpath "$(dirname "$0")")"
-PEOPLE_DATA="$SCRIPTS_DIR/../assets/data/people.json"
-IMAGES_DIR="$SCRIPTS_DIR/../assets/images/profile_pictures"
-PYTHON_DIR="$SCRIPTS_DIR/processing_scripts/"
+SCRIPTS_DIR=$(realpath "$(dirname "$0")")
+PEOPLE_DATA=$(realpath "$SCRIPTS_DIR/../assets/data/people.json")
+IMAGES_DIR=$(realpath "$SCRIPTS_DIR/../assets/images/profile_pictures")
+PYTHON_DIR=$(realpath "$SCRIPTS_DIR/processing_scripts/")
 
 RED="[0;31m"
 NO_COLOUR="[0m"
