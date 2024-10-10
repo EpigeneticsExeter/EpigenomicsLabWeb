@@ -77,6 +77,7 @@ We recommend gettting this below 200KB. There are various tools online to help
 with this.
 ${NO_COLOUR}
 EOF
+    exit 1
     fi
 fi
 fi
