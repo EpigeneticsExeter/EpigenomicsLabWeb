@@ -154,5 +154,17 @@
         "x": null,
         "orcid": "0000-0002-3546-1726",
         "biosketch": "23178-barry-chioza"
+    },
+    "Bethan Mallabar - Rimmer": {
+        "name": "Bethan Mallabar - Rimmer",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "Analysis,Lab",
+        "github": "bethan-mallabar-rimmer",
+        "email": "b.rimmer@exeter.ac.uk",
+        "linkedin": "bethanrimmer",
+        "x": null,
+        "orcid": "0009-0004-4345-8414",
+        "biosketch": null
     }
 }
