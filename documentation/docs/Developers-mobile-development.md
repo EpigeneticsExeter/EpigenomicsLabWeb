@@ -48,3 +48,19 @@ reload the page (not refresh the page, reload the page by navigating to it
 again) or change to a different device (and change back). It's fustrating, but
 I have found that doing a combination of these usually fixes problems that I
 know shouldn't be there.
+
+## Width thresholds
+
+The media queries on the site all use the width thresholds outlined in the
+`global_variables.scss` partial. I did this so that it is easier to get
+pages to agree with one another for different devices. In general, the 
+`$tablet_threshold_width` is the most important one (set to 1000px). From
+testing, it is around this point where the site benefits from having a
+redesign as each page and the header gets too cramped. The other thresholds
+are in place for the same reason, but in more specific cases. For example,
+The funders page looks bad with a single column of funders on tablets, but
+bad with a grid on thin phones (so a distinction is required).
+
+These thresholds are in no way fixed at all, you can add more, delete some,
+change the values, whatever. The important thing it to stick with using
+these variables so that refactoring is easier in the future.
