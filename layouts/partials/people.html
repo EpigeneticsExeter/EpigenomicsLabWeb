@@ -52,7 +52,7 @@
                     {{ errorf "Unable to get global resource %q" $profile_picture }}
                 {{ end }}
             {{ else }}
-                {{ with resources.Get "/svgs/default-profile.svg" }}
+                {{ with resources.Get "/images/profile_pictures/default-profile.svg" }}
                     <img class="profile_picture" src="{{ .RelPermalink }}"></img>
                 {{ end }}
             {{ end }}
