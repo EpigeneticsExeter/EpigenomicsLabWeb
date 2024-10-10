@@ -94,5 +94,17 @@
         "x": null,
         "orcid": "0000-0002-9824-2627",
         "biosketch": "35215-amy-webster"
+    },
+    "Anthony Klokkaris": {
+        "name": "Anthony Klokkaris",
+        "alumni": false,
+        "position": "PhD",
+        "themes": "Analysis,Lab",
+        "github": "AnthonyKl98",
+        "email": "a.klokkaris@exeter.ac.uk",
+        "linkedin": "anthony-klokkaris-3b9b06146",
+        "x": null,
+        "orcid": "0000-0001-8599-3109",
+        "biosketch": "35312-anthony-klokkaris"
     }
 }
