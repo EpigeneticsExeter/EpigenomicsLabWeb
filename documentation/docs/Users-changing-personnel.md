@@ -9,27 +9,6 @@ quicker). For information on what each field is go to
 For those who aren't as comfortable with json files, there is a script in the
 `scripts` folder that can guide you through the process.
 
-## IMPORTANT
-
-Before running the script, if you are **adding** a person you will need to
-place the profile picture of the person to the
-`assets/images/profile_pictures/` directory. If you do not do this, the script
-will throw an error.
-
-The file name must be in the form:
-`firstnamelastname.fileextension` or a different error will return. 
-
-For example:
-
-`samfletcher.jpg`
-`eilishannon.png`
-
-This might seem annoying, but I am not clever enough to figure out a robust way
-of finding profile pictures unless they are in a specific format. I could add
-a bunch of string manipulation to find the image, but this will needlessly add
-complexity to the code and could still end up not working in certain edge 
-cases.
-
 ## Using the designated script
 
 In order to run this script, you will need python3 installed on your machine.
@@ -50,6 +29,25 @@ fields are the name and the profile picture. These are already filled out for
 you by this point, so if you can't add any more information for whatever
 reason, you can just skip the rest of the questions.
 
+### Profile picture
+
+The script will also tell you this, but if you are reading this, you likely
+haven't ran the script yet. The profile picture for the person being added
+must follow two important rules:
+
+1) The image must have a name of firstnamelastname.(file_extension)
+    - For example: eilishannon.jpg for Eilis Hannon
+2) The image must be smaller than 200KB (large images severely slow down the 
+    site)
+
+If either of these are not met, a default profile picture will be used instead.
+
+#### Making images smaller
+
+If the image is too large, I recommend using a `.jpg` or `.webp` format and
+possibly consider using a compression tool (there are plenty of these 
+available online).
+
 ## Editing the json file directly
 
 As mentioned, the json file you want is in the `assets/data` directory,
@@ -63,8 +61,6 @@ break.
 Below is a quick definition of each field:
 
 - name: The name that appears on the person's card
-- image: The image that appears on the person's card (relative to the
-    `assets/images/profile_pictures/` directory)
 - alumni: Put `true` to put the person on the alumni page, `false` to put them
     on the current members page
 - position: Options are currently (case sensitive):
@@ -90,7 +86,6 @@ Here's an example:
 ```json
 "Eilis Hannon": {
     "name": "Eilis Hannon",
-    "image": "eilishannon.jpg",
     "alumni": false,
     "position": "PI",
     "theme": "Analysis",

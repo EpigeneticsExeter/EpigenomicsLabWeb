@@ -8,7 +8,6 @@ def argument_parser():
     parser.add_argument("json_file", type=str)
     parser.add_argument("change_type", type=str)
     parser.add_argument("name", type=str)
-    parser.add_argument("profile_picture", type=str)
 
     args = parser.parse_args()
     return args
@@ -31,7 +30,6 @@ Enter {name}'s alumni status (True or False):
 def get_people_information(name, field):
     example_texts = {
         "name": "Ex: Jane Doe",
-        "image": "Ex: janedoe.png [make sure this exists in profile_pictures]",
         "position": "Pick from: PI, PostDoc, PhD, GRA, PTY",
         "themes": "Pick from: Analysis, Lab, Bioinformatics",
         "github": "Your github username",
@@ -54,9 +52,8 @@ Enter {name}'s {field} ({example_text}):
     return information
 
 
-def add_person(json_file, name, profile_picture):
+def add_person(json_file, name):
     person_information = {"name": name,
-                          "image": profile_picture,
                           "alumni": False,
                           "position": None,
                           "themes": None,
@@ -75,7 +72,7 @@ Use white space separation if {name} falls under multiple themes.
 ===============================================================================
 """)
 
-    for entry in list(person_information.keys())[2:]:
+    for entry in list(person_information.keys())[1:]:
         person_information[entry] = get_people_information(name, entry)
 
     if person_information["alumni"] is None:
@@ -86,7 +83,7 @@ Use white space separation if {name} falls under multiple themes.
     write_json(json_file, people_data)
 
 
-def change_person(json_file, name, profile_picture):
+def change_person(json_file, name):
     people_data = read_json(json_file)
 
     if name not in people_data:
@@ -117,7 +114,7 @@ def change_person(json_file, name, profile_picture):
     write_json(json_file, people_data)
 
 
-def remove_person(json_file, name, profile_picture):
+def remove_person(json_file, name):
     people_data = read_json(json_file)
 
     try:
@@ -139,7 +136,7 @@ def main():
 
     action = actions.get(args.change_type, quit_with_message)
 
-    action(args.json_file, args.name, args.profile_picture)
+    action(args.json_file, args.name)
 
 
 if __name__ == "__main__":

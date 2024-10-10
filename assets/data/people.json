@@ -1,7 +1,6 @@
 {
     "Eilis Hannon": {
         "name": "Eilis Hannon",
-        "image": "eilishannon.jpg",
         "alumni": false,
         "position": "PI",
         "theme": "Analysis",
@@ -14,7 +13,6 @@
     },
     "Jessica Shields": {
         "name": "Jessica Shields",
-        "image": "jessicashields.jpg",
         "alumni": true,
         "position": "GRA",
         "theme": "Analysis",
@@ -25,9 +23,20 @@
         "orcid": null,
         "biosketch": "38292-jessica-shields"
     },
+    "Rhian Swarbrick": {
+        "name": "Rhian Swarbrick",
+        "alumni": true,
+        "position": "PTY",
+        "theme": "Analysis",
+        "github": null,
+        "email": "res238@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null,
+        "biosketch": null
+    },
     "Siyi Wang": {
         "name": "Siyi Wang",
-        "image": "siyiwang.jpg",
         "alumni": false,
         "position": "GRA",
         "themes": "analysis",
@@ -40,7 +49,6 @@
     },
     "Sam Fletcher": {
         "name": "Sam Fletcher",
-        "image": "samfletcher.jpg",
         "alumni": false,
         "position": "GRA",
         "themes": "Analysis Bioinformatics",

@@ -10,7 +10,7 @@ export button next to the search bar at the top of the page.
 
 After clicking on the export button, get a full record in CSV format. We
 previously used BibTex, but the publication dates are not full enough for 
-our use case. I'd reccomend clicking on 'Send email when export is ready'
+our use case. I'd recommend clicking on 'Send email when export is ready'
 if you are not familiar with Dimensions as you'll probably struggle to find
 your download link.
 

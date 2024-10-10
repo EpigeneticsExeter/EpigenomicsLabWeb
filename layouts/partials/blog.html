@@ -6,7 +6,7 @@
 {{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_no_spaces }}
 {{ $profile_picture := resources.GetMatch $author_picture_pattern}}
 {{ if not $profile_picture }}
-{{ $profile_picture = resources.Get "svgs/default-profile.svg" }}
+{{ $profile_picture = resources.Get "/images/profile_pictures/default-profile.svg" }}
 {{ end }}
 
 <a href="javascript:window.history.back()">
