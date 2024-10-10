@@ -6,6 +6,7 @@ IMAGES_DIR=$(realpath "$SCRIPTS_DIR/../assets/images/profile_pictures")
 PYTHON_DIR=$(realpath "$SCRIPTS_DIR/processing_scripts/")
 
 RED="[0;31m"
+BLUE="[0;34m"
 NO_COLOUR="[0m"
 
 ## ====================== ##
@@ -44,8 +45,10 @@ This is to simplify code for the blog pages of the website.
 EOF
 else
 cat << EOF
+${BLUE}
 INFO: Found the following profile picture for ${capitalized_name}:
 ${profile_picture_path}
+${NO_COLOUR}
 EOF
     pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
     if [[ "${pp_size}" -gt 200 ]]; then
