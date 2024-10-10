@@ -61,8 +61,16 @@ fi
 ##   MAIN   ##
 ## ======== ##
 
-python \
-    "${PYTHON_DIR}/edit_people.py" \
-    "${PEOPLE_DATA}" \
-    "${change_type}" \
-    "${capitalized_name}"
+if command -v python > /dev/null; then
+    python \
+        "${PYTHON_DIR}/edit_people.py" \
+        "${PEOPLE_DATA}" \
+        "${change_type}" \
+        "${capitalized_name}"
+else
+cat << EOF
+
+ERROR: Could not find Python on your PATH. 
+Python is required for this script to work, make sure it is installed first.
+EOF
+fi
