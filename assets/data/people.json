@@ -1,7 +1,6 @@
 {
     "Eilis Hannon": {
         "name": "Eilis Hannon",
-        "image": "eilishannon.jpg",
         "alumni": false,
         "position": "PI",
         "theme": "Analysis",
@@ -14,7 +13,6 @@
     },
     "Jessica Shields": {
         "name": "Jessica Shields",
-        "image": "jessicashields.jpg",
         "alumni": true,
         "position": "GRA",
         "theme": "Analysis",
@@ -27,7 +25,6 @@
     },
     "Rhian Swarbrick": {
         "name": "Rhian Swarbrick",
-        "image": null,
         "alumni": true,
         "position": "PTY",
         "theme": "Analysis",
@@ -40,7 +37,6 @@
     },
     "Siyi Wang": {
         "name": "Siyi Wang",
-        "image": "siyiwang.jpg",
         "alumni": false,
         "position": "GRA",
         "themes": "analysis",
@@ -53,7 +49,6 @@
     },
     "Sam Fletcher": {
         "name": "Sam Fletcher",
-        "image": "samfletcher.jpg",
         "alumni": false,
         "position": "GRA",
         "themes": "Analysis Bioinformatics",
