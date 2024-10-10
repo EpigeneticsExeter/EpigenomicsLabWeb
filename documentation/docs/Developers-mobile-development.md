@@ -5,7 +5,7 @@ latest smart toothbrush? Making a site scalable to multiple devices is a bit of
 a pain, but it is necessary.
 
 If you want any help on how to get started with making websites responsive to
-different devices, I reccommend reading 
+different devices, I recommend reading 
 [this page from w3schools](https://www.w3schools.com/html/html_responsive.asp).
 
 ## How to check the site for mobile devices
