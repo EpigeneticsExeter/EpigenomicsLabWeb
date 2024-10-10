@@ -6,18 +6,24 @@ if (globalThis.innerWidth < mobileModeWidth) {
     const filterContainer = document.querySelector(".filter-container");
     const searchBox = document.querySelector(".search-box");
     filterGrid.style.display = "none";
-    searchBox.style.display = "none";
+    if (searchBox) {
+        searchBox.style.display = "none";
+    }
     filterContainer.style.height = "auto";
 
     filterText.onclick = function () {
         filterText.style.color = "grey";
         if (filterGrid.style.display == "none") {
             filterGrid.style.display = "grid";
-            searchBox.style.display = "flex";
+            if (searchBox) {
+                searchBox.style.display = "flex";
+            }
             filterContainer.style.height = "35vh";
         } else {
             filterGrid.style.display = "none";
-            searchBox.style.display = "none";
+            if (searchBox) {
+                searchBox.style.display = "none";
+            }
             filterContainer.style.height = "auto";
         }
         setTimeout(() => {
