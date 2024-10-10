@@ -42,6 +42,12 @@ must follow two important rules:
 
 If either of these are not met, a default profile picture will be used instead.
 
+#### Making images smaller
+
+If the image is too large, I recommend using a `.jpg` or `.webp` format and
+possibly consider using a compression tool (there are plenty of these 
+available online).
+
 ## Editing the json file directly
 
 As mentioned, the json file you want is in the `assets/data` directory,
