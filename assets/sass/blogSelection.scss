@@ -107,6 +107,16 @@
 @media only screen and (max-width: 1000px) {
     .featured-blog-box {
         width: 90%;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .featured-text-box {
+            width: 100%;
+        }
+
+        .featured-image-box {
+            width: 90%;
+        }
     }
 
     .blog-grid {
