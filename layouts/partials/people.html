@@ -43,11 +43,17 @@
         {{ range $people_data }}
         {{ if eq .alumni $is_alumni_page }}
         <div id='{{ replace .name " " "" | lower}}' class="person-profile {{ .theme | lower }} {{ .position | lower }}">
-            {{ $profile_picture := printf "/images/profile_pictures/%s" .image }}
             <a class="profile_picture_container" href="https://experts.exeter.ac.uk/{{ .biosketch }}" target="_blank">
+            {{ if .image }}
+                {{ $profile_picture := printf "/images/profile_pictures/%s" .image }}
                 {{ with resources.Get $profile_picture }}
-                <img class="profile_picture" src="{{ .RelPermalink }}"></img>
+                    <img class="profile_picture" src="{{ .RelPermalink }}"></img>
                 {{ end }}
+            {{ else }}
+                {{ with resources.Get "/svgs/default-profile.svg" }}
+                    <img class="profile_picture" src="{{ .RelPermalink }}"></img>
+                {{ end }}
+            {{ end }}
             </a>
             <div class="link-tree">
                 {{ if .github }}
