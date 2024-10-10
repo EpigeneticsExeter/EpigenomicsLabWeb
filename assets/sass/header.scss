@@ -96,7 +96,7 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: $tablet_threshold_width) {
     .main-navbar {
         display: flex;
         flex-direction: column;

@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/global-variables.scss";
 
 .main-container {
     align-self: center;
@@ -29,7 +30,7 @@
 
 }
 
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width:$smaller_screen_threshold_width) {
     .main-container {
         .funder-grid {
             grid-template-columns: 1fr 1fr 1fr;
@@ -37,7 +38,7 @@
     }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$tablet_threshold_width) {
     .main-container {
         .funder-grid {
             grid-template-columns: 1fr 1fr;
@@ -48,7 +49,7 @@
     }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:$mobile_threshold_width) {
     .main-container {
         .funder-grid {
             display: flex;

@@ -76,13 +76,13 @@
 }
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: $smaller_screen_threshold_width) {
     .people-photo-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: $tablet_threshold_width) {
     .people-photo-grid {
         width: 95%;
         margin: 15vh 5px 0 5px;
@@ -98,7 +98,7 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: $mobile_threshold_width) {
     .people-photo-grid {
         display: flex;
         flex-direction: column;

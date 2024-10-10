@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/global-variables.scss";
 
 .description-container {
     display: flex;
@@ -29,7 +30,7 @@
     justify-items: center;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: $smaller_screen_threshold_width) {
     .repository-grid {
         grid-template-columns: 1fr 1fr;
 
@@ -39,7 +40,7 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: $large_mobile_threshold_width) {
     .repository-grid {
         display: flex;
         flex-direction: column;

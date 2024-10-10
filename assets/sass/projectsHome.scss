@@ -1,6 +1,7 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
 @import "partials/button.scss";
+@import "partials/global-variables.scss";
 
 
 .main-container {
@@ -62,7 +63,7 @@
     }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$tablet_threshold_width) {
     .main-container {
         display: flex;
         flex-direction: column;
@@ -74,7 +75,7 @@
 
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:$mobile_threshold_width) {
     .main-container {
         .projects-container {
             h1 {

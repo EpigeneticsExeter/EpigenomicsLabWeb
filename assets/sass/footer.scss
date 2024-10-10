@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/global-variables.scss";
 
 .main-footer-box {
     display: flex;
@@ -36,7 +37,7 @@
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: $tablet_threshold_width) {
     .main-footer-box {
         flex-direction: column;
 

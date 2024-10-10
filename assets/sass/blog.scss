@@ -1,6 +1,7 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
 @import "partials/button.scss";
+@import "partials/global-variables.scss";
 
 .back-button {
     @include back_button($base_colour);
@@ -90,7 +91,7 @@
 }
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:$large_mobile_threshold_width) {
 
     .main-container .blog-article-top .author-container .author-image {
         height: 10vw;
@@ -99,7 +100,7 @@
 
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:$mobile_threshold_width) {
 
     .main-container .blog-article-top .author-container .author-image {
         height: 15vw;

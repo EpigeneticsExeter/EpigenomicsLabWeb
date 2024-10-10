@@ -1,5 +1,6 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
+@import "partials/global-variables.scss";
 
 #team-photo-container {
     display: flex;
@@ -39,7 +40,7 @@
     }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$tablet_threshold_width) {
     #about-container {
         padding: 3%;
 
@@ -140,7 +141,7 @@
 }
 
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$tablet_threshold_width) {
     .sub-team-container {
         flex-direction: column !important;
 

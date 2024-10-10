@@ -1,6 +1,7 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
 @import "partials/button.scss";
+@import "partials/global-variables.scss";
 
 .back-button {
     @include back_button($base_colour);
@@ -104,7 +105,7 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: $tablet_threshold_width) {
     .featured-blog-box {
         width: 90%;
         flex-direction: column-reverse;
