@@ -58,5 +58,17 @@
         "x": null,
         "orcid": null,
         "biosketch": "41890-sam-fletcher"
+    },
+    "Ann Babtie": {
+        "name": "Ann Babtie",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Analysis",
+        "github": "anncfs",
+        "email": "a.babtie@exeter.ac.uk",
+        "linkedin": "ann-babtie-282a4a49",
+        "x": "annbabtie",
+        "orcid": "0000-0001-9357-8351",
+        "biosketch": "38351-ann-babtie"
     }
 }
