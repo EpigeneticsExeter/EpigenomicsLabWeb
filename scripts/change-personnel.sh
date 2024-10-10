@@ -64,8 +64,9 @@ ${profile_picture_path}
 PLEASE CHECK THAT THIS IS CORRECT
 ${NO_COLOUR}
 EOF
-    pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
-    if [[ "${pp_size}" -gt 200 ]]; then
+    picture_size=$(stat -c %s "${profile_picture_path}")
+    two_hundred_kilobytes=204800
+    if [[ "${picture_size}" -gt "${two_hundred_kilobytes}" ]]; then
 
 cat << EOF
 ${RED}
