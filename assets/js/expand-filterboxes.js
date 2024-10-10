@@ -3,28 +3,30 @@ mobileModeWidth = 1000;
 if (globalThis.innerWidth < mobileModeWidth) {
     const filterText = document.getElementById("filter-text");
     const filterGrid = document.querySelector(".filter-grid");
-    const filterContainer = document.querySelector(".filter-container");
     const searchBox = document.querySelector(".search-box");
-    filterGrid.style.display = "none";
-    if (searchBox) {
-        searchBox.style.display = "none";
-    }
-    filterContainer.style.height = "auto";
+
+    const hideElements = () => {
+        filterGrid.style.display = "none";
+        if (searchBox) {
+            searchBox.style.display = "none";
+        }
+    };
+
+    const showElements = () => {
+        filterGrid.style.display = "grid";
+        if (searchBox) {
+            searchBox.style.display = "flex";
+        }
+    };
+
+    hideElements();
 
     filterText.onclick = function () {
         filterText.style.color = "grey";
-        if (filterGrid.style.display == "none") {
-            filterGrid.style.display = "grid";
-            if (searchBox) {
-                searchBox.style.display = "flex";
-            }
-            filterContainer.style.height = "35vh";
+        if (filterGrid.style.display === "none") {
+            showElements();
         } else {
-            filterGrid.style.display = "none";
-            if (searchBox) {
-                searchBox.style.display = "none";
-            }
-            filterContainer.style.height = "auto";
+            hideElements();
         }
         setTimeout(() => {
             filterText.style.color = "white";
