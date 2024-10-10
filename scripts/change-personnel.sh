@@ -28,17 +28,23 @@ profile_picture_path="$(find "$IMAGES_DIR" -name "${concatenated_name}*")"
 
 if [[ -z "${profile_picture_path}" ]]; then
 cat << EOF
-ERROR: No profile picture exists for ${capitalized_name}.
-You need to add the person's profile picture into ${IMAGES_DIR} under the name:
+WARNING: No profile picture exists for ${capitalized_name}.
+
+As a result a default picture will be used.
+
+If this is not desired, you need to add the person's profile picture into
+${IMAGES_DIR} under the name:
 ${concatenated_name}.(jpg/png/...)
+
+After doing this, re-run this script.
 
 This is to simplify code for the blog pages of the website.
 EOF
-    exit 1
 fi
 
-pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
-if [[ "${pp_size}" -gt 200 ]]; then
+if [[ -n "${profile_picture_path}" ]]; then
+    pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
+    if [[ "${pp_size}" -gt 200 ]]; then
 cat << EOF
 WARNING: Please do not use large images for your profile picture as it slows
 the site down (the image will be small anyways so you can't even view the
@@ -47,9 +53,9 @@ Currently your image has size: $pp_size KB
 We recommend gettting this below 200KB. There are various tools online to help
 with this.
 EOF
+    fi
 fi
 
-profile_picture="$(basename "${profile_picture_path}")"
 
 ## ======== ##
 ##   MAIN   ##
@@ -59,5 +65,4 @@ python \
     "${PYTHON_DIR}/edit_people.py" \
     "${PEOPLE_DATA}" \
     "${change_type}" \
-    "${capitalized_name}" \
-    "${profile_picture}"
+    "${capitalized_name}"
