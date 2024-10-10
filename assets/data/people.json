@@ -70,5 +70,17 @@
         "x": "annbabtie",
         "orcid": "0000-0001-9357-8351",
         "biosketch": "38351-ann-babtie"
+    },
+    "Alice Franklin": {
+        "name": "Alice Franklin",
+        "alumni": false,
+        "position": "PhD",
+        "themes": "Analysis",
+        "github": "alicemfr",
+        "email": "a.franklin@exeter.ac.uk",
+        "linkedin": "alice-f-9a2905125",
+        "x": null,
+        "orcid": "0000-0001-9793-582X",
+        "biosketch": "36457-alice-franklin"
     }
 }
