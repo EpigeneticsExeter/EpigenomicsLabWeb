@@ -13,8 +13,10 @@ NO_COLOUR="[0m"
 ##   GATHER INFORMATION   ##
 ## ====================== ##
 
-echo "Enter the change type (add/change/remove):"
-read -r change_type
+while [[ "${change_type}" != "add" && "${change_type}" != "change" && "${change_type}" != "remove" ]]; do
+    echo "Enter the change type (add/change/remove):"
+    read -r change_type
+done
 
 echo "Enter the person's name:"
 read -r name
