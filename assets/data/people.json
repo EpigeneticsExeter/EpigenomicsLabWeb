@@ -106,5 +106,17 @@
         "x": null,
         "orcid": "0000-0001-8599-3109",
         "biosketch": "35312-anthony-klokkaris"
+    },
+    "Alessia Mauri": {
+        "name": "Alessia Mauri",
+        "alumni": false,
+        "position": "PhD",
+        "themes": null,
+        "github": null,
+        "email": "a.mauri@exeter.ac.uk",
+        "linkedin": "alessia-mauri-3a64b4197",
+        "x": null,
+        "orcid": "0000-0001-5675-5347",
+        "biosketch": null
     }
 }
