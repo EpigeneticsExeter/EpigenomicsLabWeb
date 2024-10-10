@@ -4,10 +4,11 @@
 
 .people-photo-grid {
     display: grid;
+    align-self: flex-end;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 70%;
     grid-template-rows: repeat(auto-fill, 35vh);
-    margin: 1vh 5px 0 31vw;
+    margin: 1vh 1vw 1vh 31vw;
 
     .person-profile {
         display: flex;
@@ -61,7 +62,7 @@
             text-decoration: none;
 
             h1 {
-                @include main-text(2rem);
+                @include main-text(1.75rem);
                 margin: 0;
             }
         }
