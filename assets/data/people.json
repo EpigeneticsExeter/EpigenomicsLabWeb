@@ -82,5 +82,17 @@
         "x": null,
         "orcid": "0000-0001-9793-582X",
         "biosketch": "36457-alice-franklin"
+    },
+    "Amy Webster": {
+        "name": "Amy Webster",
+        "alumni": false,
+        "position": "PI",
+        "themes": null,
+        "github": null,
+        "email": "a.webster@exeter.ac.uk",
+        "linkedin": "amy-webster-57b91a81",
+        "x": null,
+        "orcid": "0000-0002-9824-2627",
+        "biosketch": "35215-amy-webster"
     }
 }
