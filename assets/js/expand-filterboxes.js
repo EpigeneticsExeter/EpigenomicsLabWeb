@@ -1,5 +1,7 @@
 mobileModeWidth = 1000;
 
+// This functionality is only required in mobile mode as the filter box
+// takes up a lot of space on smaller screens.
 if (globalThis.innerWidth < mobileModeWidth) {
     const filterContainer = document.querySelector(".filter-container");
     const filterText = document.getElementById("filter-text");
@@ -36,6 +38,9 @@ if (globalThis.innerWidth < mobileModeWidth) {
     };
     filterText.onclick = function (event) {
         if (filterGrid.style.display === "grid") {
+            // This is required so that the onclick event for `filterContainer`
+            // doesn't activate right after (as this is a child element of
+            // the container).
             event.stopPropagation();
             hideElements();
         }
