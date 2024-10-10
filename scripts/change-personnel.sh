@@ -18,9 +18,10 @@ while [[ "${change_type}" != "add" && "${change_type}" != "change" && "${change_
     read -r change_type
 done
 
-echo "Enter the person's name:"
-read -r name
-if [[ -z "${name}" ]]; then echo "name not given."; exit 1; fi
+while [[ -z "${name}" ]]; do
+    echo "Enter the person's name:"
+    read -r name
+done
 
 ## ========================== ##
 ##   OBTAIN PROFILE PICTURE   ##
