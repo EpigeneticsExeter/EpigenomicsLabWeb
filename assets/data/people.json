@@ -142,5 +142,17 @@
         "x": null,
         "orcid": "0000-0001-6495-2711",
         "biosketch": "27348-adam-smith"
+    },
+    "Barry Chioza": {
+        "name": "Barry Chioza",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": null,
+        "email": "b.a.chioza@exeter.ac.uk",
+        "linkedin": "barry-chioza-thx1138",
+        "x": null,
+        "orcid": "0000-0002-3546-1726",
+        "biosketch": "23178-barry-chioza"
     }
 }
