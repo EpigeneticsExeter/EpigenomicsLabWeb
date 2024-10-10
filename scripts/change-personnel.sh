@@ -55,6 +55,7 @@ ${concatenated_name}.(jpg/png/...)
 
 This is to simplify code for the blog pages of the website.
 EOF
+
 else
 cat << EOF
 ${BLUE}
@@ -65,6 +66,7 @@ ${NO_COLOUR}
 EOF
     pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
     if [[ "${pp_size}" -gt 200 ]]; then
+
 cat << EOF
 ${RED}
 WARNING: Please do not use large images for your profile picture as it slows
