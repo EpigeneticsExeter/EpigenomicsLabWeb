@@ -130,5 +130,17 @@
         "x": null,
         "orcid": "0009-0005-7510-7130",
         "biosketch": "41994-ailsa-maccalman"
+    },
+    "Adam Smith": {
+        "name": "Adam Smith",
+        "alumni": false,
+        "position": "PI",
+        "themes": "Lab",
+        "github": null,
+        "email": "a.r.smith@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": "0000-0001-6495-2711",
+        "biosketch": "27348-adam-smith"
     }
 }
