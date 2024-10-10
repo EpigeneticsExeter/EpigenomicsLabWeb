@@ -22,6 +22,10 @@ echo "Enter the person's name:"
 read -r name
 if [[ -z "${name}" ]]; then echo "name not given."; exit 1; fi
 
+## ========================== ##
+##   OBTAIN PROFILE PICTURE   ##
+## ========================== ##
+
 lower_case_name=$(echo "${name}" | tr '[:upper:]' '[:lower:]')
 concatenated_name=$(echo "${lower_case_name}" | tr -d ' ')
 capitalized_name=$(\
@@ -31,6 +35,10 @@ capitalized_name=$(\
 )
 
 profile_picture_path="$(find "$IMAGES_DIR" -name "${concatenated_name}*")"
+
+## ====================================== ##
+##   ERROR LOGGING FOR PROFILE PICTURES   ##
+## ====================================== ##
 
 if [[ "${change_type}" == "add" ]]; then
 if [[ -z "${profile_picture_path}" ]]; then
