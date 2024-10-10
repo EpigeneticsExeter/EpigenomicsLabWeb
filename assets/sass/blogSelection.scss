@@ -1,6 +1,7 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
 @import "partials/button.scss";
+@import "partials/global-variables.scss";
 
 .back-button {
     @include back_button($base_colour);
@@ -14,6 +15,7 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.50);
     @include main-text(1rem);
     margin-top: 2vh;
+    padding: 2vh;
 
     .featured-text-box {
         margin: 0 2%;
@@ -44,10 +46,7 @@
 
         img {
             border-radius: 5px;
-            height: 100%;
             width: 100%;
-            max-width: 40vh;
-            max-height: 40vh;
         }
     }
 
@@ -104,4 +103,26 @@
     .blog-box:hover {
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50);
     }
+}
+
+@media only screen and (max-width: $tablet_threshold_width) {
+    .featured-blog-box {
+        width: 90%;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .featured-text-box {
+            width: 100%;
+        }
+
+        .featured-image-box {
+            width: 90%;
+        }
+    }
+
+    .blog-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

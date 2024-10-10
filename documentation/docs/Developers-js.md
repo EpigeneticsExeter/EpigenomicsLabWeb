@@ -62,3 +62,10 @@ items.
 
 Yes, there might be a better way of doing this, but this solution works for
 now, so I don't care.
+
+### Mobile mode
+
+Whilst viewing the site on a mobile device (and some tablets) the nav bar
+changes up entirely. The javascript in this case changes to a much simpler 
+form where clicking on certain buttons just changes the display properties of
+other elements.

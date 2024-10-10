@@ -3,3 +3,13 @@ Instead of having magic z-indecies everywhere, these are stored here instead
 to be easier to comprehend */
 $navbar_index: 10;
 $slideshow_index: 2;
+$filterbox_index: 3;
+
+/* Media query sizes
+Below are certain thresholds for mobile sizes. Mobile layouts need to be
+tweaked on certain pages for smaller devices. 
+*/
+$smaller_screen_threshold_width: 1400px;
+$tablet_threshold_width: 1000px;
+$large_mobile_threshold_width: 800px;
+$mobile_threshold_width: 500px;

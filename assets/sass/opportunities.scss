@@ -1,7 +1,7 @@
 @import "partials/theme.scss";
 @import "partials/text.scss";
 @import "partials/filter_boxes.scss";
-
+@import "partials/global-variables.scss";
 
 .opportunities-container {
     display: flex;
@@ -47,4 +47,12 @@
     .zero_opportunities {
         display: none;
     }
+}
+
+@media only screen and (max-width:$tablet_threshold_width) {
+    .opportunities-container {
+        width: 98vw;
+        margin: 1vw;
+    }
+
 }

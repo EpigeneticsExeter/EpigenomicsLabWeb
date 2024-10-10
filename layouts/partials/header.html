@@ -1,82 +1,79 @@
-{{ $style := resources.Get "sass/header.scss" | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-
 <div class="main-navbar">
     {{ $logo_image := resources.Get "images/logo.png" }}
     <a id="logo" href="/EpigenomicsLabWeb">
         <img src="{{ $logo_image.RelPermalink }}">
     </a>
-        <ul class="main-nav">
-            <li class="nav-item">
-                <a href="/EpigenomicsLabWeb" class="nav-item-link">
-                    <span class="nav-text">Home</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item-link">
-                    <span class="nav-text">Research</span>
-                </a>
-                <ul class="sub-nav">
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/publications" class="nav-item-link">
-                            <span class="nav-text">Publications</span>
-                        </a>
-                    </li>
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/projectshome" class="nav-item-link">
-                            <span class="nav-text">Projects</span>
-                        </a>
-                    </li>
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/code" class="nav-item-link">
-                            <span class="nav-text">Code</span>
-                        </a>
-                    </li>
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/opportunities" class="nav-item-link">
-                            <span class="nav-text">Opportunities</span>
-                        </a>
-                    </li>
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/funders" class="nav-item-link">
-                            <span class="nav-text">Funders</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item-link">
-                    <span class="nav-text">People</span>
-                </a>
-                <ul class="sub-nav">
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/people" class="nav-item-link">
-                            <span class="nav-text">Current Members</span>
-                        </a>
-                    </li>
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/alumni" class="nav-item-link">
-                            <span class="nav-text">Alumni</span>
-                        </a>
-                    </li>
-                    <li class="sub-nav-item">
-                        <a href="/EpigenomicsLabWeb/collaborators" class="nav-item-link">
-                            <span class="nav-text">Collaborators</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="/EpigenomicsLabWeb/lab-news" class="nav-item-link">
-                    <span class="nav-text">Lab News</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/EpigenomicsLabWeb/contact-us" class="nav-item-link">
-                    <span class="nav-text">Contact Us</span>
-                </a>
-            </li>
-        </ul>
+    <ul class="main-nav">
+        <li class="nav-item">
+            <a href="/EpigenomicsLabWeb" class="nav-item-link">
+                <span class="nav-text">Home</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item-link">
+                <span class="nav-text">Research</span>
+            </a>
+            <ul class="sub-nav">
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/publications" class="nav-item-link">
+                        <span class="nav-text">Publications</span>
+                    </a>
+                </li>
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/projectshome" class="nav-item-link">
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/code" class="nav-item-link">
+                        <span class="nav-text">Code</span>
+                    </a>
+                </li>
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/opportunities" class="nav-item-link">
+                        <span class="nav-text">Opportunities</span>
+                    </a>
+                </li>
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/funders" class="nav-item-link">
+                        <span class="nav-text">Funders</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-item-link">
+                <span class="nav-text">People</span>
+            </a>
+            <ul class="sub-nav">
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/people" class="nav-item-link">
+                        <span class="nav-text">Current Members</span>
+                    </a>
+                </li>
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/alumni" class="nav-item-link">
+                        <span class="nav-text">Alumni</span>
+                    </a>
+                </li>
+                <li class="sub-nav-item">
+                    <a href="/EpigenomicsLabWeb/collaborators" class="nav-item-link">
+                        <span class="nav-text">Collaborators</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="/EpigenomicsLabWeb/lab-news" class="nav-item-link">
+                <span class="nav-text">Lab News</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/EpigenomicsLabWeb/contact-us" class="nav-item-link">
+                <span class="nav-text">Contact Us</span>
+            </a>
+        </li>
+    </ul>
     <div id="dark-toggle">
         <svg width="30px" height="30px" viewBox="0 0 512 512">
             <path id="dark-toggle-button" d="M256 160c-52.9 0-96 
@@ -92,5 +89,8 @@
                 0 49.9 49.9 49.9 131.1 0 181z">
             </path>
         </svg>
+    </div>
+    <div id="toggle-menu">
+        <i class="fa fa-bars"></i>
     </div>
 </div>

@@ -22,7 +22,7 @@
 <div class="main-container">
 
     <div class="filter-container">
-        <h1>Filter</h1>
+        <h1 id="filter-text">Filter</h1>
         <div class="filter-grid">
             <button type="button" id="Latest">Latest</button>
             <button type="button" id="Oldest">Oldest</button>
@@ -109,4 +109,5 @@
 {{ define "scripts" }}
 {{ partial "partials/addJS.html" (dict "jsfile" "js/publication_filtering.js") }}
 {{ partial "partials/addJS.html" (dict "jsfile" "js/expand_publication.js") }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/expand-filterboxes.js") }}
 {{ end }}

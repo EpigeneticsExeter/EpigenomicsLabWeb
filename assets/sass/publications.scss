@@ -100,3 +100,10 @@
 
     }
 }
+
+@media only screen and (max-width:$tablet_threshold_width) {
+    .publications-container {
+        width: 98vw;
+        margin: 1vw;
+    }
+}

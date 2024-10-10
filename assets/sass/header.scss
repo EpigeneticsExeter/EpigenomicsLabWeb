@@ -26,7 +26,7 @@
     }
 
     #dark-toggle {
-        margin-right: 10vh;
+        margin-right: 5vw;
         justify-self: center;
         align-self: center;
         cursor: pointer;
@@ -72,7 +72,7 @@
                 opacity: 0;
                 transition: opacity 0.5s;
                 z-index: 120;
-                min-width: 80vh;
+                min-width: 80vw;
 
                 .sub-nav-item {
                     margin: 0 1%;
@@ -83,5 +83,68 @@
         }
 
 
+    }
+
+    #toggle-menu {
+        display: none;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        @include main-text(2.2rem);
+    }
+
+}
+
+
+@media only screen and (max-width: $tablet_threshold_width) {
+    .main-navbar {
+        display: flex;
+        flex-direction: column;
+
+        #logo {
+            left: 0;
+            top: 0;
+            margin: 0;
+
+            img {
+                width: 200px;
+                margin: 0;
+            }
+        }
+
+        .main-nav {
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 0 5% 0 0;
+            padding: 0 0 5% 0;
+
+            .nav-item {
+                flex-direction: column;
+                align-items: flex-end;
+
+                .sub-nav {
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    margin: 0 5% 0 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        #toggle-menu {
+            display: flex;
+            position: absolute;
+            right: 5vw;
+            top: 35px;
+        }
+
+        #dark-toggle {
+            display: flex;
+            position: absolute;
+            right: 12vw;
+            top: 35px;
+        }
     }
 }
