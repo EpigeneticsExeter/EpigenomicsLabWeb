@@ -85,7 +85,7 @@
 @media only screen and (max-width: $tablet_threshold_width) {
     .people-photo-grid {
         width: 95%;
-        margin: 15vh 5px 0 5px;
+        margin: 1vw;
         grid-template-columns: 1fr 1fr;
 
         .person-profile {

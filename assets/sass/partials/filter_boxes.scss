@@ -97,6 +97,7 @@
         align-items: center;
 
         .filter-container {
+            position: relative;
             width: 98vw;
             z-index: $filterbox_index;
 
