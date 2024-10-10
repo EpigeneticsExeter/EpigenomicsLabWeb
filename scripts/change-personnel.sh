@@ -40,13 +40,13 @@ If this is not desired, you need to add the person's profile picture into
 ${IMAGES_DIR} under the name:
 ${concatenated_name}.(jpg/png/...)
 
-After doing this, re-run this script.
-
 This is to simplify code for the blog pages of the website.
 EOF
-fi
-
-if [[ -n "${profile_picture_path}" ]]; then
+else
+cat << EOF
+INFO: Found the following profile picture for ${capitalized_name}:
+${profile_picture_path}
+EOF
     pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
     if [[ "${pp_size}" -gt 200 ]]; then
 cat << EOF
