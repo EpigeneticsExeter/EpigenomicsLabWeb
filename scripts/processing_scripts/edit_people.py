@@ -72,7 +72,7 @@ Use white space separation if {name} falls under multiple themes.
 ===============================================================================
 """)
 
-    for entry in list(person_information.keys())[2:]:
+    for entry in list(person_information.keys())[1:]:
         person_information[entry] = get_people_information(name, entry)
 
     if person_information["alumni"] is None:
