@@ -30,6 +30,7 @@ capitalized_name=$(\
 
 profile_picture_path="$(find "$IMAGES_DIR" -name "${concatenated_name}*")"
 
+if [[ "${change_type}" == "add" ]]; then
 if [[ -z "${profile_picture_path}" ]]; then
 cat << EOF
 ${RED}
@@ -48,6 +49,7 @@ cat << EOF
 ${BLUE}
 INFO: Found the following profile picture for ${capitalized_name}:
 ${profile_picture_path}
+PLEASE CHECK THAT THIS IS CORRECT
 ${NO_COLOUR}
 EOF
     pp_size=$(du "${profile_picture_path}" | awk '{print $1}')
@@ -63,6 +65,7 @@ with this.
 ${NO_COLOUR}
 EOF
     fi
+fi
 fi
 
 
