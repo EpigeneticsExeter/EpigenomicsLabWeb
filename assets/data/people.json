@@ -118,5 +118,17 @@
         "x": null,
         "orcid": "0000-0001-5675-5347",
         "biosketch": null
+    },
+    "Ailsa Maccalman": {
+        "name": "Ailsa Maccalman",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": null,
+        "email": "a.maccalman@exeter.ac.uk",
+        "linkedin": "ailsa-maccalman-29385b121",
+        "x": null,
+        "orcid": "0009-0005-7510-7130",
+        "biosketch": "41994-ailsa-maccalman"
     }
 }
