@@ -382,5 +382,17 @@
         "x": "PsyEpigenetics",
         "orcid": "0000-0003-1115-3224",
         "biosketch": "22368-jonathan-mill"
+    },
+    "Joshua Harvey": {
+        "name": "Joshua Harvey",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Bioinformatics Lab",
+        "github": null,
+        "email": "j.d.harvey@exeter.ac.uk",
+        "linkedin": "joshuadharvey",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
