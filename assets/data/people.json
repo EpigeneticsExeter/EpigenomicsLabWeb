@@ -502,5 +502,17 @@
         "x": "MortezaKouhsar",
         "orcid": "0000-0001-6092-3016",
         "biosketch": "36846-morteza-kouhsar"
+    },
+    "Molly Endicott": {
+        "name": "Molly Endicott",
+        "alumni": false,
+        "position": "PhD",
+        "themes": "Bioinformatics",
+        "github": "Molly-Endicott",
+        "email": "m.endicott@exeter.ac.uk",
+        "linkedin": "molly-endicott-87036139",
+        "x": null,
+        "orcid": "0000-0001-8097-0987",
+        "biosketch": "37736-molly-endicott"
     }
 }
