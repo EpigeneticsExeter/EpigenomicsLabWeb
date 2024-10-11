@@ -250,5 +250,17 @@
         "x": null,
         "orcid": "0009-0008-9485-0204",
         "biosketch": null
+    },
+    "Emma Walker": {
+        "name": "Emma Walker",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "Bioinformatics Analysis",
+        "github": "ew367",
+        "email": "e.m.walker@exeter.ac.uk",
+        "linkedin": "emma-walker-b7664a293",
+        "x": null,
+        "orcid": "0000-0003-2222-4577",
+        "biosketch": "27979-emma-walker"
     }
 }
