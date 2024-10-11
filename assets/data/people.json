@@ -322,5 +322,17 @@
         "x": "GregWheildon",
         "orcid": "0000-0002-7911-9973",
         "biosketch": "32538-greg-wheildon"
+    },
+    "Isabel Castanho": {
+        "name": "Isabel Castanho",
+        "alumni": true,
+        "position": "PostDoc",
+        "themes": "Lab Bioinformatics",
+        "github": null,
+        "email": null,
+        "linkedin": "i.s.castanho@exeter.ac.ukisabelcastanho",
+        "x": "isabelscst",
+        "orcid": "0000-0003-1413-626X",
+        "biosketch": null
     }
 }
