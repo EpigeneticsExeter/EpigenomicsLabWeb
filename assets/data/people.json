@@ -646,5 +646,17 @@
         "x": "SKayLeung",
         "orcid": "0000-0002-5607-4688",
         "biosketch": "39044-szi-kay-leung"
+    },
+    "Tom Piers": {
+        "name": "Tom Piers",
+        "alumni": false,
+        "position": "PI",
+        "themes": "Lab",
+        "github": null,
+        "email": "t.piers@exeter.ac.uk",
+        "linkedin": "thomaspiers",
+        "x": null,
+        "orcid": "0000-0003-1015-3417",
+        "biosketch": "37418-tom-piers"
     }
 }
