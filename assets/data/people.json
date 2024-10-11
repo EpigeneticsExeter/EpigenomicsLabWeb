@@ -406,5 +406,17 @@
         "x": "jenny_imm",
         "orcid": "0000-0002-8827-8669",
         "biosketch": "32552-jenny-imm"
+    },
+    "Katie Lunnon": {
+        "name": "Katie Lunnon",
+        "alumni": false,
+        "position": "PI",
+        "themes": "Analysis Lab",
+        "github": null,
+        "email": "k.lunnon@exeter.ac.uk",
+        "linkedin": "katie-lunnon-a1004539",
+        "x": null,
+        "orcid": "0000-0001-7570-6065",
+        "biosketch": "22834-katie-lunnon"
     }
 }
