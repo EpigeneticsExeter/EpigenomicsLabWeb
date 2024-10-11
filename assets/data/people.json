@@ -214,5 +214,17 @@
         "x": "ElkyD",
         "orcid": "0000-0003-1257-5314",
         "biosketch": "22394-emma-dempster"
+    },
+    "Ehsan Pishva": {
+        "name": "Ehsan Pishva",
+        "alumni": true,
+        "position": "PI",
+        "themes": null,
+        "github": null,
+        "email": "e.pishva@exeter.ac.uk",
+        "linkedin": "ehsan-pishva-1b3b7145",
+        "x": "EPishva",
+        "orcid": "0000-0002-8964-0682",
+        "biosketch": null
     }
 }
