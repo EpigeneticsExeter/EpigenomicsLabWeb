@@ -454,5 +454,17 @@
         "x": "tamusauskaite",
         "orcid": "0000-0003-1649-3439",
         "biosketch": "40640-kamile-tamusauskaite"
+    },
+    "Lachlan Ford MacBean": {
+        "name": "Lachlan Ford MacBean",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab Bioinformatics",
+        "github": null,
+        "email": "l.macbean2@exeter.ac.uk",
+        "linkedin": "lachlan-ford-macbean",
+        "x": null,
+        "orcid": "0009-0001-2437-8329",
+        "biosketch": null
     }
 }
