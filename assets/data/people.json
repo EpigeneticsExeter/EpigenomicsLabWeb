@@ -394,5 +394,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Jenny Imm": {
+        "name": "Jenny Imm",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": null,
+        "email": "j.l.imm@exeter.ac.uk",
+        "linkedin": "jennifer-imm-2631699a",
+        "x": "jenny_imm",
+        "orcid": "0000-0002-8827-8669",
+        "biosketch": "32552-jenny-imm"
     }
 }
