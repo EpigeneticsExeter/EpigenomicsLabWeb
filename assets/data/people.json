@@ -334,5 +334,17 @@
         "x": "isabelscst",
         "orcid": "0000-0003-1413-626X",
         "biosketch": null
+    },
+    "Isabel Larkin": {
+        "name": "Isabel Larkin",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "Lab",
+        "github": null,
+        "email": "i.larkin@exeter.ac.uk",
+        "linkedin": "isabellarkin",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
