@@ -514,5 +514,17 @@
         "x": null,
         "orcid": "0000-0001-8097-0987",
         "biosketch": "37736-molly-endicott"
+    },
+    "Marty Frith": {
+        "name": "Marty Frith",
+        "alumni": false,
+        "position": "PhD",
+        "themes": "Analysis Lab Bioinformatics",
+        "github": "MartynFrith",
+        "email": "mjf221@exeter.ac.uk",
+        "linkedin": "martyn-frith-543815206",
+        "x": null,
+        "orcid": "0009-0005-2422-9904",
+        "biosketch": "40589-marty-frith"
     }
 }
