@@ -274,5 +274,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Gina Commin": {
+        "name": "Gina Commin",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Analysis Lab",
+        "github": null,
+        "email": "g.b.commin@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": "0000-0002-6485-799X",
+        "biosketch": "33454-gina-commin"
     }
 }
