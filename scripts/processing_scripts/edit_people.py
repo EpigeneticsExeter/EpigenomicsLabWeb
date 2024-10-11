@@ -30,7 +30,11 @@ Enter {name}'s alumni status (True or False):
 def get_people_information(name, field):
     example_texts = {
         "name": "Ex: Jane Doe",
-        "position": "Pick from: PI, PostDoc, PhD, GRA, PTY",
+        "position": (
+            "Pick from: PI, Lecturer, PostDoc, "
+                "PhD, Research-Fellow, Lab-Technician, "
+                "Research-Assistant, GLA, GRA, PTY"
+        ),
         "themes": "Pick from: Analysis, Lab, Bioinformatics",
         "github": "Your github username",
         "email": "Ex: j.a.doe@exeter.ac.uk",
