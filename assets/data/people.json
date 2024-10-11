@@ -166,5 +166,17 @@
         "x": null,
         "orcid": "0009-0004-4345-8414",
         "biosketch": null
+    },
+    "Darren Soanes": {
+        "name": "Darren Soanes",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Analysis",
+        "github": "dmsoanes",
+        "email": "d.m.soanes@exeter.ac.uk",
+        "linkedin": "darren-soanes-94779550",
+        "x": "darren_soanes",
+        "orcid": "0000-0001-5025-295X",
+        "biosketch": "249-darren-soanes"
     }
 }
