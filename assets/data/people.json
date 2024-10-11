@@ -262,5 +262,17 @@
         "x": null,
         "orcid": "0000-0003-2222-4577",
         "biosketch": "27979-emma-walker"
+    },
+    "Fergus Fones": {
+        "name": "Fergus Fones",
+        "alumni": false,
+        "position": "PTY",
+        "themes": "Bioinformatics",
+        "github": null,
+        "email": "ff309@exeter.ac.uk",
+        "linkedin": "fergus-fones-8931a4216",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
