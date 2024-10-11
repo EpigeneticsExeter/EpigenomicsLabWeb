@@ -358,5 +358,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Joe Burrage": {
+        "name": "Joe Burrage",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": null,
+        "email": "j.burrage@exeter.ac.uk",
+        "linkedin": "joe-burrage-16823674",
+        "x": null,
+        "orcid": "0009-0002-1567-713X",
+        "biosketch": "22777-joe-burrage"
     }
 }
