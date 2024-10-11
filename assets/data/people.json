@@ -574,5 +574,17 @@
         "x": "NE_Clifton",
         "orcid": "0000-0003-2597-5253",
         "biosketch": "38790-nicholas-clifton"
+    },
+    "Philippa Wells": {
+        "name": "Philippa Wells",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Analysis",
+        "github": null,
+        "email": "p.wells5@exeter.ac.uk",
+        "linkedin": "philippa-wells-1a677213a",
+        "x": null,
+        "orcid": "0000-0003-0139-1624",
+        "biosketch": "42890-philippa-wells"
     }
 }
