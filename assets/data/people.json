@@ -610,5 +610,17 @@
         "x": null,
         "orcid": "0000-0001-9264-1056",
         "biosketch": "24699-bex-smith"
+    },
+    "Rosie Bamford": {
+        "name": "Rosie Bamford",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": "rb520826",
+        "email": null,
+        "linkedin": "rb520@exeter.ac.uk",
+        "x": "rbamford5",
+        "orcid": "0000-0002-2107-4637",
+        "biosketch": "24506-rosie-bamford"
     }
 }
