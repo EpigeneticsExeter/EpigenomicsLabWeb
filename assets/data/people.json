@@ -634,5 +634,17 @@
         "x": null,
         "orcid": null,
         "biosketch": "42494-rhiannon-haigh"
+    },
+    "Szi Kay Leung": {
+        "name": "Szi Kay Leung",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Bioinformatics Lab",
+        "github": "SziKayLeung",
+        "email": "sl693@exeter.ac.uk",
+        "linkedin": "szikayleung",
+        "x": "SKayLeung",
+        "orcid": "0000-0002-5607-4688",
+        "biosketch": "39044-szi-kay-leung"
     }
 }
