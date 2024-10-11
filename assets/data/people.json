@@ -310,5 +310,17 @@
         "x": "GiuliaPegoraro7",
         "orcid": "0009-0001-5206-5303",
         "biosketch": null
+    },
+    "Greg Wheildon": {
+        "name": "Greg Wheildon",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab Bioinformatics",
+        "github": null,
+        "email": "g.t.wheildon2@exeter.ac.uk",
+        "linkedin": null,
+        "x": "GregWheildon",
+        "orcid": "0000-0002-7911-9973",
+        "biosketch": "32538-greg-wheildon"
     }
 }
