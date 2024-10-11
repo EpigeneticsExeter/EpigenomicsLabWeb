@@ -190,5 +190,17 @@
         "x": null,
         "orcid": "0000-0003-0208-8619",
         "biosketch": null
+    },
+    "Ellie Hendy": {
+        "name": "Ellie Hendy",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": null,
+        "email": "e.hendy@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null,
+        "biosketch": "38179-ellie-hendy"
     }
 }
