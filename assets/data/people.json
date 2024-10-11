@@ -598,5 +598,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Bex Smith": {
+        "name": "Bex Smith",
+        "alumni": false,
+        "position": "PI",
+        "themes": "Lab",
+        "github": null,
+        "email": "r.g.smith@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": "0000-0001-9264-1056",
+        "biosketch": "24699-bex-smith"
     }
 }
