@@ -346,5 +346,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Imran Haikal": {
+        "name": "Imran Haikal",
+        "alumni": false,
+        "position": "PTY",
+        "themes": "Bioinformatics",
+        "github": null,
+        "email": "ik352@exeter.ac.uk",
+        "linkedin": "imranhaikal",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
