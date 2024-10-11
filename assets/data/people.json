@@ -202,5 +202,17 @@
         "x": null,
         "orcid": null,
         "biosketch": "38179-ellie-hendy"
+    },
+    "Emma Dempster": {
+        "name": "Emma Dempster",
+        "alumni": false,
+        "position": "PI",
+        "themes": "Analysis Lab",
+        "github": "eld211",
+        "email": "e.l.dempster@exeter.ac.uk",
+        "linkedin": "emma-dempster-890732127",
+        "x": "ElkyD",
+        "orcid": "0000-0003-1257-5314",
+        "biosketch": "22394-emma-dempster"
     }
 }
