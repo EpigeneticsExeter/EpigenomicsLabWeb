@@ -226,5 +226,17 @@
         "x": "EPishva",
         "orcid": "0000-0002-8964-0682",
         "biosketch": null
+    },
+    "Emily Fretwell": {
+        "name": "Emily Fretwell",
+        "alumni": false,
+        "position": "PTY",
+        "themes": "Bioinformatics",
+        "github": null,
+        "email": "ecf207@exeter.ac.uk",
+        "linkedin": "emily-fretwell-962375204",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
