@@ -298,5 +298,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Giulia Pegoraro": {
+        "name": "Giulia Pegoraro",
+        "alumni": false,
+        "position": "PhD",
+        "themes": "Bioinformatics Lab",
+        "github": "giuliaPegoraro",
+        "email": "g.pegoraro@exeter.ac.uk",
+        "linkedin": "giulia-pegoraro-8554361b0",
+        "x": "GiuliaPegoraro7",
+        "orcid": "0009-0001-5206-5303",
+        "biosketch": null
     }
 }
