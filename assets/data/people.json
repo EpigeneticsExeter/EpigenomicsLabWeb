@@ -370,5 +370,17 @@
         "x": null,
         "orcid": "0009-0002-1567-713X",
         "biosketch": "22777-joe-burrage"
+    },
+    "Jonathan Mill": {
+        "name": "Jonathan Mill",
+        "alumni": false,
+        "position": "PI",
+        "themes": null,
+        "github": null,
+        "email": "j.mill@exeter.ac.uk",
+        "linkedin": "jonathan-mill-64b32a134",
+        "x": "PsyEpigenetics",
+        "orcid": "0000-0003-1115-3224",
+        "biosketch": "22368-jonathan-mill"
     }
 }
