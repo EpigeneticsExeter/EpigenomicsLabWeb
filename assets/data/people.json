@@ -62,7 +62,7 @@
     "Ann Babtie": {
         "name": "Ann Babtie",
         "alumni": false,
-        "position": "PostDoc",
+        "position": "PostDoc lecturer",
         "themes": "Analysis",
         "github": "anncfs",
         "email": "a.babtie@exeter.ac.uk",
@@ -134,7 +134,7 @@
     "Adam Smith": {
         "name": "Adam Smith",
         "alumni": false,
-        "position": "PI",
+        "position": "research-fellow lab-technician",
         "themes": "Lab",
         "github": null,
         "email": "a.r.smith@exeter.ac.uk",
@@ -146,7 +146,7 @@
     "Barry Chioza": {
         "name": "Barry Chioza",
         "alumni": false,
-        "position": "PostDoc",
+        "position": "research-fellow lab-technician",
         "themes": "Lab",
         "github": null,
         "email": "b.a.chioza@exeter.ac.uk",
@@ -170,7 +170,7 @@
     "Darren Soanes": {
         "name": "Darren Soanes",
         "alumni": false,
-        "position": "PostDoc",
+        "position": "research fellow",
         "themes": "Analysis",
         "github": "dmsoanes",
         "email": "d.m.soanes@exeter.ac.uk",
@@ -182,7 +182,7 @@
     "Ashim Deb": {
         "name": "Ashim Deb",
         "alumni": true,
-        "position": "PhD",
+        "position": "PostDoc",
         "themes": null,
         "github": null,
         "email": null,
@@ -194,7 +194,7 @@
     "Ellie Hendy": {
         "name": "Ellie Hendy",
         "alumni": false,
-        "position": "PostDoc",
+        "position": "PostDoc lab-technician",
         "themes": "Lab",
         "github": null,
         "email": "e.hendy@exeter.ac.uk",
@@ -206,7 +206,7 @@
     "Emma Dempster": {
         "name": "Emma Dempster",
         "alumni": false,
-        "position": "PI",
+        "position": "PI lecturer",
         "themes": "Analysis Lab",
         "github": "eld211",
         "email": "e.l.dempster@exeter.ac.uk",
@@ -242,7 +242,7 @@
     "Emily Trusler": {
         "name": "Emily Trusler",
         "alumni": false,
-        "position": "GRA",
+        "position": "GLA",
         "themes": "Lab",
         "github": null,
         "email": "ect209@exeter.ac.uk",
@@ -254,7 +254,7 @@
     "Emma Walker": {
         "name": "Emma Walker",
         "alumni": false,
-        "position": "GRA",
+        "position": "research-assistant",
         "themes": "Bioinformatics Analysis",
         "github": "ew367",
         "email": "e.m.walker@exeter.ac.uk",
@@ -338,7 +338,7 @@
     "Isabel Larkin": {
         "name": "Isabel Larkin",
         "alumni": false,
-        "position": "GRA",
+        "position": "GLA",
         "themes": "Lab",
         "github": null,
         "email": "i.larkin@exeter.ac.uk",
@@ -362,7 +362,7 @@
     "Joe Burrage": {
         "name": "Joe Burrage",
         "alumni": false,
-        "position": "PostDoc",
+        "position": "research-fellow lab-technician",
         "themes": "Lab",
         "github": null,
         "email": "j.burrage@exeter.ac.uk",
@@ -410,7 +410,7 @@
     "Katie Lunnon": {
         "name": "Katie Lunnon",
         "alumni": false,
-        "position": "PI",
+        "position": "PI lecturer",
         "themes": "Analysis Lab",
         "github": null,
         "email": "k.lunnon@exeter.ac.uk",
@@ -422,7 +422,7 @@
     "Kirtikesav Salem Saravanaraj": {
         "name": "Kirtikesav Salem Saravanaraj",
         "alumni": false,
-        "position": "GRA",
+        "position": "lab-technician",
         "themes": "Lab",
         "github": null,
         "email": "k-salem-saravanaraj@exeter.ac.uk",
@@ -602,7 +602,7 @@
     "Bex Smith": {
         "name": "Bex Smith",
         "alumni": false,
-        "position": "PI",
+        "position": "PI lecturer",
         "themes": "Lab",
         "github": null,
         "email": "r.g.smith@exeter.ac.uk",
@@ -650,7 +650,7 @@
     "Tom Piers": {
         "name": "Tom Piers",
         "alumni": false,
-        "position": "PI",
+        "position": "PI lecturer",
         "themes": "Lab",
         "github": null,
         "email": "t.piers@exeter.ac.uk",
@@ -686,7 +686,7 @@
     "Anna Migdalska-Richards": {
         "name": "Anna Migdalska-Richards",
         "alumni": false,
-        "position": "PI",
+        "position": "PI lecturer",
         "themes": null,
         "github": null,
         "email": "a.migdalska-richards@exeter.ac.uk",

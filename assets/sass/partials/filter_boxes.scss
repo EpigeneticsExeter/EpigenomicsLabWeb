@@ -38,7 +38,7 @@
         width: fit-content;
         height: fit-content;
         position: relative;
-        margin-bottom: 5vh;
+        margin: 3vh 0;
 
         .input-search {
             height: 50px;
@@ -87,6 +87,12 @@
         background-color: $dark_accent_colour;
         border-bottom: 1px solid rgba(255, 255, 255, .5);
         transition: all 500ms cubic-bezier(0, 0, 0, 1);
+    }
+}
+
+@media only screen and (max-width:$smaller_screen_threshold_width) {
+    .main-container .filter-container .filter-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
