@@ -90,6 +90,12 @@
     }
 }
 
+@media only screen and (max-width:$smaller_screen_threshold_width) {
+    .main-container .filter-container .filter-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media only screen and (max-width:$tablet_threshold_width) {
     .main-container {
         display: flex;
