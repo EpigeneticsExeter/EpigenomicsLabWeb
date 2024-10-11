@@ -622,5 +622,17 @@
         "x": "rbamford5",
         "orcid": "0000-0002-2107-4637",
         "biosketch": "24506-rosie-bamford"
+    },
+    "Rhiannon Haigh": {
+        "name": "Rhiannon Haigh",
+        "alumni": false,
+        "position": "PhD",
+        "themes": "Analysis",
+        "github": "rhaigh5",
+        "email": "r.haigh5@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null,
+        "biosketch": "42494-rhiannon-haigh"
     }
 }
