@@ -706,5 +706,17 @@
         "x": "SimengLin",
         "orcid": "0000-0002-4201-4879",
         "biosketch": null
+    },
+    "Jonathan Davies": {
+        "name": "Jonathan Davies",
+        "alumni": true,
+        "position": "PI",
+        "themes": null,
+        "github": null,
+        "email": "j.davies4@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": "0000-0002-9954-1565",
+        "biosketch": null
     }
 }
