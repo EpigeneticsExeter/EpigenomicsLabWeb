@@ -670,5 +670,18 @@
         "x": "kartikchundru",
         "orcid": "0000-0002-6348-5565",
         "biosketch": "41357-kartik-chundru"
+    },
+    "Wendy Cowell": {
+        "name": "Wendy Cowell",
+        "alumni": false,
+        "position": "Other",
+        "themes": null,
+        "github": null,
+        "email": "wendy.cowell@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null,
+        "biosketch": "20646-wendy-cowell"
+    },
     }
 }
