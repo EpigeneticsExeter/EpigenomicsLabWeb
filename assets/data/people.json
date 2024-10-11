@@ -178,5 +178,17 @@
         "x": "darren_soanes",
         "orcid": "0000-0001-5025-295X",
         "biosketch": "249-darren-soanes"
+    },
+    "Ashim Deb": {
+        "name": "Ashim Deb",
+        "alumni": true,
+        "position": "PhD",
+        "themes": null,
+        "github": null,
+        "email": null,
+        "linkedin": "ashim-deb-64436598",
+        "x": null,
+        "orcid": "0000-0003-0208-8619",
+        "biosketch": null
     }
 }
