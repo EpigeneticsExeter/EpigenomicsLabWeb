@@ -550,5 +550,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Millie Sander-Long": {
+        "name": "Millie Sander-Long",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Lab",
+        "github": null,
+        "email": "m.sander2@exeter.ac.uk",
+        "linkedin": null,
+        "x": "millie-sander",
+        "orcid": "0000-0002-9639-5590",
+        "biosketch": null
     }
 }
