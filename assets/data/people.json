@@ -430,5 +430,17 @@
         "x": null,
         "orcid": "0000-0001-5212-1574",
         "biosketch": "40541-kirtikesav-salem-saravanaraj"
+    },
+    "Katie Jefferies": {
+        "name": "Katie Jefferies",
+        "alumni": false,
+        "position": "PhD",
+        "themes": null,
+        "github": null,
+        "email": "kj416@exeter.ac.uk",
+        "linkedin": "katie-jefferies-527958195",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
