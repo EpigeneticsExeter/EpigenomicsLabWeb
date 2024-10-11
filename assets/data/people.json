@@ -538,5 +538,17 @@
         "x": null,
         "orcid": "0000-0003-2597-5253",
         "biosketch": null
+    },
+    "Maddie Sharp": {
+        "name": "Maddie Sharp",
+        "alumni": false,
+        "position": "PTY",
+        "themes": "Bioinformatics",
+        "github": null,
+        "email": "ms1361@exeter.ac.uk",
+        "linkedin": "maddie-sharp-7890b2279",
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
