@@ -683,5 +683,16 @@
         "orcid": null,
         "biosketch": "20646-wendy-cowell"
     },
+    "Anna Migdalska-Richards": {
+        "name": "Anna Migdalska-Richards",
+        "alumni": false,
+        "position": "PI",
+        "themes": null,
+        "github": null,
+        "email": "a.migdalska-richards@exeter.ac.uk",
+        "linkedin": "anna-migdalska-richards-585a5625a",
+        "x": null,
+        "orcid": "0000-0001-6992-0751",
+        "biosketch": "27287-anna-migdalskarichards"
     }
 }
