@@ -490,5 +490,17 @@
         "x": null,
         "orcid": null,
         "biosketch": "41901-marina-flores-payan"
+    },
+    "Morteza Kouhsar": {
+        "name": "Morteza Kouhsar",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Bioinformatics",
+        "github": "m-kouhsar",
+        "email": "m.kouhsar@exeter.ac.uk",
+        "linkedin": "morteza-kouhsar-2618085a",
+        "x": "MortezaKouhsar",
+        "orcid": "0000-0001-6092-3016",
+        "biosketch": "36846-morteza-kouhsar"
     }
 }
