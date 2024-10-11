@@ -238,5 +238,17 @@
         "x": null,
         "orcid": null,
         "biosketch": null
+    },
+    "Emily Trusler": {
+        "name": "Emily Trusler",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "Lab",
+        "github": null,
+        "email": "ect209@exeter.ac.uk",
+        "linkedin": "emily-trusler-4882a7164",
+        "x": null,
+        "orcid": "0009-0008-9485-0204",
+        "biosketch": null
     }
 }
