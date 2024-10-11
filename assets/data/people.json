@@ -478,5 +478,17 @@
         "x": null,
         "orcid": "0000-0002-1168-6015",
         "biosketch": "25078-luke-weymouth"
+    },
+    "Marina Flores Payan": {
+        "name": "Marina Flores Payan",
+        "alumni": false,
+        "position": "GRA",
+        "themes": "Analysis Bioinformatics",
+        "github": "marinafloresp",
+        "email": "m.flores-payan@exeter.ac.uk",
+        "linkedin": "marina-flores-payan-1b69541a3",
+        "x": null,
+        "orcid": null,
+        "biosketch": "41901-marina-flores-payan"
     }
 }
