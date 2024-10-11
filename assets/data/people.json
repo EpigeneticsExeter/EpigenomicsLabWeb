@@ -286,5 +286,17 @@
         "x": null,
         "orcid": "0000-0002-6485-799X",
         "biosketch": "33454-gina-commin"
+    },
+    "Grace Thomson": {
+        "name": "Grace Thomson",
+        "alumni": false,
+        "position": "PTY",
+        "themes": null,
+        "github": null,
+        "email": "get206@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null,
+        "biosketch": null
     }
 }
