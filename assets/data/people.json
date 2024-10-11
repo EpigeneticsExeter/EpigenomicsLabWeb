@@ -658,5 +658,17 @@
         "x": null,
         "orcid": "0000-0003-1015-3417",
         "biosketch": "37418-tom-piers"
+    },
+    "Kartik Chundru": {
+        "name": "Kartik Chundru",
+        "alumni": false,
+        "position": "PostDoc",
+        "themes": "Analysis",
+        "github": "chundruv",
+        "email": "v.chundru@exeter.ac.uk",
+        "linkedin": "kartik-chundru-b786861b5",
+        "x": "kartikchundru",
+        "orcid": "0000-0002-6348-5565",
+        "biosketch": "41357-kartik-chundru"
     }
 }
