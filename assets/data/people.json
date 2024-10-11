@@ -562,5 +562,17 @@
         "x": "millie-sander",
         "orcid": "0000-0002-9639-5590",
         "biosketch": null
+    },
+    "Nicholas Clifton": {
+        "name": "Nicholas Clifton",
+        "alumni": false,
+        "position": "PI",
+        "themes": "Analysis Lab",
+        "github": "NiCl2",
+        "email": "n.clifton@exeter.ac.uk",
+        "linkedin": "nicholas-clifton-4b18b368",
+        "x": "NE_Clifton",
+        "orcid": "0000-0003-2597-5253",
+        "biosketch": "38790-nicholas-clifton"
     }
 }
