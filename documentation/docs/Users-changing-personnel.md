@@ -77,6 +77,8 @@ Below is a quick definition of each field:
     (the bit that follows `uk.linkedin.com/in/`).
 - x: The person's x handle (following the @)
 - orcid: The 16 digit number (0000-1234-0000-9876)
+- website: A full weblink to a personal website
+    - Note: This is favoured over a biosketch if both are given.
 - biosketch: The person's UoE biosketch link
     (the bit that follows `https://experts.exeter.ac.uk/`)
 
@@ -95,6 +97,7 @@ Here's an example:
     "linkedin": null,
     "x": null,
     "orcid": null,
+    "website": null,
     "biosketch": "23540-eilis-hannon"
 },
 ```

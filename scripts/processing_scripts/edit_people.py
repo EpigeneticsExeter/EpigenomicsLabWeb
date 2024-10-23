@@ -41,6 +41,7 @@ def get_people_information(name, field):
         "linkedin": "The string after the last '/' in your profile's url",
         "x": "Your X username, don't include the @",
         "orcid": "16 digit number, Ex: 0009-0000-4090-9258",
+        "website": "A full link to your personal website",
         "biosketch": "The string after the last '/' in your biosketch's url"
     }
     example_text = example_texts.get(field, "")
@@ -66,6 +67,7 @@ def add_person(json_file, name):
                           "linkedin": None,
                           "x": None,
                           "orcid": None,
+                          "website": None,
                           "biosketch": None}
 
     print(f"""
