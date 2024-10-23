@@ -31,3 +31,7 @@
     {{ end }}
 </div>
 {{ end }}
+
+{{ define "scripts" }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/repositories-darkmode.js") }}
+{{ end }}
