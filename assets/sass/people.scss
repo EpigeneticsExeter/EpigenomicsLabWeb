@@ -82,6 +82,10 @@
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
+.dark-theme .default_profile {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
 @media only screen and (max-width: $smaller_screen_threshold_width) {
     .people-photo-grid {
         grid-template-columns: 1fr 1fr 1fr;
