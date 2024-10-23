@@ -5,8 +5,10 @@
 {{ $author_pattern := replace .Params.author " " "-" }}
 {{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_pattern }}
 {{ $profile_picture := resources.GetMatch $author_picture_pattern}}
+{{ $default_picture_identifier := "" }}
 {{ if not $profile_picture }}
 {{ $profile_picture = resources.Get "/images/profile_pictures/default-profile.svg" }}
+{{ $default_picture_identifier = "default_profile" }}
 {{ end }}
 
 <a href="javascript:window.history.back()">
@@ -23,7 +25,7 @@
         <p> ({{ $word_count }} words, {{ $read_time }} - {{ add $read_time 1}} minute read)</p>
         <div class="author-container">
             <div class="author-image">
-                <img src="{{ $profile_picture.RelPermalink }}"></img>
+                <img class="{{ $default_picture_identifier }}" src="{{ $profile_picture.RelPermalink }}"></img>
             </div>
             <div class="author-information">
                 <p>Posted by {{ .Params.author }}</p>
