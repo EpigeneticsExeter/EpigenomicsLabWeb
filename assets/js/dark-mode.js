@@ -13,6 +13,8 @@ function setDarkMode() {
     darkModeImage.setAttribute("d", darkModePath);
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
+
+    // Only required on Reproducability page
     updateRepositoryURLs("discord_old_blurple");
 }
 
