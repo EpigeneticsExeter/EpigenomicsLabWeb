@@ -90,6 +90,11 @@
     }
 }
 
+@include themify($themes) {
+    .author-image .default_profile {
+        filter: themed('svg');
+    }
+}
 
 @media only screen and (max-width:$large_mobile_threshold_width) {
 

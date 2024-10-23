@@ -49,8 +49,10 @@
         {{ $author_pattern := replace .name " " "-" }}
         {{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_pattern }}
         {{ $profile_picture := resources.GetMatch $author_picture_pattern}}
+        {{ $default_picture_identifier := "" }}
         {{ if not $profile_picture }}
             {{ $profile_picture = resources.Get "/images/profile_pictures/default-profile.svg" }}
+            {{ $default_picture_identifier = "default_profile" }}
         {{ end }}
         {{ if eq .alumni $is_alumni_page }}
         <div id='{{ replace .name " " "" | lower}}' class="person-profile {{ .theme | lower }} {{ .position | lower }}">
@@ -60,7 +62,7 @@
             <a class="profile_picture_container" href="https://experts.exeter.ac.uk/{{ .biosketch }}" target="_blank">
             {{ end }}
                 {{ with resources.Get $profile_picture }}
-                    <img class="profile_picture" src="{{ .RelPermalink }}"></img>
+                    <img class="profile_picture {{ $default_picture_identifier }}" src="{{ .RelPermalink }}"></img>
                 {{ else }}
                     {{ errorf "Unable to get global resource %q" $profile_picture }}
                 {{ end }}
