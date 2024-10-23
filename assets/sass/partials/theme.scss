@@ -12,10 +12,12 @@ $dark_navigation_hover_colour: #555555;
 $themes: (
     light: (text: $dark_text_colour,
         bg: white,
+        svg: brightness(0) saturate(100%) invert(0%),
 
     ),
     dark: (text: white,
         bg: #333333,
+        svg: brightness(0) saturate(100%) invert(100%),
     ),
 );
 

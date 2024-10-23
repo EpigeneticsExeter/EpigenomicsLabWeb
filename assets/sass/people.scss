@@ -73,18 +73,18 @@
 @include themify($themes) {
     .person-profile h1 {
         color: themed('text');
-        background-color: themed('bg')
+        background-color: themed('bg');
+    }
+
+    .link-tree img {
+        filter: themed('svg');
+    }
+
+    .default_profile {
+        filter: themed('svg');
     }
 }
 
-
-.dark-theme .link-tree img {
-    filter: brightness(0) saturate(100%) invert(100%);
-}
-
-.dark-theme .default_profile {
-    filter: brightness(0) saturate(100%) invert(100%);
-}
 
 @media only screen and (max-width: $smaller_screen_threshold_width) {
     .people-photo-grid {
