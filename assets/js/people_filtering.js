@@ -22,30 +22,14 @@ buttons.forEach((button) => {
     btnElement.addEventListener("click", () => filterProfiles(button.type));
 });
 
-// Show all profiles with fade-in effect initially
-profiles.forEach((profile, index) => {
-    profile.classList.add("fade-in");
-    setTimeout(() => {
-        profile.classList.add("show");
-    }, 100 * (index + 1));
-});
-
 function filterProfiles(category) {
     // displays profiles sequentially depending on the button clicked
-    let delay = 100;
     profiles.forEach((profile) => {
-        profile.classList.remove("show");
         profile.style.display = "none";
     });
     profiles.forEach((profile) => {
         if (category === "all" || profile.classList.contains(category)) {
-            setTimeout(() => {
-                profile.style.display = "flex";
-                setTimeout(() => {
-                    profile.classList.add("show");
-                }, 50);
-            }, delay);
-            delay += 100;
+            profile.style.display = "flex";
         }
     });
 }
@@ -57,3 +41,5 @@ searchInput.oninput = function () {
         searchBarFilter(searchTerm, profile, profileName);
     });
 };
+
+filterProfiles("all");
