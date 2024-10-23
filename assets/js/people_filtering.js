@@ -1,3 +1,5 @@
+import { searchBarFilter } from "./search-bar.js";
+
 const buttons = [
     { id: "all", type: "all" },
     { id: "gra", type: "gra" },
@@ -48,19 +50,10 @@ function filterProfiles(category) {
     });
 }
 
-// displays profiles that contain the string in the search bar
-searchInput.addEventListener("input", () => {
+searchInput.oninput = function () {
     const searchTerm = searchInput.value.toLowerCase();
-
     profiles.forEach((profile) => {
         const profileName = profile.id.toLowerCase();
-
-        if (profileName.includes(searchTerm)) {
-            profile.style.display = "flex";
-            profile.classList.add("show");
-        } else {
-            profile.style.display = "none";
-            profile.classList.remove("show");
-        }
+        searchBarFilter(searchTerm, profile, profileName);
     });
-});
+};

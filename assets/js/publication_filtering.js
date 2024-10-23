@@ -1,3 +1,5 @@
+import { searchBarFilter } from "./search-bar.js";
+
 const latestButton = document.getElementById("Latest");
 const oldestButton = document.getElementById("Oldest");
 const azButton = document.getElementById("A-Z");
@@ -119,13 +121,8 @@ zaButton.onclick = function () {
     sortPublicationsByName("ZtoA");
 };
 
-// --------- //
-// SEARCHING //
-// --------- //
-
-searchInput.addEventListener("input", () => {
+searchInput.oninput = function () {
     const searchTerm = searchInput.value.toLowerCase();
-
     publications.forEach((publication) => {
         const publicationTitle =
             publication.querySelector(".title")?.textContent.toLowerCase() ||
@@ -137,15 +134,8 @@ searchInput.addEventListener("input", () => {
         const abstractText =
             publication.querySelector(".extra-information-container p")
                 ?.textContent.toLowerCase() || "";
+        const fullItemText = publicationTitle + allAuthors + abstractText;
 
-        if (
-            publicationTitle.includes(searchTerm) ||
-            allAuthors.includes(searchTerm) ||
-            abstractText.includes(searchTerm)
-        ) {
-            publication.style.display = "flex";
-        } else {
-            publication.style.display = "none";
-        }
+        searchBarFilter(searchTerm, publication, fullItemText);
     });
-});
+};
