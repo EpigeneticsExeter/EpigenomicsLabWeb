@@ -54,7 +54,11 @@
         {{ end }}
         {{ if eq .alumni $is_alumni_page }}
         <div id='{{ replace .name " " "" | lower}}' class="person-profile {{ .theme | lower }} {{ .position | lower }}">
+            {{ if .website }}
+            <a class="profile_picture_container" href="{{ .website }}" target="_blank">
+            {{ else }}
             <a class="profile_picture_container" href="https://experts.exeter.ac.uk/{{ .biosketch }}" target="_blank">
+            {{ end }}
                 {{ with resources.Get $profile_picture }}
                     <img class="profile_picture" src="{{ .RelPermalink }}"></img>
                 {{ else }}
