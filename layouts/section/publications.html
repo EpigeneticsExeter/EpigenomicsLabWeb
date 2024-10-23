@@ -107,6 +107,7 @@
 
 
 {{ define "scripts" }}
+{{ partial "partials/addJS.html" (dict "jsfile" "js/search-bar.js") }}
 {{ partial "partials/addJS.html" (dict "jsfile" "js/publication_filtering.js") }}
 {{ partial "partials/addJS.html" (dict "jsfile" "js/expand_publication.js") }}
 {{ partial "partials/addJS.html" (dict "jsfile" "js/expand-filterboxes.js") }}

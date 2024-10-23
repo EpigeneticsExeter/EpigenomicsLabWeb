@@ -38,6 +38,7 @@
     {{ block "scripts" . }}
     {{ end }}
 
+    {{ partial "partials/addJS.html" (dict "jsfile" "js/global-variables.js") }}
     {{ partial "partials/addJS.html" (dict "jsfile" "js/dark-mode.js") }}
     {{ partial "partials/addJS.html" (dict "jsfile" "js/sub_navigation.js") }}
     {{ partial "partials/addJS.html" (dict "jsfile" "js/mobile-navbar.js") }}

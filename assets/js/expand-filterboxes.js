@@ -1,8 +1,8 @@
-mobileModeWidth = 1000;
+import { mobileWidthThreshold } from "./global-variables.js";
 
 // This functionality is only required in mobile mode as the filter box
 // takes up a lot of space on smaller screens.
-if (globalThis.innerWidth < mobileModeWidth) {
+if (globalThis.innerWidth < mobileWidthThreshold) {
     const filterContainer = document.querySelector(".filter-container");
     const filterText = document.getElementById("filter-text");
     const filterGrid = document.querySelector(".filter-grid");

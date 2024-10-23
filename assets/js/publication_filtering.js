@@ -1,20 +1,11 @@
+import { searchBarFilter } from "./search-bar.js";
+
 const latestButton = document.getElementById("Latest");
 const oldestButton = document.getElementById("Oldest");
 const azButton = document.getElementById("A-Z");
 const zaButton = document.getElementById("Z-A");
 const publications = document.querySelectorAll("div.publication");
 const searchInput = document.getElementById("searchInput");
-
-latestButton.addEventListener(
-    "click",
-    () => sortPublicationsByDate("latestToOldest"),
-);
-oldestButton.addEventListener(
-    "click",
-    () => sortPublicationsByDate("oldestToLatest"),
-);
-azButton.addEventListener("click", () => sortPublicationsByName("AtoZ"));
-zaButton.addEventListener("click", () => sortPublicationsByName("ZtoA"));
 
 // Initially show publications from latest to oldest
 sequentiallyShowPublications(publications);
@@ -109,30 +100,29 @@ function sortPublicationsByName(sortOrder) {
     sequentiallyShowPublications(publications);
 }
 
-// ----------- //
-// BACK TO TOP //
-// ----------- //
+// ------- //
+// BUTTONS //
+// ------- //
 
 latestButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByDate("latestToOldest");
 };
 oldestButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByDate("oldestToLatest");
 };
 azButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByName("AtoZ");
 };
 zaButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByName("ZtoA");
 };
 
-// --------- //
-// SEARCHING //
-// --------- //
-
-searchInput.addEventListener("input", () => {
+searchInput.oninput = function () {
     const searchTerm = searchInput.value.toLowerCase();
-
     publications.forEach((publication) => {
         const publicationTitle =
             publication.querySelector(".title")?.textContent.toLowerCase() ||
@@ -144,15 +134,8 @@ searchInput.addEventListener("input", () => {
         const abstractText =
             publication.querySelector(".extra-information-container p")
                 ?.textContent.toLowerCase() || "";
+        const fullItemText = publicationTitle + allAuthors + abstractText;
 
-        if (
-            publicationTitle.includes(searchTerm) ||
-            allAuthors.includes(searchTerm) ||
-            abstractText.includes(searchTerm)
-        ) {
-            publication.style.display = "flex";
-        } else {
-            publication.style.display = "none";
-        }
+        searchBarFilter(searchTerm, publication, fullItemText);
     });
-});
+};
