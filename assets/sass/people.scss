@@ -22,7 +22,7 @@
         .link-tree {
             visibility: hidden;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -76,6 +76,10 @@
     }
 }
 
+
+.dark-theme .link-tree img {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
 
 @media only screen and (max-width: $smaller_screen_threshold_width) {
     .people-photo-grid {
