@@ -5,17 +5,6 @@ const zaButton = document.getElementById("Z-A");
 const publications = document.querySelectorAll("div.publication");
 const searchInput = document.getElementById("searchInput");
 
-latestButton.addEventListener(
-    "click",
-    () => sortPublicationsByDate("latestToOldest"),
-);
-oldestButton.addEventListener(
-    "click",
-    () => sortPublicationsByDate("oldestToLatest"),
-);
-azButton.addEventListener("click", () => sortPublicationsByName("AtoZ"));
-zaButton.addEventListener("click", () => sortPublicationsByName("ZtoA"));
-
 // Initially show publications from latest to oldest
 sequentiallyShowPublications(publications);
 sortPublicationsByDate("latestToOldest");
@@ -109,21 +98,25 @@ function sortPublicationsByName(sortOrder) {
     sequentiallyShowPublications(publications);
 }
 
-// ----------- //
-// BACK TO TOP //
-// ----------- //
+// ------- //
+// BUTTONS //
+// ------- //
 
 latestButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByDate("latestToOldest");
 };
 oldestButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByDate("oldestToLatest");
 };
 azButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByName("AtoZ");
 };
 zaButton.onclick = function () {
     globalThis.scrollTo(0, 0);
+    sortPublicationsByName("ZtoA");
 };
 
 // --------- //
