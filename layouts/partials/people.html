@@ -92,7 +92,11 @@
                 </a>
                 {{ end }}
             </div>
+            {{ if .website }}
+                <a class="name-container" href="{{ .website }}" target="_blank">
+            {{ else }}
             <a class="name-container" href="https://experts.exeter.ac.uk/{{ .biosketch }}" target="_blank">
+            {{ end }}
                 <h1>{{ .name }}</h1>
             </a>
         </div>
