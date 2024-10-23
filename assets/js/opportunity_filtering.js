@@ -1,16 +1,21 @@
-const allButton = document.getElementById("all");
-const graButton = document.getElementById("gra");
-const phdButton = document.getElementById("phd");
-const postdocButton = document.getElementById("postdoc");
-const ptyButton = document.getElementById("pty");
+const buttons = [
+    { id: "all", type: "all" },
+    { id: "gra", type: "gra" },
+    { id: "phd", type: "phd" },
+    { id: "postdoc", type: "postdoc" },
+    { id: "pty", type: "pty" },
+];
+
 const opportunities = document.querySelectorAll("div.opportunity");
 const zeroOpportunities = document.querySelector("div.zero_opportunities");
 
-allButton.addEventListener("click", () => filteropportunities("all"));
-graButton.addEventListener("click", () => filteropportunities("gra"));
-phdButton.addEventListener("click", () => filteropportunities("phd"));
-postdocButton.addEventListener("click", () => filteropportunities("postdoc"));
-ptyButton.addEventListener("click", () => filteropportunities("pty"));
+buttons.forEach((button) => {
+    const btnElement = document.getElementById(button.id);
+    btnElement.addEventListener(
+        "click",
+        () => filteropportunities(button.type),
+    );
+});
 
 if (noOpportunities()) {
     zeroOpportunities.style.display = "flex";
