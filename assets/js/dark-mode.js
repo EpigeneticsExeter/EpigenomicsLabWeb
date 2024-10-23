@@ -10,12 +10,23 @@ function setDarkMode() {
     darkModeImage.setAttribute("d", darkModePath);
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
+    updateRepositoryURLs("discord_old_blurple");
 }
 
 function setLightMode() {
     darkModeImage.setAttribute("d", lightModePath);
     document.body.classList.remove("dark-theme");
     document.body.classList.add("light-theme");
+    updateRepositoryURLs("default");
+}
+
+function updateRepositoryURLs(theme) {
+    const repositories = document.querySelectorAll(".repository");
+    repositories.forEach((repository) => {
+        const url = new URL(repository.src);
+        url.searchParams.set("theme", theme);
+        repository.src = url;
+    });
 }
 
 function toggleDarkMode() {
