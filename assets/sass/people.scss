@@ -22,17 +22,18 @@
         .link-tree {
             visibility: hidden;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
             opacity: 0;
             transition: opacity 0.3s ease;
 
+            a {
+                margin: 1%;
 
-            img {
-                height: 4vh;
-                width: 100%;
+                img {
+                    height: 4vh;
+                    width: 100%;
+                }
             }
-
         }
 
         &:hover {
