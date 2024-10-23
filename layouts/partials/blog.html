@@ -2,8 +2,8 @@
 {{ $read_time := div $word_count 200 | math.Round }}
 
 <!-- Assumes author's profile picture has filename ~= person name -->
-{{ $author_no_spaces := replace .Params.author " " "" }}
-{{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_no_spaces }}
+{{ $author_pattern := replace .Params.author " " "-" }}
+{{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_pattern }}
 {{ $profile_picture := resources.GetMatch $author_picture_pattern}}
 {{ if not $profile_picture }}
 {{ $profile_picture = resources.Get "/images/profile_pictures/default-profile.svg" }}

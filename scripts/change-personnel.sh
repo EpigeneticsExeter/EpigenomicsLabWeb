@@ -28,7 +28,7 @@ done
 ## ========================== ##
 
 lower_case_name=$(echo "${name}" | tr '[:upper:]' '[:lower:]')
-concatenated_name=$(echo "${lower_case_name}" | tr -d ' ')
+concatenated_name=$(echo "${lower_case_name}" | tr ' ' '-')
 capitalized_name=$(\
     echo "${lower_case_name}" | \
     awk \

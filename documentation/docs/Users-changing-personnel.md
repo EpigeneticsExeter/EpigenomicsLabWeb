@@ -35,8 +35,9 @@ The script will also tell you this, but if you are reading this, you likely
 haven't ran the script yet. The profile picture for the person being added
 must follow two important rules:
 
-1) The image must have a name of firstnamelastname.(file_extension)
-    - For example: eilishannon.jpg for Eilis Hannon
+1) The image must have a name of "firstname-lastname.(file_extension)"
+    - *i.e.* spaces are replaced with hyphens (-)
+    - For example: eilis-hannon.jpg for Eilis Hannon
 2) The image must be smaller than 200KB (large images severely slow down the 
     site)
 
