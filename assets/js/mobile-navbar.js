@@ -7,10 +7,14 @@ const mainNav = document.querySelector(".main-nav");
 toggleMenuButton.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
+    const allSubNavs = document.querySelectorAll(".sub-nav");
     if (mainNav.style.display == "flex") {
         mainNav.style.display = "none";
     } else {
         mainNav.style.display = "flex";
+        allSubNavs.forEach((item) => {
+            item.style.display = "none";
+        });
     }
 }
 
