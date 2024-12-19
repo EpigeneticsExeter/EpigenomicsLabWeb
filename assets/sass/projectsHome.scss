@@ -18,24 +18,24 @@
     .projects-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        background-size: cover;
-        height: 42vh;
-        background-repeat: no-repeat;
-        background-position: center;
+        align-items: center;
+        background-color: $base_colour;
+        border-radius: 20px;
 
         h1 {
-            padding: 5px;
-            background-color: $base_colour;
             margin: 1%;
-            border-radius: 10px;
             @include main-text(3rem);
         }
 
-        button {
-            @include button($base_colour);
-            @include bold-main-text(2rem);
+        a {
+            width: 85%;
+            height: 80%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
         }
     }
 
