@@ -792,5 +792,17 @@
         "website": null,
         "biosketch": null
     },
+    "Varshini Suresh": {
+        "name": "Varshini Suresh",
+        "alumni": false,
+        "position": "Research-Assistant",
+        "themes": "Bioinformatics",
+        "github": null,
+        "email": "V.Suresh@exeter.ac.uk",
+        "linkedin": "varshini-suresh-",
+        "x": null,
+        "orcid": null,
+        "website": null,
+        "biosketch": null
     }
 }
