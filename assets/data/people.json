@@ -778,5 +778,31 @@
         "orcid": "0000-0002-9954-1565",
         "website": "https://www.researchgate.net/profile/Jonathan-Davies-14",
         "biosketch": null
+    },
+    "Rebecca Ward": {
+        "name": "Rebecca Ward",
+        "alumni": false,
+        "position": "PhD",
+        "themes": null,
+        "github": null,
+        "email": "rw713@exeter.ac.uk",
+        "linkedin": null,
+        "x": null,
+        "orcid": null,
+        "website": null,
+        "biosketch": null
+    },
+    "Varshini Suresh": {
+        "name": "Varshini Suresh",
+        "alumni": false,
+        "position": "Research-Assistant",
+        "themes": "Bioinformatics",
+        "github": null,
+        "email": "V.Suresh@exeter.ac.uk",
+        "linkedin": "varshini-suresh-",
+        "x": null,
+        "orcid": null,
+        "website": null,
+        "biosketch": null
     }
 }
