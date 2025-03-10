@@ -105,7 +105,7 @@
     },
     "Anthony Klokkaris": {
         "name": "Anthony Klokkaris",
-        "alumni": false,
+        "alumni": true,
         "position": "PhD",
         "themes": "Analysis Lab",
         "github": "AnthonyKl98",
