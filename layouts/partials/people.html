@@ -47,6 +47,7 @@
     <div class="people-photo-grid">
         {{ range $people_data }}
         {{ $author_pattern := replace .name " " "-" }}
+        {{ $author_pattern = replace $author_pattern "\u2019" "" | lower }}
         {{ $author_picture_pattern := printf "images/profile_pictures/%s*" $author_pattern }}
         {{ $profile_picture := resources.GetMatch $author_picture_pattern}}
         {{ $default_picture_identifier := "" }}
