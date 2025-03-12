@@ -31,7 +31,7 @@
 }
 
 @include themify($themes) {
-    .shiny-app {
+    .link-container {
         background-color: themed('repobg');
         border: 1px solid #E4E2E2;
         border-radius: 2%;

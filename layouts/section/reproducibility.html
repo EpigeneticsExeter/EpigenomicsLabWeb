@@ -62,7 +62,7 @@
 </div>
 <div class="link-grid">
     {{ range $shiny_data }}
-    <a class="shiny-app" href="{{.link}}">
+    <a class="link-container" href="{{.link}}">
             <h3>{{.title}}</h3>
             <p>{{.description}}</p>
     </a>
@@ -80,7 +80,7 @@
 </div>
 <div class="link-grid">
     {{ range $publication_data }}
-    <a class="shiny-app" href="{{.link}}">
+    <a class="link-container" href="{{.link}}">
             <h3>{{.title}}</h3>
             <p>{{.description}}</p>
     </a>
