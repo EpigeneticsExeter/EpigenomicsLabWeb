@@ -28,24 +28,26 @@
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5px;
     justify-items: center;
+}
 
+@include themify($themes) {
     .shiny-app {
+        background-color: themed('repobg');
         border: 1px solid #E4E2E2;
         border-radius: 2%;
         padding: 2%;
         text-decoration: none;
         width: 90%;
 
-        h3 {
-            @include main-text(1.5rem);
-            color: #198CE7;
-        }
-
         p {
             @include main-text(1rem);
-            color: #333;
+            color: themed('text');
         }
 
+        h3 {
+            @include main-text(1rem);
+            color: themed('repoheader');
+        }
     }
 }
 
