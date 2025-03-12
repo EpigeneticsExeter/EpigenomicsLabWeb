@@ -1,0 +1,57 @@
+{
+    "MeDIP-Seq": {
+        "title": "MeDIP-Seq brain data",
+        "description": "Tissue-specific epigenetic variation across brain and blood: functional annotation of the human brain methylome",
+        "link": "https://epigenetics.essex.ac.uk/brain/"
+    },
+    "Allelic_skewing": {
+        "title": "Allelic skewing data",
+        "description": "Allelic skewing of DNA methylation is widespread across the genome",
+        "link": "https://epigenetics.essex.ac.uk/ASM/"
+    },
+    "Allelic_expression": {
+        "title": "Allelic Expression data",
+        "description": "Stochastic choice of allelic expression in human neural stem cells",
+        "link": "https://epigenetics.essex.ac.uk/aaron/"
+    },
+    "Methylomic_trajectories": {
+        "title": "Human fetal brain Methylomic trajectories",
+        "description": "Methylomic trajectories across human fetal brain development",
+        "link": "https://epigenetics.essex.ac.uk/fetalbrain/"
+    },
+    "Psychosis": {
+        "title": "Monozygotic twin data",
+        "description": "Disease-associated epigenetic changes in monozygotic twins discordant for schizophrenia and bipolar disorder",
+        "link": "https://epigenetics.essex.ac.uk/psychosis/"
+    },
+    "XXY": {
+        "title": "XXY karyotype data",
+        "description": "Epigenomic and transcriptomic signatures of a 47,XXY karyotype in the brain",
+        "link": "https://epigenetics.essex.ac.uk/XXY/"
+    },
+    "Histone_association": {
+        "title": "Alzheimer's disease H3K27ac data",
+        "description": "A histone acetylome-wide association study of Alzheimer's disease",
+        "link": "https://epigenetics.essex.ac.uk/AD_H3K27ac/"
+    },
+    "Tissue-patterns": {
+        "title": "Tissue-specific patterns of allelically-skewed DNA methylation",
+        "description": "Tissue-specific patterns of allelically-skewed DNA methylation",
+        "link": "https://epigenetics.essex.ac.uk/ASMBrainBlood/"
+    },
+    "DNAm-comparison-tool": {
+        "title": "Blood Brain DNA Methylation Comparison Tool",
+        "description": "Blood Brain DNA Methylation Comparison Tool",
+        "link": "https://epigenetics.essex.ac.uk/bloodbrain/"
+    },
+    "HABIT": {
+        "title": "HABIT",
+        "description": "Hydroxymethylation Annotation in Brain Integrative Tool (HABIT)",
+        "link": "https://epigenetics.essex.ac.uk/HMC/"
+    },
+    "development-mQTL-brain": {
+        "title": "Schizophrenia mQTL data",
+        "description": "Methylation quantitative trait loci (mQTL) in the developing human brain and their enrichment in genomic regions associated with schizophrenia.",
+        "link": "https://epigenetics.essex.ac.uk/mQTL/"
+    }
+}
