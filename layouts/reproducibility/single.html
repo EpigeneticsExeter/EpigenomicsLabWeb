@@ -1,0 +1,7 @@
+{{ define "extra_head" }}
+{{ partial "partials/addSass.html" (dict "style" "sass/blog.scss") }}
+{{ end }}
+
+{{ define "main" }}
+{{ partial "partials/blog.html" . }}
+{{ end }}
