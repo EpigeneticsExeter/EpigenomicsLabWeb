@@ -1,5 +1,5 @@
 {{ define "extra_head" }}
-{{ partial "partials/addSass.html" (dict "style" "sass/code.scss") }}
+{{ partial "partials/addSass.html" (dict "style" "sass/reproducibility.scss") }}
 {{ end }}
 
 {{ define "main" }}
@@ -8,6 +8,26 @@
 {{ with resources.Get $path }}
   {{ with . | transform.Unmarshal }}
     {{ $repo_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+{{ $shiny_data := dict }}
+{{ $path := "data/shiny-apps.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $shiny_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
+{{ $publication_data := dict }}
+{{ $path := "data/publication-data.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $publication_data = . }}
   {{ end }}
 {{ else }}
   {{ errorf "Unable to get global resource %q" $path }}
@@ -23,10 +43,46 @@
         our featured repositories.
     </p>
 </div>
-<div class="repository-grid">
+<div class="link-grid">
     {{ range $repo_data }}
     <a href="https://github.com/{{ .username }}/{{ .repo }}" target="_blank" >
         <img class="repository" src="https://github-readme-stats.vercel.app/api/pin/?username={{ .username }}&repo={{ .repo }}&theme=default">
+    </a>
+    {{ end }}
+</div>
+<div class="description-container">
+    <h1>Our Shiny Apps</h1>
+    <p>
+        We believe that reproducibility and accessibility are crucial for
+        scientific progress. <br>
+        To that end, we develop and share interactive R Shiny apps to make our
+        analyses and visualizations readily available to the research
+        community.
+    </p>
+</div>
+<div class="link-grid">
+    {{ range $shiny_data }}
+    <a class="link-container" href="{{.link}}">
+            <h3>{{.title}}</h3>
+            <p>{{.description}}</p>
+    </a>
+    {{ end }}
+</div>
+<div class="description-container">
+    <h1>Publication data</h1>
+    <p>
+        We strongly believe in the importance of open and accessible data for
+        scientific reproducibility.<br>
+        To support this, we make the data from our publications readily
+        available for download. This page provides links to our published
+        datasets.
+    </p>
+</div>
+<div class="link-grid">
+    {{ range $publication_data }}
+    <a class="link-container" href="{{.link}}">
+            <h3>{{.title}}</h3>
+            <p>{{.description}}</p>
     </a>
     {{ end }}
 </div>

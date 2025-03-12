@@ -22,7 +22,7 @@
     }
 }
 
-.repository-grid {
+.link-grid {
     display: grid;
     margin: 0 5%;
     grid-template-columns: 1fr 1fr 1fr;
@@ -30,8 +30,29 @@
     justify-items: center;
 }
 
+@include themify($themes) {
+    .link-container {
+        background-color: themed('repobg');
+        border: 1px solid #E4E2E2;
+        border-radius: 2%;
+        padding: 2%;
+        text-decoration: none;
+        width: 90%;
+
+        p {
+            @include main-text(1rem);
+            color: themed('text');
+        }
+
+        h3 {
+            @include main-text(1rem);
+            color: themed('repoheader');
+        }
+    }
+}
+
 @media only screen and (max-width: $smaller_screen_threshold_width) {
-    .repository-grid {
+    .link-grid {
         grid-template-columns: 1fr 1fr;
 
         img {
@@ -41,7 +62,7 @@
 }
 
 @media only screen and (max-width: $large_mobile_threshold_width) {
-    .repository-grid {
+    .link-grid {
         display: flex;
         flex-direction: column;
 

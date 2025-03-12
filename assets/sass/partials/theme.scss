@@ -13,11 +13,15 @@ $themes: (
     light: (text: $dark_text_colour,
         bg: white,
         svg: brightness(0) saturate(100%) invert(0%),
+        repobg: white,
+        repoheader: #198CE7,
 
     ),
     dark: (text: white,
         bg: #333333,
         svg: brightness(0) saturate(100%) invert(100%),
+        repobg: #2C2F33,
+        repoheader: #7289DA,
     ),
 );
 
