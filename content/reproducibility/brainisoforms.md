@@ -4,11 +4,9 @@ Description = "Long-read sequencing reveals novel transcripts in human cortex, w
 date = 2024-06-01
 [params]
     author = "Kartik Chundru"
-title = "brainisoforms"
 layout = "blog"
 +++
 
-# Human cortex isoform data
 We used long-read transcriptome sequencing to characterise the structure and
 abundance of full-length transcripts in the human cortex from donors aged 6
 weeks post-conception to 83 years old. We identified thousands of novel
