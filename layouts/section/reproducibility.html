@@ -13,6 +13,16 @@
   {{ errorf "Unable to get global resource %q" $path }}
 {{ end }}
 
+{{ $shiny_data := dict }}
+{{ $path := "data/shiny-apps.json" }}
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $shiny_data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
+
 <div class="description-container">
     <h1>Our Code Repositories</h1>
     <p>
@@ -27,6 +37,24 @@
     {{ range $repo_data }}
     <a href="https://github.com/{{ .username }}/{{ .repo }}" target="_blank" >
         <img class="repository" src="https://github-readme-stats.vercel.app/api/pin/?username={{ .username }}&repo={{ .repo }}&theme=default">
+    </a>
+    {{ end }}
+</div>
+<div class="description-container">
+    <h1>Our Shiny Apps</h1>
+    <p>
+        We believe that reproducibility and accessibility are crucial for
+        scientific progress. <br>
+        To that end, we develop and share interactive R
+        Shiny apps to make our analyses and visualizations readily available to
+        the research community.
+    </p>
+</div>
+<div class="repository-grid">
+    {{ range $shiny_data }}
+    <a class="shiny-app" href="{{.link}}">
+            <h3>{{.title}}</h3>
+            <p>{{.description}}</p>
     </a>
     {{ end }}
 </div>

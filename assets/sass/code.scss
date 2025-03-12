@@ -28,6 +28,25 @@
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5px;
     justify-items: center;
+
+    .shiny-app {
+        border: 1px solid #E4E2E2;
+        border-radius: 2%;
+        padding: 2%;
+        text-decoration: none;
+        width: 90%;
+
+        h3 {
+            @include main-text(1.5rem);
+            color: #198CE7;
+        }
+
+        p {
+            @include main-text(1rem);
+            color: #333;
+        }
+
+    }
 }
 
 @media only screen and (max-width: $smaller_screen_threshold_width) {

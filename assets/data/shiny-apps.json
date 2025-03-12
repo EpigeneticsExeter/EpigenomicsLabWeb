@@ -1,0 +1,22 @@
+{
+    "EPICDNAmPowerCalcs": {
+        "title": "EPICDNAmPowerCalcs",
+        "description": "Web app designed to perform power calculations for DNA methylation studies.",
+        "link": "https://epigenetics.essex.ac.uk/shiny/EPICDNAmPowerCalcs/"
+    },
+    "MetaAna": {
+        "title": "MetaAna",
+        "description": "Meta-analysis of epigenome-wide association studies in Alzheimer's disease",
+        "link": "https://epigenetics.essex.ac.uk/shiny/MetaAna/"
+    },
+    "SMR": {
+        "title": "SMR",
+        "description": "Leveraging DNA methylation quantitative trait loci to characterize the relationship between methylomic variation, gene expression and complex traits.",
+        "link": "https://epigenetics.essex.ac.uk/shiny/ShinySMR/"
+    },
+    "LRBrainCoverage": {
+        "title": "LRBrainCoverage",
+        "description": "Summary of isoform expression values in human cortex from long-read transcriptome sequencing",
+        "link": "https://chundruvk.shinyapps.io/LRBrainCoverage/"
+    }
+}
