@@ -1,5 +1,5 @@
 {{ define "extra_head" }}
-{{ partial "partials/addSass.html" (dict "style" "sass/code.scss") }}
+{{ partial "partials/addSass.html" (dict "style" "sass/reproducibility.scss") }}
 {{ end }}
 
 {{ define "main" }}
@@ -33,7 +33,7 @@
         our featured repositories.
     </p>
 </div>
-<div class="repository-grid">
+<div class="link-grid">
     {{ range $repo_data }}
     <a href="https://github.com/{{ .username }}/{{ .repo }}" target="_blank" >
         <img class="repository" src="https://github-readme-stats.vercel.app/api/pin/?username={{ .username }}&repo={{ .repo }}&theme=default">
@@ -50,7 +50,7 @@
         the research community.
     </p>
 </div>
-<div class="repository-grid">
+<div class="link-grid">
     {{ range $shiny_data }}
     <a class="shiny-app" href="{{.link}}">
             <h3>{{.title}}</h3>

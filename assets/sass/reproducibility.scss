@@ -22,7 +22,7 @@
     }
 }
 
-.repository-grid {
+.link-grid {
     display: grid;
     margin: 0 5%;
     grid-template-columns: 1fr 1fr 1fr;
@@ -50,7 +50,7 @@
 }
 
 @media only screen and (max-width: $smaller_screen_threshold_width) {
-    .repository-grid {
+    .link-grid {
         grid-template-columns: 1fr 1fr;
 
         img {
@@ -60,7 +60,7 @@
 }
 
 @media only screen and (max-width: $large_mobile_threshold_width) {
-    .repository-grid {
+    .link-grid {
         display: flex;
         flex-direction: column;
 
