@@ -4,11 +4,9 @@
 
 {{ define "main" }}
 <div id="team-photo-container">
-    <div>
-        {{ with resources.Get "images/placeholder.png" }}
-        <img src="{{ .RelPermalink }}"></img>
-        {{ end }}
-    </div>
+    {{ with resources.Get "images/group-photo.jpg" }}
+    <img src="{{ .RelPermalink }}"></img>
+    {{ end }}
 </div>
 <div id="about-container">
     {{ $dna_gif := resources.Get "gifs/DNA.gif" }}
