@@ -53,5 +53,10 @@
         "title": "Schizophrenia mQTL data",
         "description": "Methylation quantitative trait loci (mQTL) in the developing human brain and their enrichment in genomic regions associated with schizophrenia.",
         "link": "https://epigenetics.essex.ac.uk/mQTL/"
+    },
+    "brainisoform": {
+        "title": "Human cortex isoform data",
+        "description": "Long-read sequencing reveals novel transcripts in human cortex, with age-related differences",
+        "link": "brainisoforms"
     }
 }
