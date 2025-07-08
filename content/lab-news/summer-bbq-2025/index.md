@@ -3,7 +3,7 @@ title = "Summer BBQ at Exmouth"
 Description = "Description"
 date = 2025-07-08
 [params]
-    featured = 0
+    featured = 1
     author = "Sam Fletcher"
     image = "images/lab-news/summer-bbq.jpg"
 +++
