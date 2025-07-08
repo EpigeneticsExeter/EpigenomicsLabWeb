@@ -3,7 +3,7 @@ title = "Pizza at Topsham Brewery"
 Description = "Lunch at Topsham Brewery followed by ice cream and kayaking"
 date = 2024-08-01
 [params]
-    featured = 1
+    featured = 0
     author = "Sam Fletcher"
     image = "images/lab-news/Topsham-brewery.jpg"
 +++
